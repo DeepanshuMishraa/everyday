@@ -1,0 +1,11 @@
+{
+  "skill": "desk-day-movement-plan",
+  "skillHash": "e4db92b945cf9ea3c3ee145a6dcd0cad7d886dc9cf41ada77cf2240ffc85577a",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.222Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

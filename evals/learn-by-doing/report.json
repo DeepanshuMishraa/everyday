@@ -1,0 +1,11 @@
+{
+  "skill": "learn-by-doing",
+  "skillHash": "21c444116bf50d7c605a5198ad712e8a8ec9ec12597aed5c5db001c91729ec34",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.224Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

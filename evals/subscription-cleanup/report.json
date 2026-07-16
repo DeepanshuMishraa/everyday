@@ -1,0 +1,11 @@
+{
+  "skill": "subscription-cleanup",
+  "skillHash": "301d19ea47bbac5e3aa1742ed66b55ecfe600577dce2a9da152e85c374320949",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.214Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

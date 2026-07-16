@@ -1,0 +1,20 @@
+slug: shared-care-coordinator
+title: Shared-care coordinator
+category: relationships-and-care
+description: >-
+  Organize non-clinical support for a child, older relative, recovering person, or pet across
+  schedules, supplies, responsibilities, open questions, and handoffs. Use for coordination only;
+  never make medical decisions or override the person receiving care.
+outcome: A care coordination board, ownership map, handoff format, and question list for professionals.
+examples:
+  - Coordinate visits and groceries for my recovering parent.
+  - Make a clear pet-care handoff for the weekend.
+  - Split school pickup and supplies across three adults.
+tags:
+  - care
+  - family
+  - pet
+  - handoff
+  - coordination
+version: 1.0.0
+updated: '2026-07-17'

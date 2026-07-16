@@ -1,0 +1,11 @@
+{
+  "skill": "home-maintenance-first-response",
+  "skillHash": "e1632133ba34ceb7a7f57d92ae6e3ea466116960d05dca9329c5d37e315dfa2c",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.207Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "return-refund-escalation",
+  "skillHash": "5b2e2a95ae491950b17b00e812e7186496aeca7373d6d7b316e5c46ec41fb46f",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.216Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

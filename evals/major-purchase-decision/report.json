@@ -1,0 +1,11 @@
+{
+  "skill": "major-purchase-decision",
+  "skillHash": "168ca44aadd65777355d61a29db8b7e799c179e378352f066fdfa154c7e8b05b",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.215Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

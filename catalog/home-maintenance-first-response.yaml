@@ -1,0 +1,20 @@
+slug: home-maintenance-first-response
+title: Home maintenance first response
+category: food-and-home
+description: >-
+  Help document a household problem, gather evidence, perform only low-risk checks, and choose
+  between monitoring, further investigation, and professional help. Use for maintenance triage;
+  immediately escalate gas, fire, electrical, structural, and active-water hazards.
+outcome: A safe first-response brief with evidence, permitted checks, and an escalation decision.
+examples:
+  - There is a new stain spreading across the ceiling.
+  - My refrigerator is making a strange intermittent sound.
+  - Help me explain this issue to the landlord.
+tags:
+  - maintenance
+  - repair
+  - landlord
+  - safety
+  - home
+version: 1.0.0
+updated: '2026-07-17'

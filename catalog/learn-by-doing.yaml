@@ -1,0 +1,20 @@
+slug: learn-by-doing
+title: Learn by doing
+category: decisions-learning-travel
+description: >-
+  Convert a learning goal into a short explanation, worked example, guided attempt, independent
+  attempt, feedback loop, and retrieval schedule. Use when active practice is more valuable than
+  another passive reading list.
+outcome: A practice sequence with a real attempt, feedback criteria, and spaced retrieval prompts.
+examples:
+  - Teach me this by making me try it.
+  - Turn this topic into a 30-minute practice session.
+  - Do not give me the answer until I attempt it.
+tags:
+  - learning
+  - practice
+  - study
+  - retrieval
+  - example
+version: 1.0.0
+updated: '2026-07-17'

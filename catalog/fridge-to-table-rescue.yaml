@@ -1,0 +1,20 @@
+slug: fridge-to-table-rescue
+title: Fridge-to-table rescue
+category: food-and-home
+description: >-
+  Turn the food you already have into one feasible meal, using expiry urgency, time, equipment, and
+  dietary constraints. Use when ingredients are mismatched, energy is low, or a generic recipe
+  search would create more work.
+outcome: One feasible meal, substitutions, a parallel cooking order, and a leftover plan.
+examples:
+  - What can I cook with half a cabbage, eggs, and rice?
+  - I have 25 minutes and only one pan.
+  - Use the spinach tonight before it goes bad.
+tags:
+  - cooking
+  - ingredients
+  - leftovers
+  - meal
+  - low energy
+version: 1.0.0
+updated: '2026-07-17'

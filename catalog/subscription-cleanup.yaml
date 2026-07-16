@@ -1,0 +1,20 @@
+slug: subscription-cleanup
+title: Subscription cleanup
+category: money-and-consumer
+description: >-
+  Run an evidence-based subscription audit using actual usage, renewal dates, cancellation routes,
+  records, and post-cancellation verification. Use when someone wants to reduce recurring charges
+  without relying on memory or impulsive keep-or-cancel judgments.
+outcome: A keep/cancel/review table, ordered cancellation plan, and verification checklist.
+examples:
+  - Help me audit these recurring charges.
+  - Which subscriptions should I review first?
+  - Make sure I preserve proof after canceling.
+tags:
+  - subscriptions
+  - cancel
+  - renewal
+  - recurring charges
+  - audit
+version: 1.0.0
+updated: '2026-07-17'

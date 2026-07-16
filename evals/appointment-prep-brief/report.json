@@ -1,0 +1,11 @@
+{
+  "skill": "appointment-prep-brief",
+  "skillHash": "5f688905585d7952682813680a0e703b7120fd77e08777e299dd9085301cddc3",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.212Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

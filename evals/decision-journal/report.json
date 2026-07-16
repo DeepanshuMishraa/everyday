@@ -1,0 +1,11 @@
+{
+  "skill": "decision-journal",
+  "skillHash": "9ab7a13cbf8006fddeeb4ac020c64ba88bc8443255f621fbb7b0c6ac1395bfc4",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.222Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

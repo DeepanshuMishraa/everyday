@@ -1,0 +1,11 @@
+{
+  "skill": "sleep-wind-down-reset",
+  "skillHash": "df1f0a6627f5c8b4401868669cebd4eb507d55701ef8234786c5032ae06110f0",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.221Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

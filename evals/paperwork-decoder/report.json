@@ -1,0 +1,11 @@
+{
+  "skill": "paperwork-decoder",
+  "skillHash": "3673a3bb9e95b01866b80d76ff2a89e5209c04921b57c9eaff007124e4bc77c9",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.211Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

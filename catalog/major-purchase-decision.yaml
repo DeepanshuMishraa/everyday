@@ -1,0 +1,20 @@
+slug: major-purchase-decision
+title: Major purchase decision
+category: money-and-consumer
+description: >-
+  Structure an expensive purchase around weighted needs, total cost of ownership, deal-breakers,
+  research gaps, and reversibility. Use when feature comparison is obscuring the real decision. Do
+  not recommend debt, investments, or unaffordable spending.
+outcome: A decision matrix, ownership-cost view, research gaps, and a clear decision rule.
+examples:
+  - Help us choose between these two cars.
+  - Is the premium appliance worth it for our use?
+  - Build criteria before I compare laptops.
+tags:
+  - purchase
+  - comparison
+  - decision
+  - total cost
+  - shopping
+version: 1.0.0
+updated: '2026-07-17'

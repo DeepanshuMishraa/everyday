@@ -1,0 +1,20 @@
+slug: household-reset-coordinator
+title: Household reset coordinator
+category: food-and-home
+description: >-
+  Convert a messy home and a fixed time window into a prioritized reset. Use when the agent should
+  separate sanitation and functional recovery from cosmetic tidying, then assign clear work across
+  the people available.
+outcome: A focused 15-, 30-, or 60-minute reset with ownership and a stopping point.
+examples:
+  - People arrive in 30 minutes and the house is chaos.
+  - Give two adults a 20-minute reset plan.
+  - I am exhausted; what matters most tonight?
+tags:
+  - cleaning
+  - chores
+  - home
+  - overwhelm
+  - household
+version: 1.0.0
+updated: '2026-07-17'

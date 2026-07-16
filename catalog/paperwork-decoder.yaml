@@ -1,0 +1,20 @@
+slug: paperwork-decoder
+title: Paperwork decoder
+category: life-administration
+description: >-
+  Translate a form, letter, or administrative notice into plain language, deadlines, required
+  documents, open questions, and a completion checklist. Use for organization and comprehension; do
+  not infer legal conclusions or invent missing policy details.
+outcome: A plain-language brief, document checklist, deadlines, and questions for the issuing body.
+examples:
+  - What is this letter actually asking me to do?
+  - Turn this application into a checklist.
+  - Which documents am I missing before I submit?
+tags:
+  - paperwork
+  - form
+  - letter
+  - deadline
+  - documents
+version: 1.0.0
+updated: '2026-07-17'

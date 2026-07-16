@@ -1,0 +1,20 @@
+slug: packing-by-scenario
+title: Packing by scenario
+category: decisions-learning-travel
+description: >-
+  Build a packing system from the itinerary, weather, activities, local norms, luggage limits,
+  laundry access, and consequences of forgetting an item. Use instead of a universal list; verify
+  current weather and carrier rules when available.
+outcome: A scenario-based packing list, wear-in-transit plan, critical-item check, and final sweep.
+examples:
+  - Pack for five days with one small carry-on.
+  - I need work, hiking, and one formal dinner.
+  - Prioritize what would be difficult to replace abroad.
+tags:
+  - packing
+  - travel
+  - luggage
+  - weather
+  - checklist
+version: 1.0.0
+updated: '2026-07-17'

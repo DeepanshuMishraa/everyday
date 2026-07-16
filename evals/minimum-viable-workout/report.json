@@ -1,0 +1,11 @@
+{
+  "skill": "minimum-viable-workout",
+  "skillHash": "a79e0453b89f64b6add581aab1b26879b50fbfb90ef92c7601d3f7d51cc427c7",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.220Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

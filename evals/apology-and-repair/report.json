@@ -1,0 +1,11 @@
+{
+  "skill": "apology-and-repair",
+  "skillHash": "6d6344639aca288274c062dd5c4978f0240724cf83fb934b8da4ca3954fea0b4",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.218Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

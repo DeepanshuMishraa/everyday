@@ -1,0 +1,11 @@
+{
+  "skill": "bill-calendar-builder",
+  "skillHash": "bad2ac54ec38911e9ed245e52c72a9773b8f13d6062b20dc4b1c01d5ac35d065",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.214Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}

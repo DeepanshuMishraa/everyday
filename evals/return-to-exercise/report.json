@@ -1,0 +1,11 @@
+{
+  "skill": "return-to-exercise",
+  "skillHash": "0f9b49219c1d1dc98528ca02addb20c033e32271ea2794b056077a7a8c2fc90c",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-16T19:51:27.220Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+}
