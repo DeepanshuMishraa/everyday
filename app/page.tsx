@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { categories } from "@/catalog/categories";
 import { SearchLibrary } from "@/components/SearchLibrary";
-import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { getAllSkills } from "@/lib/skills";
 import { absoluteUrl, site } from "@/lib/site";
@@ -34,20 +33,18 @@ export default function Home() {
     <SearchLibrary skills={metadata} categories={categories} />
     <section className="category-overview">
       <div className="wrap">
-        <Reveal className="section-heading">
+        <div className="section-heading">
           <div><p className="eyebrow">Six parts of everyday life</p><h2>Designed around situations, not personas.</h2></div>
           <p>Every category contains five practical skills. The constraint keeps the launch useful, legible, and reviewable.</p>
-        </Reveal>
+        </div>
         <div className="category-grid">
           {categories.map((category, index) => (
-            <Reveal key={category.slug} delay={index * 60}>
-              <Link href={`/categories/${category.slug}`} className={`category-block accent-${category.color}`}>
-                <span className="cat-index"><span className="cat-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")}</span>
-                <h3>{category.name}</h3>
-                <p>{category.description}</p>
-                <strong>Browse 5 skills <i aria-hidden="true">→</i></strong>
-              </Link>
-            </Reveal>
+            <Link key={category.slug} href={`/categories/${category.slug}`} className={`category-block accent-${category.color}`}>
+              <span className="cat-index"><span className="cat-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")}</span>
+              <h3>{category.name}</h3>
+              <p>{category.description}</p>
+              <strong>Browse 5 skills <i aria-hidden="true">→</i></strong>
+            </Link>
           ))}
         </div>
       </div>
