@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import MiniSearch from "minisearch";
 import { categories } from "../catalog/categories";
 import { getAllSkills } from "../lib/skills";
+import { createSkillSearch, searchSkills } from "../lib/skills/search";
 import { validateSkill } from "../lib/skills/validate";
 
 const skills = getAllSkills();
@@ -27,15 +27,22 @@ describe("launch catalog", () => {
   });
 
   it("covers the required natural-language searches", () => {
-    const index = new MiniSearch({ fields: ["title", "description", "outcome", "examples", "tags"], storeFields: ["slug"], searchOptions: { boost: { title: 3, tags: 2, examples: 1.5 }, fuzzy: 0.22, prefix: true } });
-    index.addAll(skills.map((skill) => ({ ...skill, id: skill.slug })));
+    const index = createSkillSearch(skills);
     const expected = new Map([
       ["I feel overwhelmed", "get-unstuck"],
+      ["I don't know where to start", "get-unstuck"],
       ["what can I cook", "cook-with-what-you-have"],
       ["suspicious text", "check-a-suspicious-message"],
       ["prepare for doctor", "prepare-for-an-appointment"],
       ["missed my workouts", "restart-working-out"],
+      ["cancel netflix", "audit-subscriptions"],
+      ["moving house", "plan-a-home-move"],
+      ["fight with my partner", "cool-down-an-angry-message"],
+      ["refund denied", "get-a-return-or-refund"],
+      ["pack for a holiday", "pack-for-a-trip"],
+      ["pay my bills", "organize-monthly-bills"],
+      ["I don't know what to choose", "make-a-hard-decision"],
     ]);
-    for (const [query, slug] of expected) expect(index.search(query)[0]?.slug).toBe(slug);
+    for (const [query, slug] of expected) expect(searchSkills(index, skills, query)[0]?.slug).toBe(slug);
   });
 });

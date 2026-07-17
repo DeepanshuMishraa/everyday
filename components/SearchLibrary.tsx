@@ -1,9 +1,9 @@
 "use client";
 
 import { track } from "@vercel/analytics";
-import MiniSearch from "minisearch";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { createSkillSearch, searchSkills } from "@/lib/skills/search";
 import type { CatalogSkill, Category } from "@/lib/types";
 
 type Props = { skills: CatalogSkill[]; categories: Category[] };
@@ -16,37 +16,10 @@ export function SearchLibrary({ skills, categories }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const ledgerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function onKeydown(event: KeyboardEvent) {
-      const target = event.target as HTMLElement | null;
-      const typing = target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable);
-      if (event.key === "/" && !typing) {
-        event.preventDefault();
-        inputRef.current?.focus();
-      }
-      if (event.key === "Escape" && target === inputRef.current) {
-        setQuery("");
-        inputRef.current?.blur();
-      }
-    }
-    window.addEventListener("keydown", onKeydown);
-    return () => window.removeEventListener("keydown", onKeydown);
-  }, []);
-
-  const search = useMemo(() => {
-    const index = new MiniSearch<CatalogSkill>({
-      fields: ["title", "description", "outcome", "examples", "tags"],
-      storeFields: ["slug"],
-      searchOptions: { boost: { title: 3, tags: 2, examples: 1.5 }, fuzzy: 0.22, prefix: true },
-    });
-    index.addAll(skills.map((skill) => ({ ...skill, id: skill.slug })));
-    return index;
-  }, [skills]);
+  const search = useMemo(() => createSkillSearch(skills), [skills]);
 
   const results = useMemo(() => {
-    const matching = query.trim()
-      ? search.search(query).map((result) => skills.find((skill) => skill.slug === result.slug)!).filter(Boolean)
-      : skills;
+    const matching = searchSkills(search, skills, query);
     return category === "all" ? matching : matching.filter((skill) => skill.category === category);
   }, [category, query, search, skills]);
 
@@ -80,7 +53,20 @@ export function SearchLibrary({ skills, categories }: Props) {
         <label className="visually-hidden" htmlFor="skill-search">What are you trying to handle?</label>
         <div className={`search-box${query ? " has-query" : ""}`}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
-          <input ref={inputRef} id="skill-search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Describe the situation…" autoComplete="off" />
+          <input
+            ref={inputRef}
+            id="skill-search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                setQuery("");
+                event.currentTarget.blur();
+              }
+            }}
+            placeholder="Describe the situation…"
+            autoComplete="off"
+          />
           <kbd className="kbd" aria-hidden="true">/</kbd>
         </div>
         <div className="search-examples">

@@ -4,13 +4,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { clientBootScript } from "@/lib/client-boot";
 import { absoluteUrl, site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
-
-const themeScript = `try{var t=localStorage.getItem("everyday-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} data-theme="light" suppressHydrationWarning>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: clientBootScript }} />
         <JsonLd data={{
           "@context": "https://schema.org",
           "@graph": [
