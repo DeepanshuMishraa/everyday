@@ -1,0 +1,102 @@
+evals/plan-weeknight-meals/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/layout.tsx
+  s_1efea9966df2ee::t_da2b56dd952857 8,23
+evals/build-a-bedtime-routine/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/page.tsx
+  s_1efea9966df2ee::t_da2b56dd952857 15,30
+evals/compare-a-big-purchase/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+README.md
+  s_1efea9966df2ee::t_8bde836139d6bc 32,36,38-40
+evals/cool-down-an-angry-message/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/split-household-chores/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/cook-with-what-you-have/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/plan-a-home-move/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/make-a-hard-decision/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/check-a-suspicious-message/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+scripts/validate-skills.ts
+  s_1efea9966df2ee::t_0f3188780f7de1 40,48
+evals/learn-by-doing/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/audit-subscriptions/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/handle-a-home-repair/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/clean-your-home-fast/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/globals.css
+  s_1efea9966df2ee::t_8c44817d78a258 137-138,169
+evals/get-a-return-or-refund/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/prepare-for-an-appointment/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/skills/[slug]/page.tsx
+  s_1efea9966df2ee::t_0f3188780f7de1 22,34
+evals/restart-working-out/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/restart-a-habit/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/set-a-boundary/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/write-an-apology/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/coordinate-family-care/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/organize-monthly-bills/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/methodology/page.tsx
+  s_1efea9966df2ee::t_8bde836139d6bc 5-8,13,16-17
+  s_1efea9966df2ee::t_da2b56dd952857 15
+evals/plan-your-week/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/PROTOCOL.md
+  s_1efea9966df2ee::t_8bde836139d6bc 1,3,9-12,14-18
+evals/get-unstuck/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/move-more-at-your-desk/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+scripts/check-evals.ts
+  s_1efea9966df2ee::t_9e153018b6a1c0 11,21,31-33,42-45,47-49,51-54,57
+evals/pack-for-a-trip/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+lib/types.ts
+  s_1efea9966df2ee::t_0f3188780f7de1 50,58,65-67
+evals/plan-a-gathering/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/prepare-for-travel-delays/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/restart-a-personal-project/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+components/EvaluationReportView.tsx
+  s_1efea9966df2ee::t_bd0f9612239f7f 12-13,15-18,23-24,26-30,32,37,39-40
+evals/shorten-a-workout/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+evals/understand-paperwork/report.json
+  s_1efea9966df2ee::t_eeffc26a8b8b07 5,8-10,15-17,34,52,70,88,105,122,139-140,156-157,174,191,195
+app/install/page.tsx
+  s_1efea9966df2ee::t_da2b56dd952857 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "33ec39eafe95c281c86257ea15c6474f15271cd7",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
