@@ -1,0 +1,33 @@
+app/layout.tsx
+  s_1efea9966df2ee::t_f5beee7d046e07 67,70-80
+components/SearchLibrary.tsx
+  s_1efea9966df2ee::t_b6c5c87d5e322d 56-57,62,123-125
+  s_1efea9966df2ee::t_b0e57d769f3968 97,99,103,121-122,126
+  s_1efea9966df2ee::t_f6df2366774236 10,15,17,53-55,58-61,63-67,98,102,104,114,127
+app/globals.css
+  s_1efea9966df2ee::t_b0e57d769f3968 153,156-169,171,173,176,178-179,181,183,194,196-197,199,214,216-223,283,300-301,308-321,610-612,615-616,622-623
+app/skills/[slug]/opengraph-image.tsx
+  s_1efea9966df2ee::t_92e2c18a6ddaf1 16-17,19,21-23,26-27
+  s_1efea9966df2ee::t_102c8c8007402d 18,25
+app/page.tsx
+  s_1efea9966df2ee::t_f5beee7d046e07 26-31
+app/opengraph-image.tsx
+  s_1efea9966df2ee::t_102c8c8007402d 13,20-21
+  s_1efea9966df2ee::t_5ed5073563f9d2 11-12,14,16-18,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "cc47e161581c4a62ccf6ada42880916b8370df7e",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
