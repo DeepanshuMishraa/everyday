@@ -1,0 +1,191 @@
+evals/cool-down-an-angry-message/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/coordinate-family-care/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+scripts/validate-skills.ts
+  s_1efea9966df2ee::t_f162f604d6e39f 8,27-28,39-40,44
+evals/learn-by-doing/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+README.md
+  s_1efea9966df2ee::t_bd9c312721365a 36
+evals/compare-a-big-purchase/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-182,185-187,189-191
+evals/plan-weeknight-meals/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/audit-subscriptions/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/build-a-bedtime-routine/report.json
+  s_1efea9966df2ee::t_6c75dfe04523a9 3
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/set-a-boundary/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-182,185-189,191-193
+evals/plan-your-week/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,102,105-107,109-111,123-125,127-129,141-143,145-147,157-158,161-164,166-168,178-179,182-186,188-190
+evals/prepare-for-an-appointment/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/shorten-a-workout/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-182,185-189,191-193
+evals/make-a-hard-decision/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,181-182,185-187,189-191
+evals/prepare-for-travel-delays/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-14,16-18,30-35,37-39,51-56,58-60,70-71,74-79,81-83,93-94,97-99,101-103,113-114,117-119,121-123,135-137,139-141,153-155,157-159,169-170,173-178,180-182,192-193,196-198,200-202
+lib/types.ts
+  s_1efea9966df2ee::t_f162f604d6e39f 37
+  s_1efea9966df2ee::t_bd9c312721365a 26
+evals/pack-for-a-trip/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/audit-subscriptions/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-191,193-195
+evals/restart-a-personal-project/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/plan-your-week/report.json
+  s_1efea9966df2ee::t_6c75dfe04523a9 3
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/restart-working-out/report.json
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/handle-a-home-repair/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/move-more-at-your-desk/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-189,191-193
+evals/understand-paperwork/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/move-more-at-your-desk/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/PROTOCOL.md
+  s_1efea9966df2ee::t_bd9c312721365a 16
+skills/build-a-bedtime-routine/SKILL.md
+  s_1efea9966df2ee::t_662af80ca55580 14,26
+evals/plan-weeknight-meals/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-183,186-188,190-192
+evals/restart-working-out/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-181,184-186,188-190
+scripts/check-evals.ts
+  s_1efea9966df2ee::t_f162f604d6e39f 4,24-25,28
+  s_1efea9966df2ee::t_6f1a72cf67ad37 3,30,34-35,42,46,49-50,55
+  s_1efea9966df2ee::t_d2a0f4657171fa 14-15,36-41
+  s_1efea9966df2ee::t_36929a277322bd 31,44-45,47-48,51-54,56-58
+evals/get-unstuck/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/cook-with-what-you-have/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/cool-down-an-angry-message/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85,89-91,93-95,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,183-184,187-189,191-193
+evals/organize-monthly-bills/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/learn-by-doing/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85,89-91,93-95,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-191,193-195
+evals/clean-your-home-fast/report.json
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/pack-for-a-trip/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-183,186-188,190-192
+evals/understand-paperwork/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-183,186-188,190-192
+evals/build-a-bedtime-routine/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-191,193-195
+evals/check-a-suspicious-message/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/set-a-boundary/report.json
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/coordinate-family-care/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-183,186-188,190-192
+evals/split-household-chores/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-189,191-193
+evals/plan-a-gathering/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/handle-a-home-repair/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-182,185-187,189-191
+evals/shorten-a-workout/report.json
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/write-an-apology/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,181-182,185-187,189-191
+skills/plan-your-week/SKILL.md
+  s_1efea9966df2ee::t_662af80ca55580 10-11
+evals/plan-a-gathering/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-181,184-186,188-190
+evals/organize-monthly-bills/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,181-182,185-187,189-191
+evals/clean-your-home-fast/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,102,105-107,109-111,123-125,127-129,141-143,145-147,157-158,161-164,166-168,178-180,183-187,189-191
+evals/plan-a-home-move/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-189,191-193
+lib/skills/index.ts
+  s_1efea9966df2ee::t_bd9c312721365a 49,56
+evals/compare-a-big-purchase/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/prepare-for-an-appointment/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-183,186-188,190-192
+evals/prepare-for-travel-delays/report.json
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+evals/restart-a-habit/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/cook-with-what-you-have/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-181,184-186,188-190
+evals/get-a-return-or-refund/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-181,184-186,188-190
+evals/split-household-chores/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/get-unstuck/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,180-182,185-187,189-191
+app/skills/[slug]/page.tsx
+  s_1efea9966df2ee::t_bd9c312721365a 20,37
+evals/write-an-apology/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/restart-a-personal-project/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,103-104,107-109,111-113,125-127,129-131,143-145,147-149,159-160,163-166,168-170,184-186,188-190
+evals/plan-a-home-move/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/make-a-hard-decision/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/restart-a-habit/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,84,87-89,91-93,102,105-107,109-111,123-125,127-129,141-143,145-147,157-158,161-164,166-168,178-180,183-187,189-191
+evals/get-a-return-or-refund/report.json
+  s_1efea9966df2ee::t_0120805cd47fdf 4,7-8,15
+  s_1efea9966df2ee::t_e2f09581bbc17b 5-6,9,14,16-266
+evals/check-a-suspicious-message/suite.yaml
+  s_1efea9966df2ee::t_6c75dfe04523a9 9-12,14-16,28-31,33-35,47-50,52-54,64-65,68-71,73-75,85-86,89-91,93-95,105-106,109-111,113-115,127-129,131-133,145-147,149-151,161-162,165-168,170-172,182-184,187-189,191-193
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "6077978908ea509f40b7952dbe03c2f946b7a2a3",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
