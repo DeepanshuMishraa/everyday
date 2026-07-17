@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shorten a Workout"
+  short_description: "Practical guidance to shorten a workout"
+  default_prompt: "Use $shorten-a-workout to help me: Turn my 60-minute workout into 20 minutes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organize Monthly Bills"
+  short_description: "Practical guidance to organize monthly bills"
+  default_prompt: "Use $organize-monthly-bills to help me: Map my bills against two monthly paydays."

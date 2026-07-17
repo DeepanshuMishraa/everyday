@@ -1,0 +1,11 @@
+{
+  "skill": "audit-subscriptions",
+  "skillHash": "3286af54fa77fce5efb9ffff0e44abca01f471228ca26e1d7457090e643332bf",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.344Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

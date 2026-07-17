@@ -1,0 +1,20 @@
+slug: prepare-for-travel-delays
+title: Prepare for Travel Delays
+category: decisions-learning-travel
+description: >-
+  Check a flight, train, bus, ferry, or multi-leg travel day for tight connections and prepare for
+  delays, cancellation, missed transport, dead phones, and lost luggage. Use when the user needs a
+  timeline and compact offline fallback brief for a specific itinerary.
+outcome: A risk-audited timeline and compact offline fallback brief for disruptions.
+examples:
+  - Audit this itinerary for a tight connection.
+  - What should I save offline before the trip?
+  - Make a plan for delayed bags and a missed last train.
+tags:
+  - travel day
+  - flight
+  - connection
+  - delay
+  - offline
+version: 2.0.0
+updated: '2026-07-17'

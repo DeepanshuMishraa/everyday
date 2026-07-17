@@ -1,0 +1,11 @@
+{
+  "skill": "plan-your-week",
+  "skillHash": "de4fb18ff6eeed501d6cb4b7f34eec5627c533c9919c1404126467773458a271",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.364Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

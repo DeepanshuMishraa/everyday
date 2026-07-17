@@ -1,0 +1,11 @@
+{
+  "skill": "plan-weeknight-meals",
+  "skillHash": "052e36ee42bc542da89ead11578fb13f094956a3c79538f129fca4c000cb14c8",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.363Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

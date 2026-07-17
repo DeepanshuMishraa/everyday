@@ -1,0 +1,4 @@
+interface:
+  display_name: "Get Unstuck"
+  short_description: "Practical guidance to get unstuck"
+  default_prompt: "Use $get-unstuck to help me: I feel overwhelmed and do not know where to begin."

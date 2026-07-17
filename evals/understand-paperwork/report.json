@@ -1,0 +1,11 @@
+{
+  "skill": "understand-paperwork",
+  "skillHash": "ffd8e03f6e5bd1ef93b424781c22975d2f79dbade38b0f71ac24eca4c81be2a7",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.368Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

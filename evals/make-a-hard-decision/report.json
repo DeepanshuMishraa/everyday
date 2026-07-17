@@ -1,0 +1,11 @@
+{
+  "skill": "make-a-hard-decision",
+  "skillHash": "05870824beed1bc4c77bcb3ae56db966a9ece856dbd9f055023a734445739559",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.357Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

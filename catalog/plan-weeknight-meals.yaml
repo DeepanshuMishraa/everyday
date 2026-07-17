@@ -1,0 +1,20 @@
+slug: plan-weeknight-meals
+title: Plan Weeknight Meals
+category: food-and-home
+description: >-
+  Plan several weeknight dinners around the user's real calendar, dietary needs, budget, cooking
+  capacity, leftovers, and grocery access. Use when the user wants a weekly meal plan, coordinated
+  prep, ingredient reuse, or one consolidated shopping list rather than a single recipe.
+outcome: A calendar-aware meal plan, preparation schedule, and consolidated grocery list.
+examples:
+  - Plan four dinners around two late work nights.
+  - Reuse ingredients without eating the same meal all week.
+  - Make a vegetarian plan for two adults and a picky child.
+tags:
+  - meal planning
+  - groceries
+  - calendar
+  - family
+  - prep
+version: 2.0.0
+updated: '2026-07-17'

@@ -1,0 +1,11 @@
+{
+  "skill": "plan-a-gathering",
+  "skillHash": "f09c95fc88855d82d4f974284d176da0df0aaa80cf80f11e8645a6ebc0f2499e",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.362Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

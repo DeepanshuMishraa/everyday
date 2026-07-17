@@ -1,0 +1,20 @@
+slug: check-a-suspicious-message
+title: Check a Suspicious Message
+category: money-and-consumer
+description: >-
+  Check whether an email, text, direct message, marketplace request, or phone follow-up shows signs
+  of a scam or phishing attempt. Use when the user needs a risk assessment and safe verification
+  steps without clicking links, replying, calling supplied numbers, or opening attachments.
+outcome: A risk assessment, suspicious signals, safe verification route, and account-protection steps.
+examples:
+  - Is this suspicious text from my bank real?
+  - A buyer wants me to pay a courier first.
+  - Check this urgent password-reset email without opening the link.
+tags:
+  - scam
+  - phishing
+  - suspicious text
+  - fraud
+  - verification
+version: 2.0.0
+updated: '2026-07-17'

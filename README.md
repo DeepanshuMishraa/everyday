@@ -1,6 +1,6 @@
 # Good Work — Everyday Agent Skills
 
-A static Next.js field guide containing exactly 30 installable, non-developer `SKILL.md` procedures for recurring real-life situations.
+A static Next.js field guide containing exactly 30 installable, non-developer skill packages for recurring real-life situations.
 
 ## Local setup
 
@@ -21,27 +21,18 @@ Deploy the generated Next.js project to Vercel, or host `out/` on any static hos
 
 ## Content workflow
 
-The authoring records live in `catalog/skills.ts` and `catalog/specs.ts`. Generate installable files, YAML catalog records, and evaluation fixtures with:
+Each installable package lives in `skills/<slug>/`. `SKILL.md` is the entry point; add focused Markdown references, scripts, or assets only when the procedure needs them. Discovery metadata lives in `agents/openai.yaml`. Website metadata remains in `catalog/<slug>.yaml`, and tests remain outside the installed package in `evals/<slug>/`.
 
 ```bash
-npm run generate
 npm run validate
 ```
 
-The validator enforces exactly 30 skill folders, frontmatter, required sections, description and body limits, suite size, catalog consistency, safety linting, and SHA-256-bound reports.
+The validator enforces exactly 30 skill folders, valid frontmatter and agent metadata, resolved package links, suite size, catalog consistency, and SHA-256 reports bound to every file in the package.
 
-## Model evaluation
+## Codex evaluation
 
 Every suite contains 10 scenarios: four normal, two clarification, two negative-routing, one difficult edge, and one adversarial safety case.
 
-```bash
-OPENAI_API_KEY=... npm run eval -- --skill=fridge-to-table-rescue
-```
+No API or automated model judge is used. Codex reads the exact package and its ten scenarios, performs each routing, quality, and safety judgment, and records written evidence in the hash-bound report. See `evals/PROTOCOL.md` for the review contract. `npm run check-evals` verifies completed reviews and reports pending ones without inventing semantic scores.
 
-This runs randomized blind baseline-versus-skill comparisons. It may make many paid model calls, so run one skill first and inspect the generated report. Automated success remains `pending` until a human reviews all ten results and signs it:
-
-```bash
-npm run approve-eval -- --skill=fridge-to-table-rescue --reviewer="Reviewer Name"
-```
-
-Editing `SKILL.md` changes its hash; the next validation removes any stale tested status.
+Editing any package file changes its hash; the next validation removes any stale tested status.

@@ -1,0 +1,21 @@
+slug: prepare-for-an-appointment
+title: Prepare for an Appointment
+category: life-administration
+description: >-
+  Prepare for a medical, financial, school, legal, or professional appointment by organizing the
+  goal, timeline, documents, and highest-priority questions. Use when the user wants a concise brief
+  they can bring into a limited-time meeting without asking the agent to diagnose or decide for the
+  professional.
+outcome: A one-page appointment brief with chronology, evidence, top questions, and desired outcome.
+examples:
+  - Help me prepare for a doctor appointment.
+  - I need a clear brief for a school meeting.
+  - Organize my questions before I meet the accountant.
+tags:
+  - appointment
+  - doctor
+  - meeting
+  - questions
+  - brief
+version: 2.0.0
+updated: '2026-07-17'

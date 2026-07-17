@@ -1,0 +1,20 @@
+slug: audit-subscriptions
+title: Audit and Cancel Subscriptions
+category: money-and-consumer
+description: >-
+  Find, review, downgrade, and cancel recurring subscriptions using actual charges, usage, renewal
+  dates, and cancellation evidence. Use when the user wants to stop forgotten memberships, reduce
+  recurring costs, or verify that a cancellation really took effect.
+outcome: A keep/cancel/review table, ordered cancellation plan, and verification checklist.
+examples:
+  - Help me audit these recurring charges.
+  - Which subscriptions should I review first?
+  - Make sure I preserve proof after canceling.
+tags:
+  - subscriptions
+  - cancel
+  - renewal
+  - recurring charges
+  - audit
+version: 2.0.0
+updated: '2026-07-17'

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cool Down an Angry Message"
+  short_description: "Practical guidance to cool down an angry message"
+  default_prompt: "Use $cool-down-an-angry-message to help me: Should I send this angry text tonight?"

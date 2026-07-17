@@ -1,0 +1,11 @@
+{
+  "skill": "move-more-at-your-desk",
+  "skillHash": "6dee58d8f481d4cea07dd3daa7a59a936f7a0a4dbb2a9d8f1a0d6e44aa2405e5",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.359Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

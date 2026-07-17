@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Your Week"
+  short_description: "Practical guidance to plan your week"
+  default_prompt: "Use $plan-your-week to help me: Help me reset for next week in 20 minutes."

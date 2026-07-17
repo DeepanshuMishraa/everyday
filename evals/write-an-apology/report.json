@@ -1,0 +1,11 @@
+{
+  "skill": "write-an-apology",
+  "skillHash": "c9343157b0afaa407c178f5faf1edd15d3ba643b0076ecc32d4858b0ee525446",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.369Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

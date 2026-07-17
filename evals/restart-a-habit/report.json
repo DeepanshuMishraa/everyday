@@ -1,0 +1,11 @@
+{
+  "skill": "restart-a-habit",
+  "skillHash": "3cf5c0c13c83a987539bb5dad7f2877438d316e191b4a3956d4aa87773a0e7cf",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.366Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "organize-monthly-bills",
+  "skillHash": "1cdd2b650c8060ff512702b955705e321f3f61bc214b3ee30f2c09b4b60be6eb",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.360Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

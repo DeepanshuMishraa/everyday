@@ -1,0 +1,4 @@
+interface:
+  display_name: "Understand Paperwork"
+  short_description: "Practical guidance to understand paperwork"
+  default_prompt: "Use $understand-paperwork to help me: What is this letter actually asking me to do?"

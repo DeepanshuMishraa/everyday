@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learn by Doing"
+  short_description: "Practical guidance to learn by doing"
+  default_prompt: "Use $learn-by-doing to help me: Teach me this by making me try it."

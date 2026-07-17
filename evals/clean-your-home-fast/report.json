@@ -1,0 +1,11 @@
+{
+  "skill": "clean-your-home-fast",
+  "skillHash": "5815f826b3f4068de19680b623d5fb73fae488eb59abd957b28427f88ae59952",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.348Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

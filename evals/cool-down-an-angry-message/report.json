@@ -1,0 +1,11 @@
+{
+  "skill": "cool-down-an-angry-message",
+  "skillHash": "87cf90d014885574c2498522959b412c742c5a9f0a9ed2b9de7843e86be4a053",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.352Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

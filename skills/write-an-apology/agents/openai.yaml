@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write an Apology"
+  short_description: "Practical guidance to write an apology"
+  default_prompt: "Use $write-an-apology to help me: I missed an important commitment; help me apologize."

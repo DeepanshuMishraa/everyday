@@ -1,0 +1,20 @@
+slug: pack-for-a-trip
+title: Pack for a Trip
+category: decisions-learning-travel
+description: >-
+  Build a packing list from a real trip's destination, weather, itinerary, activities, local norms,
+  luggage limits, laundry, and replacement risk. Use when the user wants to pack light, use a
+  carry-on, cover several scenarios, or avoid a generic universal list.
+outcome: A scenario-based packing list, wear-in-transit plan, critical-item check, and final sweep.
+examples:
+  - Pack for five days with one small carry-on.
+  - I need work, hiking, and one formal dinner.
+  - Prioritize what would be difficult to replace abroad.
+tags:
+  - packing
+  - travel
+  - luggage
+  - weather
+  - checklist
+version: 2.0.0
+updated: '2026-07-17'

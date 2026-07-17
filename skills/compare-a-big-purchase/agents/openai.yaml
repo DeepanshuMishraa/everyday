@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compare a Big Purchase"
+  short_description: "Practical guidance to compare a big purchase"
+  default_prompt: "Use $compare-a-big-purchase to help me: Help us choose between these two cars."

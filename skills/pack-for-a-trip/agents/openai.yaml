@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pack for a Trip"
+  short_description: "Practical guidance to pack for a trip"
+  default_prompt: "Use $pack-for-a-trip to help me: Pack for five days with one small carry-on."

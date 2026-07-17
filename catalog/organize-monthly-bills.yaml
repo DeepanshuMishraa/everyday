@@ -1,0 +1,20 @@
+slug: organize-monthly-bills
+title: Organize Monthly Bills
+category: money-and-consumer
+description: >-
+  Put income dates, recurring bills, variable essentials, and due dates into a monthly bill
+  calendar. Use when the user wants payment reminders, needs to see which weeks are tight, or wants
+  to organize cash-flow timing without receiving borrowing, debt, or investment advice.
+outcome: A dated bill calendar, pressure-point warnings, and a reminder schedule.
+examples:
+  - Map my bills against two monthly paydays.
+  - Which week is likely to be tight?
+  - Turn these due dates into reminders.
+tags:
+  - bills
+  - budget
+  - calendar
+  - cash flow
+  - payments
+version: 2.0.0
+updated: '2026-07-17'

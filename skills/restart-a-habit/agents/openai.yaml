@@ -1,0 +1,4 @@
+interface:
+  display_name: "Restart a Habit"
+  short_description: "Practical guidance to restart a habit"
+  default_prompt: "Use $restart-a-habit to help me: I broke my routine and cannot get going again."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check a Suspicious Message"
+  short_description: "Practical guidance to check a suspicious message"
+  default_prompt: "Use $check-a-suspicious-message to help me: Is this suspicious text from my bank real?"

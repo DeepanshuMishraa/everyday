@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Gathering"
+  short_description: "Practical guidance to plan a gathering"
+  default_prompt: "Use $plan-a-gathering to help me: Eight people are coming Saturday; where do I start?"

@@ -1,0 +1,20 @@
+slug: cook-with-what-you-have
+title: Cook With What You Have
+category: food-and-home
+description: >-
+  Turn ingredients already in the fridge, freezer, or pantry into a practical meal. Use when the
+  user asks what to cook, needs to use food before it spoils, has limited time or equipment, or
+  wants substitutions and a cooking order from an incomplete set of ingredients.
+outcome: One feasible meal, substitutions, a parallel cooking order, and a leftover plan.
+examples:
+  - What can I cook with half a cabbage, eggs, and rice?
+  - I have 25 minutes and only one pan.
+  - Use the spinach tonight before it goes bad.
+tags:
+  - cooking
+  - ingredients
+  - leftovers
+  - meal
+  - low energy
+version: 2.0.0
+updated: '2026-07-17'

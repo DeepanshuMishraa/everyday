@@ -1,0 +1,11 @@
+{
+  "skill": "prepare-for-travel-delays",
+  "skillHash": "def84b312ff5bfee3e20b23c0fe4e3a51ce00882715c9da044d0881fb59d6b10",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.365Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

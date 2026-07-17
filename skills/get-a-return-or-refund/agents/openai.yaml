@@ -1,0 +1,4 @@
+interface:
+  display_name: "Get a Return or Refund"
+  short_description: "Practical guidance to get a return or refund"
+  default_prompt: "Use $get-a-return-or-refund to help me: The seller stopped replying about my refund."

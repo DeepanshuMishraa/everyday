@@ -1,0 +1,20 @@
+slug: make-a-hard-decision
+title: Make a Hard Decision
+category: decisions-learning-travel
+description: >-
+  Think through a consequential personal or work decision and record the reasoning before the
+  outcome is known. Use when the user is choosing between real alternatives, wants a premortem,
+  needs to separate reversible from irreversible choices, or wants to review decision quality later.
+outcome: A timestamped decision record with assumptions, confidence, safeguards, and review trigger.
+examples:
+  - Create a journal entry for this job decision.
+  - Run a premortem before I commit.
+  - Help me record what I believe now so hindsight cannot rewrite it.
+tags:
+  - decision
+  - journal
+  - premortem
+  - uncertainty
+  - review
+version: 2.0.0
+updated: '2026-07-17'

@@ -8,17 +8,15 @@
     "start": "next start",
     "validate": "node --import tsx scripts/validate-skills.ts",
     "test": "vitest run",
-    "eval": "node --import tsx scripts/run-evals.ts",
-    "approve-eval": "node --import tsx scripts/approve-eval.ts",
-    "generate": "node --import tsx scripts/generate-all.ts"
+    "check-evals": "node --import tsx scripts/check-evals.ts"
   },
   "dependencies": {
     "@vercel/analytics": "latest",
+    "fflate": "^0.8.3",
     "gray-matter": "latest",
     "js-yaml": "latest",
     "minisearch": "latest",
     "next": "latest",
-    "openai": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-markdown": "latest",

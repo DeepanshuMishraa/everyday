@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Weeknight Meals"
+  short_description: "Practical guidance to plan weeknight meals"
+  default_prompt: "Use $plan-weeknight-meals to help me: Plan four dinners around two late work nights."

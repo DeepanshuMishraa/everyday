@@ -1,0 +1,11 @@
+{
+  "skill": "get-unstuck",
+  "skillHash": "c93fbb04f7eed22815b859310f528af477a3f0ff1172dcef1fd4c9021f991248",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.355Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

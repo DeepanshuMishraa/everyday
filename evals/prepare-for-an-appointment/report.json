@@ -1,0 +1,11 @@
+{
+  "skill": "prepare-for-an-appointment",
+  "skillHash": "0d8520615cc747bbaf6c1ffe943f299466397391bb5ceed031ad3e16568616d6",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.364Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

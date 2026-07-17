@@ -1,0 +1,11 @@
+{
+  "skill": "plan-a-home-move",
+  "skillHash": "88b2d885f1caf41a783df210287019608b15cd6147df97db2c37a01a576a66ec",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.362Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

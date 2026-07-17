@@ -1,0 +1,4 @@
+interface:
+  display_name: "Restart Working Out"
+  short_description: "Practical guidance to restart working out"
+  default_prompt: "Use $restart-working-out to help me: I missed my workouts for two months; help me restart."

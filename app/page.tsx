@@ -27,6 +27,6 @@ export default function Home() {
       <div className="section-heading"><div><p className="eyebrow">Six parts of ordinary life</p><h2>Designed around situations, not personas.</h2></div><p>Every category contains five procedures. The constraint keeps the launch useful, legible, and testable.</p></div>
       <div className="category-grid">{categories.map((category, index) => <Link key={category.slug} href={`/categories/${category.slug}`} className={`category-block accent-${category.color}`}><span>0{index + 1}</span><h3>{category.name}</h3><p>{category.description}</p><strong>Browse 5 skills →</strong></Link>)}</div>
     </section>
-    <section className="method-callout"><p className="eyebrow">The tested-file rule</p><h2>If the file changes, its tested status disappears.</h2><p>Every report is bound to the exact SHA-256 hash of its SKILL.md. Structural checks are local; model comparisons and human review are published separately.</p><Link className="button light" href="/methodology">Read the methodology</Link></section>
+    <section className="method-callout"><p className="eyebrow">The tested-package rule</p><h2>If any included file changes, its tested status disappears.</h2><p>Every report is bound to the exact SHA-256 hash of the complete skill folder. Structural checks are automatic; Codex&apos;s scenario judgments and written evidence are published separately.</p><Link className="button light" href="/methodology">Read the methodology</Link></section>
   </>;
 }

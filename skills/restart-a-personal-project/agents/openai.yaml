@@ -1,0 +1,4 @@
+interface:
+  display_name: "Restart a Personal Project"
+  short_description: "Practical guidance to restart a personal project"
+  default_prompt: "Use $restart-a-personal-project to help me: I abandoned this project three months ago; help me restart."

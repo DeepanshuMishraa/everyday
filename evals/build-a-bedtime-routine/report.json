@@ -1,0 +1,11 @@
+{
+  "skill": "build-a-bedtime-routine",
+  "skillHash": "9f0a865bf88beda078df31cf184f44d20cf96f8700de830dac1f0b9c2f13331a",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.346Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

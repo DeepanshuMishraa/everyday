@@ -1,0 +1,11 @@
+{
+  "skill": "compare-a-big-purchase",
+  "skillHash": "47392d9b2faef8ff0bcbbd2a7c22e931b4cdbfda9b83a89f57127d82fe86a07d",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.349Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

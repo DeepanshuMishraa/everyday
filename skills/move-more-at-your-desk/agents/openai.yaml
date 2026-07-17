@@ -1,0 +1,4 @@
+interface:
+  display_name: "Move More at Your Desk"
+  short_description: "Practical guidance to move more at your desk"
+  default_prompt: "Use $move-more-at-your-desk to help me: Fit movement into a day of back-to-back meetings."

@@ -1,0 +1,11 @@
+{
+  "skill": "coordinate-family-care",
+  "skillHash": "77e91f8171ed72b0a4342372b073604dcb3d8a7e62d67f75bff808a3446896fc",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.353Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

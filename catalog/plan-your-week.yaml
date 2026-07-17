@@ -1,0 +1,20 @@
+slug: plan-your-week
+title: Plan Your Week
+category: life-administration
+description: >-
+  Review the next seven days and create a realistic weekly plan across appointments, home, food,
+  money, relationships, and unfinished commitments. Use when the user asks for a weekly reset,
+  Sunday planning session, calendar cleanup, or help deciding what genuinely fits this week.
+outcome: A short review, resolved loose ends, and a capacity-aware plan for the next seven days.
+examples:
+  - Help me reset for next week in 20 minutes.
+  - My calendar and chores are getting away from me.
+  - Turn these loose ends into a realistic week.
+tags:
+  - weekly review
+  - planning
+  - calendar
+  - life admin
+  - reset
+version: 2.0.0
+updated: '2026-07-17'

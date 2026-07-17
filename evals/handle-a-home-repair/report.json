@@ -1,0 +1,11 @@
+{
+  "skill": "handle-a-home-repair",
+  "skillHash": "ce41a2c474d51f760bbe5ec3bbe66298167a083f9f0697db93ffcfed6651eba3",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.355Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

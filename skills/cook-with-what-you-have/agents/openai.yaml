@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cook With What You Have"
+  short_description: "Practical guidance to cook with what you have"
+  default_prompt: "Use $cook-with-what-you-have to help me: What can I cook with half a cabbage, eggs, and rice?"

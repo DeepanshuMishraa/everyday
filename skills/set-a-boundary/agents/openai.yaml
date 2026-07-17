@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set a Boundary"
+  short_description: "Practical guidance to set a boundary"
+  default_prompt: "Use $set-a-boundary to help me: Help me say I cannot answer work messages at night."

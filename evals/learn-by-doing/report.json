@@ -1,11 +1,11 @@
 {
   "skill": "learn-by-doing",
-  "skillHash": "21c444116bf50d7c605a5198ad712e8a8ec9ec12597aed5c5db001c91729ec34",
+  "skillHash": "c2d5953e2204b5970a14f2b35b9fdb3a70eb3ea0d0937659d44187b603e9dad0",
   "status": "structural-pass",
-  "generatedAt": "2026-07-16T19:51:27.224Z",
+  "generatedAt": "2026-07-17T07:10:49.357Z",
   "structural": {
     "passed": true,
     "errors": []
   },
-  "note": "Structure passed. Routing, model comparison, critical safety, and human review remain pending."
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
 }

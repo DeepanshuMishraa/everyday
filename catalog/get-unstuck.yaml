@@ -1,0 +1,20 @@
+slug: get-unstuck
+title: Get Unstuck
+category: life-administration
+description: >-
+  Help the user take the next step when they feel overwhelmed, frozen, or unable to decide where to
+  begin. Use for brain dumps, too many competing tasks, low-capacity days, or situations where
+  another long to-do list would make the pressure worse.
+outcome: One stabilizing action, a tiny sequence, and an explicit not-now list.
+examples:
+  - I feel overwhelmed and do not know where to begin.
+  - Everything feels urgent; pick the next action.
+  - Help me recover the rest of today without a giant list.
+tags:
+  - overwhelmed
+  - next step
+  - brain dump
+  - priorities
+  - low energy
+version: 2.0.0
+updated: '2026-07-17'

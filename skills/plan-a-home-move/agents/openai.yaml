@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan a Home Move"
+  short_description: "Practical guidance to plan a home move"
+  default_prompt: "Use $plan-a-home-move to help me: We move in six weeks; build the plan."

@@ -1,0 +1,11 @@
+{
+  "skill": "restart-a-personal-project",
+  "skillHash": "b9431008ceb1f898de671e023dabf17477eb8fa5b43adbbd71cf280417ea9a66",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.366Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

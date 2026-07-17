@@ -19,12 +19,16 @@ export type CatalogSkill = {
 };
 
 export type SkillDocument = CatalogSkill & {
+  files: SkillPackageFile[];
   markdown: string;
   body: string;
   hash: string;
   lineCount: number;
+  fileCount: number;
   evaluation: EvaluationReport | null;
 };
+
+export type SkillPackageFile = { path: string; content: string; lineCount: number };
 
 export type EvaluationReport = {
   skill: string;

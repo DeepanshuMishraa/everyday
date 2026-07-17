@@ -1,0 +1,11 @@
+{
+  "skill": "cook-with-what-you-have",
+  "skillHash": "7c8ab2472008dc7b0edce5d67fff301e4a9973dedf7d06b20cb1618be2ee8f7c",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.351Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

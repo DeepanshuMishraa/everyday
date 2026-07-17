@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Household Chores Fairly"
+  short_description: "Practical guidance to split household chores fairly"
+  default_prompt: "Use $split-household-chores to help me: We keep arguing about who notices the chores."

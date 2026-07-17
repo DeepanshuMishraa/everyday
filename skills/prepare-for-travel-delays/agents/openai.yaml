@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for Travel Delays"
+  short_description: "Practical guidance to prepare for travel delays"
+  default_prompt: "Use $prepare-for-travel-delays to help me: Audit this itinerary for a tight connection."

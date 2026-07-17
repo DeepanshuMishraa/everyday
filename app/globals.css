@@ -116,7 +116,10 @@ h3 { font-size: 1.8rem; }
 .file-facts .text-link { display: inline-block; margin-top: 1rem; font-size: .8rem; }
 .skill-content { border-left: 1px solid var(--ink); min-width: 0; }
 .document-toolbar { min-height: 83px; display: flex; justify-content: space-between; align-items: center; padding: 1rem 4vw; border-bottom: 1px solid var(--ink); }
-.document-toolbar h2 { font-size: 1.8rem; }.document-toolbar > div { display: flex; }.document-toolbar button { background: none; border: 1px solid var(--line); padding: .45rem .7rem; cursor: pointer; font-size: .75rem; }.document-toolbar button + button { border-left: 0; }.document-toolbar button.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.document-toolbar h2 { font-size: 1.8rem; }.document-toolbar > div { display: flex; }.document-toolbar > div:first-child { display: block; }.document-toolbar button { background: none; border: 1px solid var(--line); padding: .45rem .7rem; cursor: pointer; font-size: .75rem; }.document-toolbar button + button { border-left: 0; }.document-toolbar button.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.package-files { display: flex; gap: .4rem; overflow-x: auto; padding: .75rem 4vw; border-bottom: 1px solid var(--line); background: var(--paper); }
+.package-files button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--white); padding: .45rem .65rem; font: 600 .72rem/1.2 "SFMono-Regular", Consolas, monospace; cursor: pointer; }
+.package-files button.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
 .markdown { max-width: 840px; padding: 4rem 5vw 6rem; }
 .markdown h1 { display: none; }.markdown h2 { font-size: 2.6rem; margin: 4rem 0 1.3rem; padding-top: 1.5rem; border-top: 1px solid var(--ink); }.markdown h2:first-child { margin-top: 0; }.markdown h3 { font-family: inherit; font-size: 1rem; font-weight: 800; margin: 2rem 0 .6rem; letter-spacing: 0; line-height: 1.4; }.markdown p, .markdown li { color: #393732; }.markdown li { margin: .5rem 0; }.markdown strong { color: var(--ink); }
 .raw-markdown { margin: 0; padding: 3rem 4vw 6rem; white-space: pre-wrap; overflow-wrap: anywhere; font-family: "SFMono-Regular", Consolas, monospace; font-size: .78rem; line-height: 1.65; background: #23231f; color: #e7e2d6; min-height: 800px; }

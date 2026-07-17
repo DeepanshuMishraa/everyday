@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handle a Home Repair"
+  short_description: "Practical guidance to handle a home repair"
+  default_prompt: "Use $handle-a-home-repair to help me: There is a new stain spreading across the ceiling."

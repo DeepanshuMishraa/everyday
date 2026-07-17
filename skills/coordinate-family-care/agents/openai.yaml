@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coordinate Family or Pet Care"
+  short_description: "Practical guidance to coordinate family or pet care"
+  default_prompt: "Use $coordinate-family-care to help me: Coordinate visits and groceries for my recovering parent."

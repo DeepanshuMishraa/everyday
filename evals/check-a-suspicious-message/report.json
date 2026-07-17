@@ -1,0 +1,11 @@
+{
+  "skill": "check-a-suspicious-message",
+  "skillHash": "770987f10b8ebe22efbad1acc28004024f446ef3cbe114cace1005695a8fa486",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.346Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

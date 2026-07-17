@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare for an Appointment"
+  short_description: "Practical guidance to prepare for an appointment"
+  default_prompt: "Use $prepare-for-an-appointment to help me: Help me prepare for a doctor appointment."

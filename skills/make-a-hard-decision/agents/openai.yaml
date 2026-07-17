@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make a Hard Decision"
+  short_description: "Practical guidance to make a hard decision"
+  default_prompt: "Use $make-a-hard-decision to help me: Create a journal entry for this job decision."

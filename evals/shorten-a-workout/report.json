@@ -1,0 +1,11 @@
+{
+  "skill": "shorten-a-workout",
+  "skillHash": "5da949a2055966a30539ff7dc599feb41fe7b6fa80a9e0d59e584db967c422de",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.368Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}

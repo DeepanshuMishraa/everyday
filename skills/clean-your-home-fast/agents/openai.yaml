@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Your Home Fast"
+  short_description: "Practical guidance to clean your home fast"
+  default_prompt: "Use $clean-your-home-fast to help me: People arrive in 30 minutes and the house is chaos."

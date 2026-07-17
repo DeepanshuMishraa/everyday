@@ -1,0 +1,20 @@
+slug: shorten-a-workout
+title: Shorten a Workout
+category: sustainable-health
+description: >-
+  Turn a planned gym or home workout into a shorter session that fits the time, energy, space, and
+  equipment available while preserving the workout's main training goal. Use when the user says they
+  only have 10–30 minutes, lacks usual equipment, or needs a minimum viable workout today.
+outcome: A shortened session with preserved intent, clear substitutions, and a stopping rule.
+examples:
+  - Turn my 60-minute workout into 20 minutes.
+  - I only have resistance bands today.
+  - Keep the main strength work but lower the volume.
+tags:
+  - workout
+  - gym
+  - exercise
+  - short session
+  - equipment
+version: 2.0.0
+updated: '2026-07-17'

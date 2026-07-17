@@ -1,0 +1,11 @@
+{
+  "skill": "get-a-return-or-refund",
+  "skillHash": "0bbfee8d1212bd7c8d435fb4060a5b91a288aa47c1f314a102299766ed449497",
+  "status": "structural-pass",
+  "generatedAt": "2026-07-17T07:10:49.354Z",
+  "structural": {
+    "passed": true,
+    "errors": []
+  },
+  "note": "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending."
+}
