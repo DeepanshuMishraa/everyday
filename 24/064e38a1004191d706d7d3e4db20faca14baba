@@ -1,0 +1,34 @@
+app/page.tsx
+  s_1efea9966df2ee::t_61709a42f18ed3 30
+app/methodology/page.tsx
+  s_1efea9966df2ee::t_25e04190e87b3e 10-11,15,18,28-29,31
+scripts/check-seo.ts
+  s_1efea9966df2ee::t_e49bfceec04de7 57
+app/install/page.tsx
+  s_1efea9966df2ee::t_25e04190e87b3e 19
+app/layout.tsx
+  s_1efea9966df2ee::t_61709a42f18ed3 52
+components/EvaluationReportView.tsx
+  s_1efea9966df2ee::t_61709a42f18ed3 13,31
+app/skills/[slug]/page.tsx
+  s_1efea9966df2ee::t_61709a42f18ed3 58
+app/globals.css
+  s_1efea9966df2ee::t_52299389da7d6c 456
+  s_1efea9966df2ee::t_d306872edb4f2b 464,525,614-615
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "24064e38a1004191d706d7d3e4db20faca14baba",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
