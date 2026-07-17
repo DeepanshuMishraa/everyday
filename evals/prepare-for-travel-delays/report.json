@@ -4,8 +4,9 @@
   "suiteHash": "08ab9a8adaea085cdee045c00ad2516fa9b58abcf8128d20fd782f8c8074f595",
   "status": "passed",
   "reviewer": "codex",
-  "reviewedAt": "2026-07-17T07:21:56.021Z",
-  "generatedAt": "2026-07-17T07:21:56.021Z",
+  "reviewerModel": "GPT-5 (Codex)",
+  "reviewedAt": "2026-07-17T07:26:58.508Z",
+  "generatedAt": "2026-07-17T07:26:58.508Z",
   "method": "direct-codex-review",
   "structural": {
     "passed": true,

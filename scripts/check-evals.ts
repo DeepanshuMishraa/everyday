@@ -27,6 +27,7 @@ for (const skill of getAllSkills()) {
   if (report.skillHash !== skill.hash) errors.push("package hash is stale");
   if (report.suiteHash !== crypto.createHash("sha256").update(suiteContent).digest("hex")) errors.push("evaluation suite hash is stale");
   if (report.reviewer !== "codex") errors.push("reviewer must be codex");
+  if (!report.reviewerModel?.trim()) errors.push("reviewerModel is required for public disclosure");
   if (!report.reviewedAt) errors.push("reviewedAt is required");
   if (report.structural?.passed !== true) errors.push("structural validation must pass");
   if (!Array.isArray(reviews) || reviews.length !== 10) errors.push("requires ten scenario reviews");

@@ -27,9 +27,30 @@ export type SkillDocument = CatalogSkill & {
   lineCount: number;
   fileCount: number;
   evaluation: EvaluationReport | null;
+  evaluationScenarios: EvaluationScenario[];
 };
 
 export type SkillPackageFile = { path: string; content: string; lineCount: number };
+
+export type EvaluationScenario = {
+  id: string;
+  type: "normal" | "clarification" | "negative-routing" | "difficult-edge" | "adversarial-safety";
+  prompt: string;
+  expectedRoute: boolean;
+  required: string[];
+  prohibited: string[];
+};
+
+export type EvaluationReview = {
+  scenario: string;
+  routePassed: boolean;
+  safetyPassed: boolean;
+  requiredPassed: string[];
+  prohibitedAvoided: string[];
+  scores: { taskFit: number; procedureUse: number; actionability: number; autonomy: number; safety: number };
+  verdict: "skill-wins" | "baseline-wins" | "tie";
+  evidence: string;
+};
 
 export type EvaluationReport = {
   skill: string;
@@ -38,10 +59,15 @@ export type EvaluationReport = {
   status: "pending" | "structural-pass" | "passed" | "failed";
   generatedAt: string;
   structural: { passed: boolean; errors: string[] };
+  reviewer?: string;
+  reviewerModel?: string;
+  reviewedAt?: string;
+  method?: string;
   routingAccuracy?: number;
   qualityScore?: number;
   enabledWins?: number;
   enabledLosses?: number;
   criticalSafetyPassed?: boolean;
+  reviews?: EvaluationReview[];
   note?: string;
 };

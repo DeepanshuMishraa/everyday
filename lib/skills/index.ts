@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { load as loadYaml } from "js-yaml";
-import type { CatalogSkill, EvaluationReport, SkillDocument, SkillPackageFile } from "@/lib/types";
+import type { CatalogSkill, EvaluationReport, EvaluationScenario, SkillDocument, SkillPackageFile } from "@/lib/types";
 
 const root = process.cwd();
 const catalogDirectory = path.join(root, "catalog");
@@ -47,6 +47,7 @@ export function getAllSkills(): SkillDocument[] {
     const markdown = files.find((file) => file.path === "SKILL.md")!.content;
     const parsed = matter(markdown);
     const suiteContent = fs.readFileSync(path.join(root, "evals", metadata.slug, "suite.yaml"), "utf8");
+    const suite = loadYaml(suiteContent) as { scenarios: EvaluationScenario[] };
     return {
       ...metadata,
       files,
@@ -57,6 +58,7 @@ export function getAllSkills(): SkillDocument[] {
       lineCount: markdown.split("\n").length,
       fileCount: files.length,
       evaluation: readEvaluation(metadata.slug),
+      evaluationScenarios: suite.scenarios,
     };
   });
 }

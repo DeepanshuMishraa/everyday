@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { categories } from "@/catalog/categories";
 import { CopyButton, DownloadButton } from "@/components/SkillActions";
 import { SkillDocumentView } from "@/components/SkillDocumentView";
+import { EvaluationReportView } from "@/components/EvaluationReportView";
 import { getAllSkills, getSkill } from "@/lib/skills";
 
 export const dynamicParams = false;
@@ -34,7 +35,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
       </aside>
       <div className="skill-content">
         <SkillDocumentView body={skill.body} files={skill.files} />
-        <section className="eval-panel"><div><p className="eyebrow">Evaluation report</p><h2>{passed ? "Passed against the published package" : "Codex scenario review pending"}</h2><p>{passed ? "The report matches every package file and the exact test suite; all launch thresholds passed." : "The local validator confirms package structure and references. Codex must still work through the ten routing, quality, and safety scenarios and record evidence; the site does not invent scores."}</p></div><dl><div><dt>Structural</dt><dd>{skill.evaluation?.structural.passed ? "Pass" : "Pending"}</dd></div><div><dt>Package + suite hashes</dt><dd>{reportMatches ? "Match" : "Not tested"}</dd></div><div><dt>Codex review</dt><dd>{skill.evaluation?.qualityScore ? `${skill.evaluation.qualityScore}/100` : "Pending"}</dd></div><div><dt>Evidence</dt><dd>{passed ? "Complete" : "Pending"}</dd></div></dl></section>
+        <EvaluationReportView report={skill.evaluation} scenarios={skill.evaluationScenarios} current={reportMatches} />
       </div>
     </div>
   </>;
