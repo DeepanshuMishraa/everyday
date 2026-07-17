@@ -7,11 +7,14 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { CatalogSkill, Category } from "@/lib/types";
 
 type Props = { skills: CatalogSkill[]; categories: Category[] };
+const PAGE_SIZE = 10;
 
 export function SearchLibrary({ skills, categories }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  const [page, setPage] = useState(1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const ledgerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKeydown(event: KeyboardEvent) {
@@ -47,6 +50,21 @@ export function SearchLibrary({ skills, categories }: Props) {
     return category === "all" ? matching : matching.filter((skill) => skill.category === category);
   }, [category, query, search, skills]);
 
+  useEffect(() => { setPage(1); }, [query, category]);
+
+  const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const currentPage = Math.min(page, pageCount);
+  const pageStart = (currentPage - 1) * PAGE_SIZE;
+  const pageEnd = Math.min(pageStart + PAGE_SIZE, results.length);
+  const visibleResults = results.slice(pageStart, pageEnd);
+
+  function goToPage(nextPage: number) {
+    if (nextPage < 1 || nextPage > pageCount || nextPage === currentPage) return;
+    setPage(nextPage);
+    track("library_page_change", { page: nextPage, query: query || "none", category });
+    requestAnimationFrame(() => ledgerRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
+  }
+
   function submit(event: FormEvent) {
     event.preventDefault();
     track(results.length ? "search" : "zero_result_search", { query, category, results: results.length });
@@ -76,13 +94,14 @@ export function SearchLibrary({ skills, categories }: Props) {
           {categories.map((item) => <button type="button" key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => setCategory(item.slug)}>{item.shortName}</button>)}
         </div>
       </form>
-      <div className="ledger" aria-live="polite">
-        <div className="ledger-head" aria-hidden="true">
-          <span>#</span><span>Skill</span><span className="ledger-count">{results.length} {results.length === 1 ? "skill" : "skills"}</span>
+      <div className="ledger" ref={ledgerRef}>
+        <div className="ledger-head">
+          <span aria-hidden="true">#</span><span aria-hidden="true">Skill</span><span className="ledger-count" aria-live="polite">{results.length ? `${pageStart + 1}–${pageEnd} of ${results.length}` : "0 skills"}</span>
         </div>
         {results.length ? (
-          <div className="skill-list">
-            {results.map((skill, index) => {
+          <>
+            <div className="skill-list">
+            {visibleResults.map((skill, index) => {
               const itemCategory = categories.find((item) => item.slug === skill.category)!;
               return (
                 <Link
@@ -92,14 +111,20 @@ export function SearchLibrary({ skills, categories }: Props) {
                   style={{ animationDelay: `${Math.min(index, 10) * 20}ms` }}
                   onClick={() => track("skill_open", { skill: skill.slug, source: "library" })}
                 >
-                  <span className="skill-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="skill-number">{String(pageStart + index + 1).padStart(2, "0")}</span>
                   <span className="skill-main"><strong>{skill.title}</strong><span>{skill.outcome}</span></span>
                   <span className="skill-cat"><span className="cat-dot" aria-hidden="true" />{itemCategory.shortName}</span>
                   <span className="skill-arrow" aria-hidden="true">↗</span>
                 </Link>
               );
             })}
-          </div>
+            </div>
+            {pageCount > 1 && <nav className="pagination" aria-label="Library pages">
+              <button type="button" className="pagination-button" disabled={currentPage === 1} onClick={() => goToPage(currentPage - 1)}><span aria-hidden="true">←</span> Previous</button>
+              <span className="pagination-status" aria-live="polite">Page {currentPage} of {pageCount}</span>
+              <button type="button" className="pagination-button" disabled={currentPage === pageCount} onClick={() => goToPage(currentPage + 1)}>Next <span aria-hidden="true">→</span></button>
+            </nav>}
+          </>
         ) : (
           <div className="empty-state"><p className="eyebrow">No exact skill</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The launch library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all skills</button></div>
         )}

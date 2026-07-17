@@ -23,12 +23,12 @@ export default function Home() {
         <Link className="button secondary" href="/methodology">How we review</Link>
       </div>
     </section>
-    <div className="stats-strip">
-      <div className="wrap stats-grid">
-        <div><strong>30</strong><span>installable skills</span></div>
-        <div><strong>06</strong><span>parts of everyday life</span></div>
-        <div><strong>10</strong><span>scenarios per skill</span></div>
-        <div><strong>sha-256</strong><span>hash-bound reviews</span></div>
+    <div className="trust-strip" aria-label="Library facts">
+      <div className="wrap trust-line">
+        <span><strong>30</strong> installable skills</span>
+        <span><strong>6</strong> everyday categories</span>
+        <span><strong>10</strong> review scenarios each</span>
+        <span>Hash-bound packages</span>
       </div>
     </div>
     <SearchLibrary skills={metadata} categories={categories} />

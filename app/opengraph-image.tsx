@@ -8,18 +8,18 @@ export const contentType = "image/png";
 
 export default function OpenGraphImage() {
   return new ImageResponse(
-    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "72px 76px", background: "#0c0c0e", color: "#fafafa", fontFamily: "Arial, sans-serif" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 21, letterSpacing: 4, textTransform: "uppercase", color: "#71717a" }}>
-        <span>Everyday — practical agent skills</span>
-        <span style={{ display: "flex", alignItems: "center", gap: 10, color: "#0e9f6e" }}><span style={{ width: 10, height: 10, borderRadius: 10, background: "#0e9f6e" }} />30 skills · current</span>
+    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "68px 72px", background: "#f7f7f5", color: "#171719", fontFamily: "Arial, sans-serif", border: "16px solid #efefec" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 20 }}>
+        <span style={{ fontSize: 27, fontWeight: 600, letterSpacing: -1.2 }}>every/day</span>
+        <span style={{ color: "#777772" }}>Open agent skill library</span>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 26, maxWidth: 1000 }}>
-        <div style={{ fontSize: 86, fontWeight: 600, lineHeight: 1.02, letterSpacing: -4 }}>Give your agent skills for real life.</div>
-        <div style={{ fontSize: 26, lineHeight: 1.5, maxWidth: 860, color: "#a1a1aa" }}>Thirty open, installable procedures for cooking, workouts, paperwork, shared care, money routines, and travel.</div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 970 }}>
+        <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.03, letterSpacing: -3.4 }}>Practical skills for everyday life.</div>
+        <div style={{ fontSize: 25, lineHeight: 1.48, maxWidth: 860, color: "#62625e" }}>Thirty open, installable procedures for cooking, workouts, paperwork, shared care, money routines, and travel.</div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 21 }}>
-        <span style={{ fontFamily: "monospace", color: "#a1a1aa", border: "1px solid #27272a", borderRadius: 10, padding: "12px 20px" }}>$ npx skills add</span>
-        <span style={{ color: "#71717a" }}>Browse · Inspect · Install</span>
+      <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 24, borderTop: "1px solid #dbdbd6", fontSize: 20, color: "#777772" }}>
+        <span style={{ display: "flex", gap: 5 }}><span style={{ color: "#171719", fontWeight: 600 }}>30</span><span>reviewed skills</span></span>
+        <span>Browse · inspect · install</span>
       </div>
     </div>,
     size,
