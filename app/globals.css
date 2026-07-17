@@ -129,7 +129,7 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 42px; padding: 0 20px;
-  border: 1px solid transparent; border-radius: 999px;
+  border: 1px solid transparent; border-radius: var(--r-lg);
   font-size: 0.88rem; font-weight: 550; text-decoration: none; white-space: nowrap;
   cursor: pointer;
   transition: transform 180ms var(--ease), background 160ms ease, border-color 160ms ease, color 160ms ease, opacity 160ms ease;
@@ -157,26 +157,26 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 .wordmark > span > span { margin: 0 1px; color: var(--green); font-family: var(--font-mono), monospace; font-weight: 500; }
 .site-header nav {
   display: flex; align-items: center; gap: 3px; padding: 4px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
 }
 .nav-primary, .nav-utilities { display: flex; align-items: center; gap: 2px; }
 .nav-utilities { gap: 3px; margin-left: 4px; padding-left: 7px; border-left: 1px solid var(--line); }
 .nav-link {
   font-size: 0.8rem; color: var(--ink-2); text-decoration: none;
-  padding: 7px 11px; border-radius: 999px;
+  padding: 7px 11px; border-radius: var(--r-md);
   transition: color 140ms ease, background 140ms ease;
 }
 .nav-link:hover { color: var(--ink); background: var(--surface-2); }
 .nav-icon {
   display: grid; place-items: center; width: 30px; height: 30px;
-  color: var(--ink-2); border-radius: 999px;
+  color: var(--ink-2); border-radius: 50%;
   transition: color 140ms ease, background 140ms ease;
 }
 .nav-icon svg { width: 17px; height: 17px; }
 .nav-icon:hover { color: var(--ink); background: var(--surface-2); }
 .theme-toggle {
   display: grid; place-items: center; width: 30px; height: 30px;
-  background: transparent; border: 0; border-radius: 999px;
+  background: transparent; border: 0; border-radius: 50%;
   color: var(--ink-2); cursor: pointer;
   transition: color 140ms ease, background 140ms ease;
 }
@@ -192,7 +192,7 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 [data-theme="dark"] .theme-icon .icon-moon { opacity: 1; transform: rotate(0deg) scale(1); }
 .nav-cta {
   display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px;
-  background: var(--ink); color: var(--bg); border-radius: 999px;
+  background: var(--ink); color: var(--bg); border-radius: var(--r-md);
   font-size: 0.78rem; font-weight: 550; text-decoration: none;
   transition: opacity 140ms ease;
 }
@@ -271,7 +271,7 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .filter {
   padding: 6px 13px;
-  background: transparent; border: 1px solid var(--line); border-radius: 999px;
+  background: transparent; border: 1px solid var(--line); border-radius: var(--r-md);
   font-family: var(--font-mono), monospace; font-size: 0.66rem;
   text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2);
   cursor: pointer; transition: border-color 140ms ease, color 140ms ease, background 140ms ease, transform 180ms var(--ease);
