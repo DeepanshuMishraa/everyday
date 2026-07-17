@@ -1,0 +1,36 @@
+lib/skills/search.ts
+  s_1efea9966df2ee::t_436c525922bbf0 1-6,8-14,16-19,21-67
+  s_1efea9966df2ee::t_75f64d30575eb5 7,20
+  s_1efea9966df2ee::t_26b973db5a93b9 15
+app/globals.css
+  s_1efea9966df2ee::t_c9efa4c1c5e47c 191-192
+tests/catalog.test.ts
+  s_1efea9966df2ee::t_c657579b7e8eb2 4,30,38-44,46
+  s_1efea9966df2ee::t_50e68b367b7918 33
+components/SearchLibrary.tsx
+  s_1efea9966df2ee::t_0f1f97664e8a9f 6,19,22,56-69
+components/ThemeToggle.tsx
+  s_1efea9966df2ee::t_02dc16452aa1ab 6-7,9
+tests/client-boot.test.ts
+  s_1efea9966df2ee::t_f12ce429bcc397 1-53
+app/layout.tsx
+  s_1efea9966df2ee::t_f12ce429bcc397 7,54
+lib/client-boot.ts
+  s_1efea9966df2ee::t_f12ce429bcc397 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "b2585f50d5c67bb3d9218483268b298c3af2f8a9",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
