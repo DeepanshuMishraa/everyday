@@ -5,6 +5,7 @@ import yaml from "js-yaml";
 import { getAllSkills } from "../lib/skills";
 import { validateSkill } from "../lib/skills/validate";
 import type { EvaluationReport } from "../lib/types";
+import crypto from "node:crypto";
 
 const root = process.cwd();
 let failed = 0;
@@ -23,7 +24,8 @@ for (const catalog of skills) {
   }
   const markdown = catalog.markdown;
   const parsedCatalog = yaml.load(fs.readFileSync(catalogPath, "utf8")) as typeof catalog;
-  const suite = yaml.load(fs.readFileSync(suitePath, "utf8")) as { skill: string; scenarios: unknown[] };
+  const suiteContent = fs.readFileSync(suitePath, "utf8");
+  const suite = yaml.load(suiteContent) as { skill: string; scenarios: unknown[] };
   const result = validateSkill(catalog.files, parsedCatalog);
   if (suite.scenarios.length !== 10) result.errors.push(`Evaluation suite must contain 10 scenarios; found ${suite.scenarios.length}.`);
   if (suite.skill !== catalog.slug) result.errors.push("Evaluation suite skill must match the catalog slug.");
@@ -34,10 +36,12 @@ for (const catalog of skills) {
   let existing: Partial<EvaluationReport> = {};
   if (fs.existsSync(reportPath)) existing = JSON.parse(fs.readFileSync(reportPath, "utf8"));
   const hash = catalog.hash;
-  const preserveFullPass = existing.status === "passed" && existing.skillHash === hash;
+  const suiteHash = crypto.createHash("sha256").update(suiteContent).digest("hex");
+  const preserveFullPass = existing.status === "passed" && existing.skillHash === hash && existing.suiteHash === suiteHash;
   const report: EvaluationReport = preserveFullPass ? existing as EvaluationReport : {
     skill: catalog.slug,
     skillHash: hash,
+    suiteHash,
     status: result.passed ? "structural-pass" : "failed",
     generatedAt: new Date().toISOString(),
     structural: { passed: result.passed, errors: result.errors },

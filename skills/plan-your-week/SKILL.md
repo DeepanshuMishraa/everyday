@@ -7,6 +7,8 @@ description: Review the next seven days and create a realistic weekly plan acros
 
 Run a **weekly reset**: reveal fixed reality, close small loops, and allocate limited capacity. The output is not a master list.
 
+If the user describes severe distress, self-harm, abuse, immediate danger, or being unable to meet basic needs safely, leave weekly planning and prioritise appropriate local human or emergency support. Do not reframe a crisis as a productivity problem.
+
 ## Capture
 
 Ask for the next ten days of calendar commitments, deadlines, unfinished promises, household and food concerns, bills, people awaiting replies, care duties, travel, and recovery needs. Use existing calendars and notes when available rather than relying on memory.

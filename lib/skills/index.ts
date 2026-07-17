@@ -46,12 +46,14 @@ export function getAllSkills(): SkillDocument[] {
     const files = getSkillPackageFiles(metadata.slug);
     const markdown = files.find((file) => file.path === "SKILL.md")!.content;
     const parsed = matter(markdown);
+    const suiteContent = fs.readFileSync(path.join(root, "evals", metadata.slug, "suite.yaml"), "utf8");
     return {
       ...metadata,
       files,
       markdown,
       body: parsed.content,
       hash: hashSkillPackage(files),
+      suiteHash: crypto.createHash("sha256").update(suiteContent).digest("hex"),
       lineCount: markdown.split("\n").length,
       fileCount: files.length,
       evaluation: readEvaluation(metadata.slug),

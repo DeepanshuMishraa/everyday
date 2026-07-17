@@ -23,6 +23,7 @@ export type SkillDocument = CatalogSkill & {
   markdown: string;
   body: string;
   hash: string;
+  suiteHash: string;
   lineCount: number;
   fileCount: number;
   evaluation: EvaluationReport | null;
@@ -33,6 +34,7 @@ export type SkillPackageFile = { path: string; content: string; lineCount: numbe
 export type EvaluationReport = {
   skill: string;
   skillHash: string;
+  suiteHash?: string;
   status: "pending" | "structural-pass" | "passed" | "failed";
   generatedAt: string;
   structural: { passed: boolean; errors: string[] };

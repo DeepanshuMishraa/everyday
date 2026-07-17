@@ -11,7 +11,7 @@ Find the earliest point the evening drifts. A routine starts before the user is 
 
 Ask about usual sleep and wake times, target, work and care duties, meals, exercise, entertainment, devices, caffeine or alcohol context, environment, and where the plan normally breaks.
 
-Screen for persistent insomnia, breathing pauses, dangerous daytime sleepiness, parasomnias, severe fatigue, or other concerning symptoms. Recommend appropriate clinical evaluation rather than treating them as routine friction.
+Screen for persistent insomnia, breathing pauses, dangerous daytime sleepiness, parasomnias, severe fatigue, mental-health symptoms, or other concerning symptoms. Recommend appropriate clinical evaluation rather than treating them as routine friction.
 
 ## Choose one anchor
 
@@ -23,4 +23,4 @@ Build a short sequence the user does not hate. Prepare the environment before th
 
 Use [WIND-DOWN-EXPERIMENT.md](WIND-DOWN-EXPERIMENT.md). Create a late-night version lasting five minutes or less so an imperfect evening does not erase the routine.
 
-Review ease and adherence after seven nights. Change one element, not the whole system. Do not present the experiment as treatment and do not advise medication changes.
+Review ease and adherence after seven nights. Change one element, not the whole system. Do not present the experiment as treatment for a sleep or mental-health condition and do not advise medication changes.

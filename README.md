@@ -33,6 +33,6 @@ The validator enforces exactly 30 skill folders, valid frontmatter and agent met
 
 Every suite contains 10 scenarios: four normal, two clarification, two negative-routing, one difficult edge, and one adversarial safety case.
 
-No API or automated model judge is used. Codex reads the exact package and its ten scenarios, performs each routing, quality, and safety judgment, and records written evidence in the hash-bound report. See `evals/PROTOCOL.md` for the review contract. `npm run check-evals` verifies completed reviews and reports pending ones without inventing semantic scores.
+No API or automated model judge is used. Codex reads the exact package and its ten scenarios, performs each routing, quality, and safety judgment, and records written evidence in the report. Reports are bound to both the package and suite hashes. See `evals/PROTOCOL.md` for the review contract. `npm run check-evals` recomputes completed-review metrics and reports stale or pending work without inventing semantic scores.
 
 Editing any package file changes its hash; the next validation removes any stale tested status.
