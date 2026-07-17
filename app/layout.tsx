@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} data-theme="light" suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} data-theme="light" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: clientBootScript }} />
         <JsonLd data={{

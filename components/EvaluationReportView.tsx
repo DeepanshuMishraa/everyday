@@ -10,7 +10,7 @@ const typeLabels: Record<EvaluationScenario["type"], string> = {
 
 export function EvaluationReportView({ report, scenarios, current }: { report: EvaluationReport | null; scenarios: EvaluationScenario[]; current: boolean }) {
   const reviewed = current && report?.status === "instruction-review-pass" && report.reviews?.length === scenarios.length;
-  if (!reviewed || !report?.reviews) return <section className="eval-panel"><div><p className="eyebrow">Instruction coverage</p><h2>Codex review pending</h2><p>The written package has not completed a current coverage review against this exact package and test-suite hash.</p></div><dl><div><dt>Structure</dt><dd>{report?.structural.passed ? "Pass" : "Pending"}</dd></div><div><dt>Package + suite hashes</dt><dd>{current ? "Match" : "Stale"}</dd></div><div><dt>Instruction review</dt><dd>Pending</dd></div></dl></section>;
+  if (!reviewed || !report?.reviews) return <section className="eval-panel"><div><p className="eyebrow">Instruction review</p><h2>Fresh review pending</h2><p>{current ? "Codex has not finished reviewing this skill against its ten everyday scenarios." : "This skill changed after its last review, so it needs to be reviewed again."}</p></div><dl><div><dt>File structure</dt><dd>{report?.structural.passed ? "Ready" : "Checking"}</dd></div><div><dt>Scenario review</dt><dd>Pending</dd></div><div><dt>Safety review</dt><dd>Pending</dd></div></dl></section>;
 
   const covered = report.reviews.filter((review) => review.assessment === "covered").length;
   const routesCovered = report.reviews.filter((review) => review.routePassed).length;
@@ -27,9 +27,8 @@ export function EvaluationReportView({ report, scenarios, current }: { report: E
       <div><span>Scenario coverage</span><strong>{covered}/{scenarios.length}</strong><small>Requirements addressed</small></div>
       <div><span>Routing coverage</span><strong>{routesCovered}/{scenarios.length}</strong><small>Written route aligns</small></div>
       <div><span>Safety coverage</span><strong>{safetyCovered}/{safetyCases.length}</strong><small>Boundary addressed</small></div>
-      <div><span>Execution comparison</span><strong>Not run</strong><small>No output artifacts yet</small></div>
     </div>
-    <p className="eval-disclosure"><strong>Evidence level:</strong> {report.reviewerModel ?? "The recorded Codex model"} compared the written package with the scenario requirements. It did not generate and preserve baseline and skill-enabled outputs. This is an internal instruction review—not independent validation, a quality score, or evidence of real-world performance.</p>
+    <p className="eval-disclosure"><strong>What this means:</strong> {report.reviewerModel ?? "The recorded Codex model"} checked whether the written instructions include the expected steps, routing, and safety boundaries for the scenarios below. It is a review of the instructions, not a promise of real-world results.</p>
     <div className="scenario-ledger">
       {scenarios.map((scenario, index) => {
         const review = report.reviews!.find((item) => item.scenario === scenario.id)!;
@@ -42,6 +41,5 @@ export function EvaluationReportView({ report, scenarios, current }: { report: E
         </details>;
       })}
     </div>
-    <footer className="grading-footer"><span>Package SHA-256</span><code>{report.skillHash}</code><span>Suite SHA-256</span><code>{report.suiteHash}</code></footer>
   </section>;
 }

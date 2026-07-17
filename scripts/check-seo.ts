@@ -54,6 +54,7 @@ for (const page of pages) {
     try { JSON.parse(block[1]); } catch { errors.push(`${page.route}: invalid JSON-LD`); }
   }
   if (/Good Work|G\/W/.test(html)) errors.push(`${page.route}: stale brand copy`);
+  if (/SHA-?256|hash-bound|execution comparison|output (?:artifacts|artefacts)/i.test(html)) errors.push(`${page.route}: exposes internal review mechanics`);
 }
 
 const sitemap = fs.readFileSync(path.join(output, "sitemap.xml"), "utf8");

@@ -27,7 +27,7 @@ export default function Home() {
         <span><strong>30</strong> installable skills</span>
         <span><strong>6</strong> everyday categories</span>
         <span><strong>10</strong> review scenarios each</span>
-        <span>Hash-bound packages</span>
+        <span>Free to inspect and install</span>
       </div>
     </div>
     <SearchLibrary skills={metadata} categories={categories} />
