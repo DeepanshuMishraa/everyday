@@ -16,6 +16,10 @@
   --line-2: rgba(19, 19, 22, 0.18);
   --header-bg: rgba(250, 250, 250, 0.82);
   --ring: rgba(19, 19, 22, 0.06);
+  --button-primary-hover: color-mix(in srgb, var(--ink) 88%, var(--bg));
+  --button-shadow: 0 2px 8px rgba(19, 19, 22, 0.1);
+  --button-shadow-hover: 0 4px 12px rgba(19, 19, 22, 0.14);
+  --button-shadow-active: 0 1px 3px rgba(19, 19, 22, 0.12);
   --dark: #0c0c0e;
   --dark-2: #141417;
   --dark-line: rgba(255, 255, 255, 0.14);
@@ -48,6 +52,10 @@
   --line-2: rgba(255, 255, 255, 0.22);
   --header-bg: rgba(10, 10, 12, 0.78);
   --ring: rgba(255, 255, 255, 0.1);
+  --button-primary-hover: color-mix(in srgb, var(--ink) 88%, var(--bg));
+  --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
+  --button-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.42);
+  --button-shadow-active: 0 1px 3px rgba(0, 0, 0, 0.36);
   --dark: #101013;
   --green: #34d399;
   --red: #f26d5b;
@@ -132,12 +140,14 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
   border: 1px solid transparent; border-radius: var(--r-lg);
   font-size: 0.88rem; font-weight: 550; text-decoration: none; white-space: nowrap;
   cursor: pointer;
-  transition: transform 180ms var(--ease), background 160ms ease, border-color 160ms ease, color 160ms ease, opacity 160ms ease;
+  box-shadow: var(--button-shadow);
+  transition: transform 180ms var(--ease), background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 180ms var(--ease);
 }
-.button:active { transform: translateY(0) scale(0.985); }
+.button:hover { box-shadow: var(--button-shadow-hover); }
+.button:active { transform: translateY(0) scale(0.985); box-shadow: var(--button-shadow-active); }
 .button.primary { background: var(--ink); color: var(--bg); }
-.button.primary:hover { background: #000; transform: translateY(-1px); }
-.button.secondary { background: transparent; border-color: var(--line-2); color: var(--ink); }
+.button.primary:hover { background: var(--button-primary-hover); transform: translateY(-1px); }
+.button.secondary { background: var(--surface); border-color: var(--line-2); color: var(--ink); }
 .button.secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
 .text-link { font-size: 0.88rem; font-weight: 550; text-underline-offset: 4px; }
 .text-link:hover { color: var(--ink-2); }
@@ -176,11 +186,12 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 .nav-icon:hover { color: var(--ink); background: var(--surface-2); }
 .theme-toggle {
   display: grid; place-items: center; width: 30px; height: 30px;
-  background: transparent; border: 0; border-radius: 50%;
+  background: var(--surface); border: 0; border-radius: 50%; box-shadow: var(--button-shadow);
   color: var(--ink-2); cursor: pointer;
-  transition: color 140ms ease, background 140ms ease;
+  transition: color 140ms ease, background 140ms ease, box-shadow 180ms var(--ease);
 }
-.theme-toggle:hover { color: var(--ink); background: var(--surface-2); }
+.theme-toggle:hover { color: var(--ink); background: var(--surface-2); box-shadow: var(--button-shadow-hover); }
+.theme-toggle:active { box-shadow: var(--button-shadow-active); }
 .theme-icon { position: relative; width: 15px; height: 15px; }
 .theme-icon svg {
   position: absolute; inset: 0; width: 15px; height: 15px;
@@ -194,9 +205,11 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
   display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px;
   background: var(--ink); color: var(--bg); border-radius: var(--r-md);
   font-size: 0.78rem; font-weight: 550; text-decoration: none;
-  transition: opacity 140ms ease;
+  box-shadow: var(--button-shadow);
+  transition: background 140ms ease, box-shadow 180ms var(--ease);
 }
-.nav-cta:hover { opacity: 0.82; }
+.nav-cta:hover { background: var(--button-primary-hover); box-shadow: var(--button-shadow-hover); }
+.nav-cta:active { box-shadow: var(--button-shadow-active); }
 
 /* ————— Hero ————— */
 
@@ -271,13 +284,14 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .filter {
   padding: 6px 13px;
-  background: transparent; border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
   font-family: var(--font-mono), monospace; font-size: 0.66rem;
   text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2);
-  cursor: pointer; transition: border-color 140ms ease, color 140ms ease, background 140ms ease, transform 180ms var(--ease);
+  cursor: pointer; box-shadow: var(--button-shadow);
+  transition: border-color 140ms ease, color 140ms ease, background 140ms ease, transform 180ms var(--ease), box-shadow 180ms var(--ease);
 }
-.filter:hover { border-color: var(--line-2); color: var(--ink); }
-.filter:active { transform: scale(0.97); }
+.filter:hover { border-color: var(--line-2); color: var(--ink); box-shadow: var(--button-shadow-hover); }
+.filter:active { transform: scale(0.97); box-shadow: var(--button-shadow-active); }
 .filter.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 
 .ledger { margin-top: 40px; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 20px); }
@@ -312,12 +326,14 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
 }
 .pagination-button {
   display: inline-flex; align-items: center; gap: 8px; width: max-content; min-height: 40px; padding: 0 10px;
-  background: transparent; border: 0; border-radius: 8px; color: var(--ink-2);
-  font-size: 0.8rem; cursor: pointer; transition: color 140ms ease, background 140ms ease;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; color: var(--ink-2);
+  font-size: 0.8rem; cursor: pointer; box-shadow: var(--button-shadow);
+  transition: color 140ms ease, background 140ms ease, border-color 140ms ease, box-shadow 180ms var(--ease);
 }
 .pagination-button:last-child { justify-self: end; }
-.pagination-button:hover:not(:disabled) { color: var(--ink); background: var(--surface); }
-.pagination-button:disabled { opacity: 0.32; cursor: not-allowed; }
+.pagination-button:hover:not(:disabled) { color: var(--ink); background: var(--surface-2); border-color: var(--line-2); box-shadow: var(--button-shadow-hover); }
+.pagination-button:active:not(:disabled) { box-shadow: var(--button-shadow-active); }
+.pagination-button:disabled { opacity: 0.32; cursor: not-allowed; box-shadow: none; }
 .pagination-status { font-family: var(--font-mono), monospace; font-size: 0.68rem; color: var(--ink-3); }
 .skill-arrow { font-size: 0.9rem; color: var(--ink-3); transition: transform 220ms var(--ease), color 140ms ease; }
 .skill-row:hover .skill-arrow { transform: translate(2px, -2px); color: var(--ink); }
@@ -410,15 +426,17 @@ h3 { font-size: 1.25rem; letter-spacing: -0.02em; }
   transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
 }
 .segmented button:hover { color: var(--ink); }
-.segmented button.active { background: var(--surface); border-color: var(--line); color: var(--ink); }
+.segmented button.active { background: var(--surface); border-color: var(--line); color: var(--ink); box-shadow: var(--button-shadow); }
 .package-files { display: flex; gap: 6px; overflow-x: auto; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .package-files button {
   flex: 0 0 auto; padding: 5px 10px;
-  background: none; border: 1px solid var(--line); border-radius: 7px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 7px;
   font-family: var(--font-mono), monospace; font-size: 0.66rem; color: var(--ink-2);
-  cursor: pointer; transition: all 140ms ease;
+  cursor: pointer; box-shadow: var(--button-shadow);
+  transition: border-color 140ms ease, color 140ms ease, background 140ms ease, box-shadow 180ms var(--ease);
 }
-.package-files button:hover { border-color: var(--line-2); color: var(--ink); }
+.package-files button:hover { border-color: var(--line-2); color: var(--ink); box-shadow: var(--button-shadow-hover); }
+.package-files button:active { box-shadow: var(--button-shadow-active); }
 .package-files button.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 
 .markdown { max-width: 700px; padding: 40px 0 88px; }
