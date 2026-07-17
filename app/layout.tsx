@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "Good Work — Everyday agent skills", template: "%s — Good Work" },
-  description: "Thirty tested procedures that help AI agents handle the practical work of everyday life.",
+  description: "Thirty reviewed procedures that help AI agents handle the practical work of everyday life.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Link>
           <nav aria-label="Primary navigation">
             <Link href="/#library">Library</Link>
-            <Link href="/methodology">How we test</Link>
+            <Link href="/methodology">How we review</Link>
             <Link className="nav-cta" href="/install">Install a skill</Link>
           </nav>
         </header>

@@ -12,7 +12,7 @@ export default function Home() {
         <p className="eyebrow">Everyday agent skills · Edition 01</p>
         <h1>Better judgment for the work nobody teaches.</h1>
         <p className="hero-deck">Thirty open procedures that turn an AI agent into a more careful partner for meals, paperwork, shared care, money routines, travel, and the difficult middle of a week.</p>
-        <div className="hero-actions"><Link className="button primary" href="#library">Find a skill</Link><Link className="text-link" href="/methodology">See how each skill is tested <span aria-hidden="true">→</span></Link></div>
+        <div className="hero-actions"><Link className="button primary" href="#library">Find a skill</Link><Link className="text-link" href="/methodology">See how each package is reviewed <span aria-hidden="true">→</span></Link></div>
       </div>
       <aside className="hero-note" aria-label="Library principles">
         <span className="note-label">A field note</span>
@@ -27,6 +27,6 @@ export default function Home() {
       <div className="section-heading"><div><p className="eyebrow">Six parts of ordinary life</p><h2>Designed around situations, not personas.</h2></div><p>Every category contains five procedures. The constraint keeps the launch useful, legible, and testable.</p></div>
       <div className="category-grid">{categories.map((category, index) => <Link key={category.slug} href={`/categories/${category.slug}`} className={`category-block accent-${category.color}`}><span>0{index + 1}</span><h3>{category.name}</h3><p>{category.description}</p><strong>Browse 5 skills →</strong></Link>)}</div>
     </section>
-    <section className="method-callout"><p className="eyebrow">The tested-package rule</p><h2>If any included file changes, its tested status disappears.</h2><p>Every report is bound to the exact SHA-256 hash of the complete skill folder. Structural checks are automatic; Codex&apos;s scenario judgments and written evidence are published separately.</p><Link className="button light" href="/methodology">Read the methodology</Link></section>
+    <section className="method-callout"><p className="eyebrow">The current-package rule</p><h2>If any included file changes, its reviewed status disappears.</h2><p>Every report is bound to the exact SHA-256 hash of the complete skill folder. Structural checks are automatic; Codex&apos;s instruction-coverage evidence is published separately.</p><Link className="button light" href="/methodology">Read the methodology</Link></section>
   </>;
 }

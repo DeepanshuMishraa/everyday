@@ -37,7 +37,7 @@ for (const catalog of skills) {
   if (fs.existsSync(reportPath)) existing = JSON.parse(fs.readFileSync(reportPath, "utf8"));
   const hash = catalog.hash;
   const suiteHash = crypto.createHash("sha256").update(suiteContent).digest("hex");
-  const preserveFullPass = existing.status === "passed" && existing.skillHash === hash && existing.suiteHash === suiteHash;
+  const preserveFullPass = existing.status === "instruction-review-pass" && existing.skillHash === hash && existing.suiteHash === suiteHash;
   const report: EvaluationReport = preserveFullPass ? existing as EvaluationReport : {
     skill: catalog.slug,
     skillHash: hash,
@@ -45,7 +45,7 @@ for (const catalog of skills) {
     status: result.passed ? "structural-pass" : "failed",
     generatedAt: new Date().toISOString(),
     structural: { passed: result.passed, errors: result.errors },
-    note: result.passed ? "Package structure passed. Codex scenario review, routing, quality, and critical safety judgments remain pending." : "Structural validation failed.",
+    note: result.passed ? "Package structure passed. A current Codex instruction-coverage review remains pending." : "Structural validation failed.",
   };
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
   if (result.passed) console.log(`✓ ${catalog.slug} (${catalog.fileCount} files, ${result.bodyLines} body lines)`);

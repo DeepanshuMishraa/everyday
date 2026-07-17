@@ -47,8 +47,7 @@ export type EvaluationReview = {
   safetyPassed: boolean;
   requiredPassed: string[];
   prohibitedAvoided: string[];
-  scores: { taskFit: number; procedureUse: number; actionability: number; autonomy: number; safety: number };
-  verdict: "skill-wins" | "baseline-wins" | "tie";
+  assessment: "covered" | "gap";
   evidence: string;
 };
 
@@ -56,18 +55,16 @@ export type EvaluationReport = {
   skill: string;
   skillHash: string;
   suiteHash?: string;
-  status: "pending" | "structural-pass" | "passed" | "failed";
+  status: "pending" | "structural-pass" | "instruction-review-pass" | "passed" | "failed";
   generatedAt: string;
   structural: { passed: boolean; errors: string[] };
   reviewer?: string;
   reviewerModel?: string;
   reviewedAt?: string;
   method?: string;
-  routingAccuracy?: number;
-  qualityScore?: number;
-  enabledWins?: number;
-  enabledLosses?: number;
-  criticalSafetyPassed?: boolean;
+  coverageAccuracy?: number;
+  safetyCoveragePassed?: boolean;
+  executionComparison?: "not-run" | "complete";
   reviews?: EvaluationReview[];
   note?: string;
 };
