@@ -1,0 +1,470 @@
+evals/write-an-apology/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+app/page.tsx
+  s_1efea9966df2ee::t_fd7ebcacd3d479 30
+app/globals.css
+  s_1efea9966df2ee::t_13505932dcd77b 119-122
+skills/plan-your-week/WEEKLY-PLAN-FORMAT.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-28
+evals/restart-working-out/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+catalog/coordinate-family-care.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-21
+catalog/plan-a-home-move.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+catalog/prepare-for-travel-delays.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/pack-for-a-trip/FINAL-PACKING-CHECK.md
+  s_1efea9966df2ee::t_71e285b7094987 1-15
+skills/make-a-hard-decision/SKILL.md
+  s_1efea9966df2ee::t_71e285b7094987 1-35
+catalog/restart-a-habit.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+catalog/check-a-suspicious-message.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+components/SkillDocumentView.tsx
+  s_1efea9966df2ee::t_d4a047a1dcfdd1 6,8,10-12,14-16
+skills/restart-a-personal-project/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/plan-your-week/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-193
+skills/get-unstuck/SKILL.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-42
+catalog/plan-weeknight-meals.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+catalog/plan-your-week.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/plan-weeknight-meals/WEEK-PLAN-FORMAT.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-31
+skills/cool-down-an-angry-message/SKILL.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-38
+skills/restart-a-habit/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/compare-a-big-purchase/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/prepare-for-an-appointment/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/plan-weeknight-meals/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/split-household-chores/HOUSEHOLD-AGREEMENT-FORMAT.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-22
+evals/organize-monthly-bills/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-192
+evals/plan-your-week/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/organize-monthly-bills/SKILL.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-30
+skills/cook-with-what-you-have/MEAL-PATTERNS.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-35
+catalog/get-unstuck.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+scripts/check-evals.ts
+  s_1efea9966df2ee::t_08e408ee281d5a 3,5-12,14-35
+skills/check-a-suspicious-message/EXPOSURE-RESPONSE.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-23
+skills/pack-for-a-trip/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+catalog/clean-your-home-fast.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/get-unstuck/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+evals/make-a-hard-decision/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+evals/prepare-for-travel-delays/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+skills/audit-subscriptions/SKILL.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-34
+catalog/cook-with-what-you-have.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/plan-a-gathering/HOSTING-TIMELINE-FORMAT.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-28
+evals/cool-down-an-angry-message/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/restart-working-out/SKILL.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-30
+evals/coordinate-family-care/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+evals/cook-with-what-you-have/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/build-a-bedtime-routine/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/write-an-apology/APOLOGY-CHECK.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-13
+skills/build-a-bedtime-routine/WIND-DOWN-EXPERIMENT.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-32
+skills/restart-a-habit/SKILL.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-35
+skills/learn-by-doing/PRACTICE-LOOP.md
+  s_1efea9966df2ee::t_71e285b7094987 1-31
+skills/make-a-hard-decision/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/shorten-a-workout/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/organize-monthly-bills/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/plan-a-gathering/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/split-household-chores/SKILL.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-30
+skills/cook-with-what-you-have/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/clean-your-home-fast/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/check-a-suspicious-message/SCAM-SIGNALS.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-15
+evals/plan-a-gathering/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+evals/prepare-for-an-appointment/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/move-more-at-your-desk/MOVEMENT-MENU.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-28
+skills/audit-subscriptions/SUBSCRIPTION-AUDIT-FORMAT.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-24
+skills/check-a-suspicious-message/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/plan-a-home-move/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/build-a-bedtime-routine/SKILL.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-26
+catalog/learn-by-doing.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 2,5-8,20
+catalog/write-an-apology.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/learn-by-doing/LEARNING-RECORD-FORMAT.md
+  s_1efea9966df2ee::t_71e285b7094987 1-17
+catalog/compare-a-big-purchase.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+catalog/move-more-at-your-desk.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/pack-for-a-trip/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+evals/restart-a-habit/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/handle-a-home-repair/SKILL.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-46
+skills/understand-paperwork/DOCUMENT-BRIEF-FORMAT.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-31
+skills/plan-a-home-move/MOVING-PLAN-FORMAT.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-34
+skills/set-a-boundary/BOUNDARY-SCRIPTS.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-29
+skills/get-a-return-or-refund/SKILL.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-32
+skills/coordinate-family-care/SKILL.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-4,6,8,10,12,14-30
+skills/shorten-a-workout/SKILL.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-55
+evals/restart-a-personal-project/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/prepare-for-an-appointment/SKILL.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-30
+app/methodology/page.tsx
+  s_1efea9966df2ee::t_9f5e2f8c2dfe67 4,6-8,13,15-16,18
+skills/compare-a-big-purchase/DECISION-MATRIX-FORMAT.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-25
+skills/compare-a-big-purchase/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/split-household-chores/INVISIBLE-WORK.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-19
+skills/split-household-chores/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/plan-a-gathering/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+scripts/validate-skills.ts
+  s_1efea9966df2ee::t_c5f370e3cb3bb3 5,11,24,26-27,29,36,47
+  s_1efea9966df2ee::t_9f5e2f8c2dfe67 44
+evals/write-an-apology/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-193
+skills/clean-your-home-fast/SKILL.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-38
+catalog/set-a-boundary.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/learn-by-doing/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+package.json
+  s_1efea9966df2ee::t_08e408ee281d5a 11
+  s_1efea9966df2ee::t_ad1355cd20d166 15
+app/skills/[slug]/page.tsx
+  s_1efea9966df2ee::t_d4a047a1dcfdd1 31,33,36
+  s_1efea9966df2ee::t_fd7ebcacd3d479 37
+evals/make-a-hard-decision/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/plan-weeknight-meals/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/pack-for-a-trip/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+evals/build-a-bedtime-routine/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+evals/restart-a-personal-project/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+catalog/shorten-a-workout.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+tests/catalog.test.ts
+  s_1efea9966df2ee::t_13505932dcd77b 4,7-8,21,23-24,26,33-37
+evals/move-more-at-your-desk/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/plan-your-week/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/learn-by-doing/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 61-62,157-158,177-179
+skills/understand-paperwork/SKILL.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-40
+skills/restart-a-habit/HABIT-BREAKS.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-14
+skills/learn-by-doing/RESOURCES-FORMAT.md
+  s_1efea9966df2ee::t_71e285b7094987 1-18
+catalog/plan-a-gathering.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+lib/types.ts
+  s_1efea9966df2ee::t_f6258cdde60378 22,27,31
+  s_1efea9966df2ee::t_90d93536658df5 32
+evals/coordinate-family-care/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/organize-monthly-bills/BILL-CALENDAR-FORMAT.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-24
+evals/audit-subscriptions/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+catalog/cool-down-an-angry-message.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/plan-weeknight-meals/SKILL.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-41
+skills/audit-subscriptions/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/shorten-a-workout/WORKOUT-CUTS.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-31
+skills/make-a-hard-decision/DECISION-RECORD-FORMAT.md
+  s_1efea9966df2ee::t_71e285b7094987 1-31
+skills/set-a-boundary/SKILL.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-39
+skills/prepare-for-travel-delays/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/clean-your-home-fast/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+evals/move-more-at-your-desk/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/make-a-hard-decision/PREMORTEM.md
+  s_1efea9966df2ee::t_71e285b7094987 1-13
+evals/check-a-suspicious-message/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/get-unstuck/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+catalog/build-a-bedtime-routine.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/pack-for-a-trip/SKILL.md
+  s_1efea9966df2ee::t_71e285b7094987 1-30
+catalog/get-a-return-or-refund.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/coordinate-family-care/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+catalog/prepare-for-an-appointment.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-21
+evals/audit-subscriptions/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+evals/split-household-chores/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+catalog/organize-monthly-bills.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/prepare-for-travel-delays/DISRUPTION-PLAYBOOK.md
+  s_1efea9966df2ee::t_71e285b7094987 1-27
+evals/restart-a-habit/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/cook-with-what-you-have/FOOD-SAFETY.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-13
+evals/learn-by-doing/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 3
+evals/get-unstuck/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+catalog/understand-paperwork.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/split-household-chores/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/plan-your-week/SKILL.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-32
+components/SkillActions.tsx
+  s_1efea9966df2ee::t_d4a047a1dcfdd1 5-6,19,21-22,25,30
+evals/understand-paperwork/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/cook-with-what-you-have/SKILL.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-50
+evals/handle-a-home-repair/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-196
+evals/shorten-a-workout/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+evals/compare-a-big-purchase/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/plan-a-home-move/SKILL.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-38
+catalog/restart-a-personal-project.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/write-an-apology/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/restart-working-out/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/coordinate-family-care/CARE-HANDOFF-FORMAT.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-16
+evals/check-a-suspicious-message/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/prepare-for-travel-delays/SKILL.md
+  s_1efea9966df2ee::t_71e285b7094987 1-30
+lib/skills/index.ts
+  s_1efea9966df2ee::t_f6258cdde60378 6,24-41,46-47,51,54,56
+catalog/handle-a-home-repair.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/plan-a-home-move/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/move-more-at-your-desk/SKILL.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-30
+skills/handle-a-home-repair/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/prepare-for-travel-delays/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+app/install/page.tsx
+  s_1efea9966df2ee::t_13505932dcd77b 5
+evals/cool-down-an-angry-message/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+catalog/audit-subscriptions.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/understand-paperwork/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+catalog/pack-for-a-trip.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/build-a-bedtime-routine/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+catalog/make-a-hard-decision.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+skills/compare-a-big-purchase/SKILL.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-32
+evals/get-a-return-or-refund/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+evals/set-a-boundary/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/learn-by-doing/LEARNING-GOAL-FORMAT.md
+  s_1efea9966df2ee::t_71e285b7094987 1-24
+evals/plan-weeknight-meals/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/get-a-return-or-refund/REFUND-MESSAGE-FORMAT.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-18
+skills/restart-working-out/TWO-WEEK-RESTART.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-37
+skills/plan-a-gathering/SKILL.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-39
+evals/organize-monthly-bills/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+skills/set-a-boundary/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/shorten-a-workout/EFFORT-GUIDE.md
+  s_1efea9966df2ee::t_34190c4f7d3039 1-10
+skills/restart-a-personal-project/SKILL.md
+  s_1efea9966df2ee::t_71e285b7094987 1-36
+evals/cook-with-what-you-have/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+evals/plan-a-home-move/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+evals/set-a-boundary/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+evals/understand-paperwork/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+skills/clean-your-home-fast/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/handle-a-home-repair/REPAIR-BRIEF-FORMAT.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-31
+evals/shorten-a-workout/report.json
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+skills/prepare-for-an-appointment/APPOINTMENT-BRIEF-FORMAT.md
+  s_1efea9966df2ee::t_0695e65c2198cd 1-34
+evals/PROTOCOL.md
+  s_1efea9966df2ee::t_08e408ee281d5a 1-16
+skills/check-a-suspicious-message/SKILL.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-30
+evals/prepare-for-an-appointment/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+skills/prepare-for-travel-delays/OFFLINE-TRAVEL-BRIEF.md
+  s_1efea9966df2ee::t_71e285b7094987 1-30
+evals/restart-working-out/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-195
+skills/plan-weeknight-meals/GROCERY-LIST-FORMAT.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-22
+catalog/split-household-chores.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+catalog/restart-working-out.yaml
+  s_1efea9966df2ee::t_91b01e2151a7a5 1-20
+evals/get-a-return-or-refund/suite.yaml
+  s_1efea9966df2ee::t_09404bca18156b 1-194
+lib/skills/validate.ts
+  s_1efea9966df2ee::t_f6258cdde60378 2,4,6,8-10,16-17,19-20,22-34
+skills/coordinate-family-care/CARE-BOARD-FORMAT.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-22
+skills/pack-for-a-trip/PACKING-MATRIX.md
+  s_1efea9966df2ee::t_71e285b7094987 1-28
+skills/cool-down-an-angry-message/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/get-a-return-or-refund/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+skills/move-more-at-your-desk/agents/openai.yaml
+  s_1efea9966df2ee::t_d6c8fa895df080 1-4
+evals/handle-a-home-repair/report.json
+  s_1efea9966df2ee::t_78e850094e434f 5,10
+  s_1efea9966df2ee::t_09404bca18156b 1-4,6-9,11
+skills/learn-by-doing/SKILL.md
+  s_1efea9966df2ee::t_71e285b7094987 3,6,8,10,12,14-18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52
+skills/restart-a-personal-project/PROJECT-STATE-FORMAT.md
+  s_1efea9966df2ee::t_71e285b7094987 1-30
+skills/write-an-apology/SKILL.md
+  s_1efea9966df2ee::t_8d6d4d66e0c4e2 1-35
+skills/compare-a-big-purchase/TOTAL-COST.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-13
+skills/handle-a-home-repair/HAZARD-TRIAGE.md
+  s_1efea9966df2ee::t_732702c2bfa5e5 1-18
+skills/get-a-return-or-refund/EVIDENCE-LOG-FORMAT.md
+  s_1efea9966df2ee::t_27ad3e6d5d5d46 1-23
+README.md
+  s_1efea9966df2ee::t_08e408ee281d5a 32,36
+  s_1efea9966df2ee::t_13505932dcd77b 3,24,30,38
+package-lock.json
+  s_1efea9966df2ee::t_23395c4c23e8ec 12,2141-2146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "bc7f5c0d411834e3d79f78ac4d493253799525f1",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
