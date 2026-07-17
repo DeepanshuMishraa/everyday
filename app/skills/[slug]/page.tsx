@@ -5,11 +5,28 @@ import { categories } from "@/catalog/categories";
 import { CopyButton, DownloadButton } from "@/components/SkillActions";
 import { SkillDocumentView } from "@/components/SkillDocumentView";
 import { EvaluationReportView } from "@/components/EvaluationReportView";
+import { JsonLd } from "@/components/JsonLd";
 import { getAllSkills, getSkill } from "@/lib/skills";
+import { absoluteUrl, breadcrumbSchema, metaDescription, site } from "@/lib/site";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getAllSkills().map(({ slug }) => ({ slug })); }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const skill = getSkill(slug); return skill ? { title: skill.title, description: skill.description } : {}; }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const skill = getSkill(slug);
+  if (!skill) return {};
+  const title = `${skill.title} AI Agent Skill`;
+  const description = metaDescription(`${skill.outcome} Free, inspectable SKILL.md package for AI agents.`);
+  const path = `/skills/${skill.slug}/`;
+  return {
+    title,
+    description,
+    keywords: [...skill.tags, skill.title, "AI agent skill", "SKILL.md"],
+    alternates: { canonical: path },
+    openGraph: { type: "article", url: path, title: `${title} | Everyday`, description, modifiedTime: skill.updated, images: [{ url: `${path}opengraph-image`, width: 1200, height: 630, alt: `${skill.title} — an Everyday AI agent skill` }] },
+    twitter: { card: "summary_large_image", title: `${title} | Everyday`, description, images: [`${path}opengraph-image`] },
+  };
+}
 
 export default async function SkillPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -20,8 +37,13 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
   const install = `npx skills add ${repo}@${skill.slug} -g -y`;
   const reportMatches = skill.evaluation?.skillHash === skill.hash && skill.evaluation?.suiteHash === skill.suiteHash;
   const reviewed = reportMatches && skill.evaluation?.status === "instruction-review-pass";
+  const path = `/skills/${skill.slug}/`;
 
   return <>
+    <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+      { "@type": "DigitalDocument", "@id": `${absoluteUrl(path)}#skill`, name: `${skill.title} AI Agent Skill`, headline: skill.title, description: skill.description, url: absoluteUrl(path), inLanguage: site.language, encodingFormat: "text/markdown", isAccessibleForFree: true, version: skill.version, dateModified: skill.updated, isPartOf: { "@id": `${site.url}/#website` }, about: skill.tags, mainEntityOfPage: absoluteUrl(path) },
+      breadcrumbSchema([{ name: "Everyday", path: "/" }, { name: category.name, path: `/categories/${category.slug}/` }, { name: skill.title, path }]),
+    ] }} />
     <div className="breadcrumb"><Link href="/">Library</Link><span>/</span><Link href={`/categories/${category.slug}`}>{category.name}</Link><span>/</span><span>{skill.title}</span></div>
     <header className={`skill-hero accent-${category.color}`}>
       <div><p className="eyebrow">{category.name} · v{skill.version}</p><h1>{skill.title}</h1><p className="skill-description">{skill.description}</p></div>

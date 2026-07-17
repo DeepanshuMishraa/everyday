@@ -1,6 +1,6 @@
-# Good Work — Everyday Agent Skills
+# Everyday — Practical AI Agent Skills
 
-A static Next.js field guide containing exactly 30 installable, non-developer skill packages for recurring real-life situations.
+A static Next.js library containing exactly 30 installable, non-developer AI agent skill packages for recurring real-life situations.
 
 ## Local setup
 
@@ -13,8 +13,11 @@ npm run dev
 
 Set `NEXT_PUBLIC_SKILLS_REPOSITORY` to the GitHub `owner/repository` used by the installation command. The production build is a fully static export:
 
+Set `NEXT_PUBLIC_SITE_URL` to the production origin, without a trailing slash. Canonical URLs, Open Graph metadata, the sitemap, robots.txt, JSON-LD, and `llms.txt` are all generated from it. The fallback is `https://everyday-agent-skills.vercel.app`.
+
 ```bash
 npm run build
+npm run check-seo
 ```
 
 Deploy the generated Next.js project to Vercel, or host `out/` on any static host. The site has no database, authentication, API routes, or server runtime requirement.

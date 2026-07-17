@@ -37,7 +37,7 @@ export function SearchLibrary({ skills, categories }: Props) {
   return (
     <section className="library-section" id="library" aria-labelledby="library-title">
       <div className="section-heading">
-        <div><p className="eyebrow">The field guide · 30 procedures</p><h2 id="library-title">Find the moment you are in.</h2></div>
+        <div><p className="eyebrow">The Everyday library · 30 skills</p><h2 id="library-title">Find the moment you are in.</h2></div>
         <p>Search in plain language. Try “I feel overwhelmed,” “suspicious text,” or “missed my workouts.”</p>
       </div>
       <form className="search-panel" role="search" onSubmit={submit}>
@@ -51,7 +51,7 @@ export function SearchLibrary({ skills, categories }: Props) {
           {categories.map((item) => <button type="button" key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => setCategory(item.slug)}>{item.shortName}</button>)}
         </div>
       </form>
-      <div className="result-bar" aria-live="polite"><span>{results.length} {results.length === 1 ? "procedure" : "procedures"}</span>{query && <button type="button" onClick={() => setQuery("")}>Clear search</button>}</div>
+      <div className="result-bar" aria-live="polite"><span>{results.length} {results.length === 1 ? "skill" : "skills"}</span>{query && <button type="button" onClick={() => setQuery("")}>Clear search</button>}</div>
       {results.length ? (
         <div className="skill-list">
           {results.map((skill, index) => {
@@ -64,7 +64,7 @@ export function SearchLibrary({ skills, categories }: Props) {
           })}
         </div>
       ) : (
-        <div className="empty-state"><p className="eyebrow">No exact procedure</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The launch library stays intentionally narrow.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all skills</button></div>
+        <div className="empty-state"><p className="eyebrow">No exact skill</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The launch library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all skills</button></div>
       )}
     </section>
   );
