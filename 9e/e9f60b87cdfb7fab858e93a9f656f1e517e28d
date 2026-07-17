@@ -1,0 +1,19 @@
+app/globals.css
+  s_1efea9966df2ee::t_be98f7237af5fa 132,160,166,172,179,195,274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "9ee9f60b87cdfb7fab858e93a9f656f1e517e28d",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
