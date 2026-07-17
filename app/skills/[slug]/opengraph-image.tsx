@@ -13,13 +13,19 @@ export default async function SkillOpenGraphImage({ params }: { params: Promise<
   const { slug } = await params;
   const skill = getSkill(slug)!;
   return new ImageResponse(
-    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "68px 76px", background: "#f4f0e7", color: "#1d1c19", border: "18px solid #1d1c19", fontFamily: "Georgia, serif" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "Arial, sans-serif", fontSize: 23, letterSpacing: 3, textTransform: "uppercase" }}><span>Everyday</span><span style={{ color: "#d94a2f" }}>AI agent skill</span></div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 28, maxWidth: 1010 }}>
-        <div style={{ fontSize: 78, lineHeight: 1, letterSpacing: -3 }}>{skill.title}</div>
-        <div style={{ fontFamily: "Arial, sans-serif", fontSize: 26, lineHeight: 1.4, maxWidth: 940 }}>{skill.outcome}</div>
+    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "72px 76px", background: "#0c0c0e", color: "#fafafa", fontFamily: "Arial, sans-serif" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 21, letterSpacing: 4, textTransform: "uppercase", color: "#71717a" }}>
+        <span>Everyday — AI agent skill</span>
+        <span style={{ display: "flex", alignItems: "center", gap: 10, color: "#0e9f6e" }}><span style={{ width: 10, height: 10, borderRadius: 10, background: "#0e9f6e" }} />v{skill.version}</span>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "Arial, sans-serif", fontSize: 20 }}><span>Open package · v{skill.version}</span><span>everyday agent skills</span></div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 26, maxWidth: 1020 }}>
+        <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.02, letterSpacing: -3 }}>{skill.title}</div>
+        <div style={{ fontSize: 25, lineHeight: 1.5, maxWidth: 940, color: "#a1a1aa" }}>{skill.outcome}</div>
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 21 }}>
+        <span style={{ fontFamily: "monospace", color: "#a1a1aa", border: "1px solid #27272a", borderRadius: 10, padding: "12px 20px" }}>$ npx skills add</span>
+        <span style={{ color: "#71717a" }}>Open package · inspectable</span>
+      </div>
     </div>,
     size,
   );

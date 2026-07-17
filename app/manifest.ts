@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "A free library of practical, installable AI agent skills for daily life.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f4f0e7",
-    theme_color: "#d94a2f",
+    background_color: "#fafafa",
+    theme_color: "#131316",
     icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" }],
   };
 }

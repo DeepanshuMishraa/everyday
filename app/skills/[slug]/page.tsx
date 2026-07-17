@@ -44,12 +44,14 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
       { "@type": "DigitalDocument", "@id": `${absoluteUrl(path)}#skill`, name: `${skill.title} AI Agent Skill`, headline: skill.title, description: skill.description, url: absoluteUrl(path), inLanguage: site.language, encodingFormat: "text/markdown", isAccessibleForFree: true, version: skill.version, dateModified: skill.updated, isPartOf: { "@id": `${site.url}/#website` }, about: skill.tags, mainEntityOfPage: absoluteUrl(path) },
       breadcrumbSchema([{ name: "Everyday", path: "/" }, { name: category.name, path: `/categories/${category.slug}/` }, { name: skill.title, path }]),
     ] }} />
-    <div className="breadcrumb"><Link href="/">Library</Link><span>/</span><Link href={`/categories/${category.slug}`}>{category.name}</Link><span>/</span><span>{skill.title}</span></div>
+    <div className="wrap"><nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Library</Link><span aria-hidden="true">/</span><Link href={`/categories/${category.slug}`}>{category.name}</Link><span aria-hidden="true">/</span><span>{skill.title}</span></nav></div>
     <header className={`skill-hero accent-${category.color}`}>
-      <div><p className="eyebrow">{category.name} · v{skill.version}</p><h1>{skill.title}</h1><p className="skill-description">{skill.description}</p></div>
-      <aside className="skill-fact"><span>Observable outcome</span><p>{skill.outcome}</p></aside>
+      <div className="wrap skill-hero-grid">
+        <div><p className="eyebrow"><span className="cat-dot" aria-hidden="true" />{category.name} — v{skill.version}</p><h1>{skill.title}</h1><p className="skill-description">{skill.description}</p></div>
+        <aside className="skill-fact"><span>Observable outcome</span><p>{skill.outcome}</p></aside>
+      </div>
     </header>
-    <div className="skill-layout">
+    <div className="wrap skill-layout">
       <aside className="skill-sidebar">
         <section><h2>Install</h2><div className="command"><code>{install}</code><CopyButton value={install} label="Copy command" event="install_command_copy" skill={skill.slug} /></div><DownloadButton files={skill.files} slug={skill.slug} /><CopyButton value={skill.markdown} label="Copy SKILL.md" event="skill_copy" skill={skill.slug} /></section>
         <section><h2>Try asking</h2><ul>{skill.examples.map((example) => <li key={example}>“{example}”</li>)}</ul></section>
