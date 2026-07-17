@@ -1,0 +1,92 @@
+evals/prepare-for-an-appointment/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/get-a-return-or-refund/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+components/EvaluationReportView.tsx
+  s_1efea9966df2ee::t_61420a7389db29 1-25,27-36,38-55
+  s_1efea9966df2ee::t_fee13605c8a6ed 26,37
+evals/compare-a-big-purchase/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/check-a-suspicious-message/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/plan-a-home-move/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+scripts/check-evals.ts
+  s_1efea9966df2ee::t_61420a7389db29 30
+evals/PROTOCOL.md
+  s_1efea9966df2ee::t_61420a7389db29 16
+app/globals.css
+  s_1efea9966df2ee::t_fee13605c8a6ed 128-139,162,169
+evals/coordinate-family-care/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/prepare-for-travel-delays/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/restart-a-personal-project/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/plan-your-week/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/plan-a-gathering/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/learn-by-doing/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/plan-weeknight-meals/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/understand-paperwork/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/write-an-apology/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/audit-subscriptions/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/restart-a-habit/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/set-a-boundary/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/handle-a-home-repair/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/cool-down-an-angry-message/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+app/skills/[slug]/page.tsx
+  s_1efea9966df2ee::t_61420a7389db29 7,38
+evals/organize-monthly-bills/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/get-unstuck/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/cook-with-what-you-have/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/pack-for-a-trip/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/split-household-chores/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+lib/skills/index.ts
+  s_1efea9966df2ee::t_61420a7389db29 6,50,61
+evals/clean-your-home-fast/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/move-more-at-your-desk/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+lib/types.ts
+  s_1efea9966df2ee::t_61420a7389db29 30,35-54,62-65,71
+evals/shorten-a-workout/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/build-a-bedtime-routine/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/restart-working-out/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+evals/make-a-hard-decision/report.json
+  s_1efea9966df2ee::t_08b9ceb7f52c9e 7-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "8b5850e9c85600013f5e7b1b35a31b0a1c0ac16d",
+  "prompts": {},
+  "sessions": {
+    "s_1efea9966df2ee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6c4d-774e-76e2-ba5d-25441acc7528",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
