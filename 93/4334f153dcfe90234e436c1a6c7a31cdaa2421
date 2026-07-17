@@ -1,0 +1,70 @@
+app/opengraph-image.tsx
+  s_904633ddb0cac0::t_850841fc32345e 11-14,16-22
+app/methodology/page.tsx
+  s_904633ddb0cac0::t_b31f5ba1bf3919 27-33
+components/SearchLibrary.tsx
+  s_904633ddb0cac0::t_6f67f1c92c7c0b 92
+  s_904633ddb0cac0::t_a5c545d3226b09 59,67-72
+  s_904633ddb0cac0::t_dd780e5c96cd48 6,14-31,56,58,62-66,79-81,83-91,93-106
+app/icon.svg
+  s_904633ddb0cac0::t_27b0d119ff7673 2-4
+app/globals.css
+  s_904633ddb0cac0::t_0113cad8f79777 255-264
+  s_904633ddb0cac0::t_306d892c6749cd 50
+  s_904633ddb0cac0::t_c0463a91a01039 7,17,36-49,51-57
+  s_904633ddb0cac0::t_366b15f4293fda 323-324
+  s_904633ddb0cac0::t_740de2c1959339 71
+  s_904633ddb0cac0::t_4e5b816ea1982d 599-600
+  s_904633ddb0cac0::t_102644fa3bb067 144-145
+  s_904633ddb0cac0::t_8c559ffd87702a 18
+  s_904633ddb0cac0::t_3badce5bc3d7fa 208,216
+  s_904633ddb0cac0::t_47d029bcb00064 153,163,165-197
+  s_904633ddb0cac0::t_6014ee057416c5 214-215,217
+  s_904633ddb0cac0::t_3964d77595221c 1-5,8-16,19-35,61-70,72,76-84,87-143,146-152,154-162,164,198-207,209-213,218-254,265-322,325-598,601-622
+app/page.tsx
+  s_904633ddb0cac0::t_211774e1f4e16c 4,17,26-29,32-33,36-53
+  s_904633ddb0cac0::t_66ac4330a203c1 18-23,30-31
+app/layout.tsx
+  s_904633ddb0cac0::t_83c437ce4a1bcb 3,10-11
+  s_904633ddb0cac0::t_d51d5731f2ba00 6,12-13
+  s_904633ddb0cac0::t_24a0b1092b1648 71-76
+  s_904633ddb0cac0::t_dae51e87bdcc30 65-70,77-79
+  s_904633ddb0cac0::t_25d4f99ba577e6 53,55
+  s_904633ddb0cac0::t_2a2720673995f0 14
+app/skills/[slug]/page.tsx
+  s_904633ddb0cac0::t_74649796d1d915 47,49-52,54
+components/SkillActions.tsx
+  s_904633ddb0cac0::t_26aa365224042c 4,8-24,26-27,32-33,35-40,54-61
+app/install/page.tsx
+  s_904633ddb0cac0::t_58fb864554add7 19
+components/Reveal.tsx
+  s_904633ddb0cac0::t_01fd23f1ff132f 1-34
+app/not-found.tsx
+  s_904633ddb0cac0::t_69b48777bf11ae 4
+app/categories/[slug]/page.tsx
+  s_904633ddb0cac0::t_410e3a5de7c9f8 37
+app/skills/[slug]/opengraph-image.tsx
+  s_904633ddb0cac0::t_8f7e2742902164 16-27
+app/manifest.ts
+  s_904633ddb0cac0::t_c53727089ca45c 12-13
+components/ThemeToggle.tsx
+  s_904633ddb0cac0::t_9106270b5b20ac 1-50
+components/SkillDocumentView.tsx
+  s_904633ddb0cac0::t_e2da4c13332b14 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "934334f153dcfe90234e436c1a6c7a31cdaa2421",
+  "prompts": {},
+  "sessions": {
+    "s_904633ddb0cac0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_090e581acffeLm8bWZpFXC5Ssu",
+        "model": "kimi-k3"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
