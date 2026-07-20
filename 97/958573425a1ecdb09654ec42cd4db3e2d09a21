@@ -1,0 +1,98 @@
+research/USER_INTERVIEW_PROTOCOL.md
+  s_a913e572949944::t_b990ce6f9da6db 1-49
+app/skills/[slug]/opengraph-image.tsx
+  s_a913e572949944::t_81ed17e6662cca 4,14-15,20,27-28
+app/not-found.tsx
+  s_a913e572949944::t_f2a400d1e5bc19 4
+components/LibraryMemoryPanel.tsx
+  s_a913e572949944::t_c2210b4bc6f04b 13-15
+  s_a913e572949944::t_48d572698a95e7 1-12,16-41,44-46
+  s_a913e572949944::t_a2970576f6f549 42-43
+app/layout.tsx
+  s_a913e572949944::t_f2a400d1e5bc19 6,13,19-20,27,33,72,80,87
+  s_a913e572949944::t_a2970576f6f549 49-54
+  s_a913e572949944::t_746ce75e297069 86
+.impeccable.md
+  s_a913e572949944::t_3a61863d4f4f1d 13
+  s_a913e572949944::t_f2a400d1e5bc19 1-12,14-21
+app/privacy/page.tsx
+  s_a913e572949944::t_b990ce6f9da6db 1-16
+app/skills/[slug]/page.tsx
+  s_a913e572949944::t_c981e5b22d889d 27,36-37,46
+  s_a913e572949944::t_f47dd2e9b9d18e 7,19-20,47,49,53,61-65
+  s_a913e572949944::t_a2970576f6f549 52
+lib/site.ts
+  s_a913e572949944::t_f2a400d1e5bc19 4
+app/install/page.tsx
+  s_a913e572949944::t_746ce75e297069 8,19
+app/categories/[slug]/page.tsx
+  s_a913e572949944::t_746ce75e297069 15-16,34-35
+  s_a913e572949944::t_a2970576f6f549 37
+components/ProductAnalytics.tsx
+  s_a913e572949944::t_48d572698a95e7 1-5,7,9,21-35,37-40
+  s_a913e572949944::t_c2210b4bc6f04b 6,8,10-20,36
+app/skills/page.tsx
+  s_a913e572949944::t_f2a400d1e5bc19 1-27
+components/SkillDocumentView.tsx
+  s_a913e572949944::t_f47dd2e9b9d18e 13-15
+tests/library-memory.test.ts
+  s_a913e572949944::t_a945a480cc6936 1-31
+components/TrackedBrowseLink.tsx
+  s_a913e572949944::t_ee1d39929eb358 7
+  s_a913e572949944::t_f2a400d1e5bc19 1-6,8
+app/page.tsx
+  s_a913e572949944::t_f2a400d1e5bc19 2,7
+  s_a913e572949944::t_ee1d39929eb358 8-19,21-36
+scripts/check-seo.ts
+  s_a913e572949944::t_b990ce6f9da6db 12,15
+components/SkillUseActions.tsx
+  s_a913e572949944::t_48d572698a95e7 1-11,18-26,36-39,46-50,52-67
+  s_a913e572949944::t_c2210b4bc6f04b 12-17,40-45,51
+  s_a913e572949944::t_c981e5b22d889d 27-32,34
+  s_a913e572949944::t_cbb203c923d283 33,35
+app/methodology/page.tsx
+  s_a913e572949944::t_746ce75e297069 31
+app/sitemap.ts
+  s_a913e572949944::t_b990ce6f9da6db 13,16
+lib/library-memory.ts
+  s_a913e572949944::t_48d572698a95e7 1-47,56-84
+  s_a913e572949944::t_c2210b4bc6f04b 48-55
+app/opengraph-image.tsx
+  s_a913e572949944::t_81ed17e6662cca 5,14,17-18,21-22
+app/llms.txt/route.ts
+  s_a913e572949944::t_81ed17e6662cca 12,14,17,25
+README.md
+  s_a913e572949944::t_81ed17e6662cca 1,3
+app/manifest.ts
+  s_a913e572949944::t_f2a400d1e5bc19 7,9
+app/globals.css
+  s_a913e572949944::t_23dc1bb697152e 36,135,171,173,178,185,202,273-277,279-281,300-301,318,410,430-433,435,447,616-627,655,684-686,703-704
+  s_a913e572949944::t_32e1a741393dbf 148,204,257,397,405,407-408,416-417,426,434,439,441,450,453-454,461,471,473,475-476,480,501,508-509,514,516,533,535-537,543,554,568,584,590
+  s_a913e572949944::t_537042d40c5598 643-648,677-678,713-714,720-726,747-753
+  s_a913e572949944::t_9d21f951f525a7 661-670,697-702,705-712,715-719,727-746,754-757
+  s_a913e572949944::t_c899fab4f010ad 1,37-43,78-81,91,105,109-112,117-118,137,162-163,254,262,264,278,292,298,302,316,320,329-330,334,348-362
+  s_a913e572949944::t_3b82e56f16502a 213-222,224-243
+components/SearchLibrary.tsx
+  s_a913e572949944::t_3e555455c2dfa9 6,15,18,25-35,47-48,68,79-80,83,85,90-92,99,101,111
+  s_a913e572949944::t_a2970576f6f549 103-104
+  s_a913e572949944::t_c981e5b22d889d 39-41
+  s_a913e572949944::t_06ca48ebd292ee 50
+.github/ISSUE_TEMPLATE/workflow-request.yml
+  s_a913e572949944::t_b990ce6f9da6db 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "97958573425a1ecdb09654ec42cd4db3e2d09a21",
+  "prompts": {},
+  "sessions": {
+    "s_a913e572949944": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f80ae-d96e-71f3-9ed2-be2a6d3b3076",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
