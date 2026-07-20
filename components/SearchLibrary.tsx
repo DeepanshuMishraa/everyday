@@ -3,52 +3,51 @@
 import { track } from "@vercel/analytics";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { LibraryMemoryPanel } from "@/components/LibraryMemoryPanel";
 import { createSkillSearch, searchSkills } from "@/lib/skills/search";
 import type { CatalogSkill, Category } from "@/lib/types";
 
 type Props = { skills: CatalogSkill[]; categories: Category[] };
-const PAGE_SIZE = 10;
-
 export function SearchLibrary({ skills, categories }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
-  const [page, setPage] = useState(1);
   const inputRef = useRef<HTMLInputElement>(null);
-  const ledgerRef = useRef<HTMLDivElement>(null);
+  const trackedSearchRef = useRef("");
 
   const search = useMemo(() => createSkillSearch(skills), [skills]);
+  const categoriesBySlug = useMemo(() => new Map(categories.map((item) => [item.slug, item])), [categories]);
 
   const results = useMemo(() => {
     const matching = searchSkills(search, skills, query);
     return category === "all" ? matching : matching.filter((skill) => skill.category === category);
   }, [category, query, search, skills]);
 
-  useEffect(() => { setPage(1); }, [query, category]);
-
-  const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
-  const currentPage = Math.min(page, pageCount);
-  const pageStart = (currentPage - 1) * PAGE_SIZE;
-  const pageEnd = Math.min(pageStart + PAGE_SIZE, results.length);
-  const visibleResults = results.slice(pageStart, pageEnd);
-
-  function goToPage(nextPage: number) {
-    if (nextPage < 1 || nextPage > pageCount || nextPage === currentPage) return;
-    setPage(nextPage);
-    track("library_page_change", { page: nextPage, query: query || "none", category });
-    requestAnimationFrame(() => ledgerRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
-  }
+  useEffect(() => {
+    const normalized = query.trim();
+    if (!normalized && category === "all") return;
+    const signature = `${normalized.toLocaleLowerCase()}|${category}|${results.length}`;
+    const timer = window.setTimeout(() => {
+      if (trackedSearchRef.current === signature) return;
+      trackedSearchRef.current = signature;
+      track(results.length ? "search_performed" : "zero_result_search", { has_query: Boolean(normalized), query_length: normalized.length, category, results: results.length });
+    }, 600);
+    return () => window.clearTimeout(timer);
+  }, [category, query, results.length]);
 
   function submit(event: FormEvent) {
     event.preventDefault();
-    track(results.length ? "search" : "zero_result_search", { query, category, results: results.length });
+    const normalized = query.trim();
+    trackedSearchRef.current = `${normalized.toLocaleLowerCase()}|${category}|${results.length}`;
+    track(results.length ? "search_performed" : "zero_result_search", { has_query: Boolean(normalized), query_length: normalized.length, category, results: results.length });
   }
 
   return (
     <section className="library-section wrap" id="library" aria-labelledby="library-title">
       <div className="section-heading">
-        <div><p className="eyebrow">The library — 30 packages</p><h2 id="library-title">Find the moment you are in.</h2></div>
-        <p>Search in plain language. Every package is fully inspectable before you install anything.</p>
+        <div><p className="eyebrow">30 practical workflows</p><h1 id="library-title">What are you trying to do?</h1></div>
+        <p>Describe the situation in plain language. Open a workflow and start with the first useful step.</p>
       </div>
+      <LibraryMemoryPanel skills={skills} />
       <form className="search-panel" role="search" onSubmit={submit}>
         <label className="visually-hidden" htmlFor="skill-search">What are you trying to handle?</label>
         <div className={`search-box${query ? " has-query" : ""}`}>
@@ -66,6 +65,7 @@ export function SearchLibrary({ skills, categories }: Props) {
             }}
             placeholder="Describe the situation…"
             autoComplete="off"
+            aria-keyshortcuts="/"
           />
           <kbd className="kbd" aria-hidden="true">/</kbd>
         </div>
@@ -76,43 +76,39 @@ export function SearchLibrary({ skills, categories }: Props) {
           ))}
         </div>
         <div className="filter-row" aria-label="Filter by category">
-          <button type="button" className={category === "all" ? "filter active" : "filter"} onClick={() => setCategory("all")}>All 30</button>
-          {categories.map((item) => <button type="button" key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => setCategory(item.slug)}>{item.shortName}</button>)}
+          <button type="button" aria-pressed={category === "all"} className={category === "all" ? "filter active" : "filter"} onClick={() => setCategory("all")}>All 30</button>
+          {categories.map((item) => <button type="button" aria-pressed={category === item.slug} key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => setCategory(item.slug)}>{item.shortName}</button>)}
         </div>
       </form>
-      <div className="ledger" ref={ledgerRef}>
+      <div className="ledger">
         <div className="ledger-head">
-          <span aria-hidden="true">#</span><span aria-hidden="true">Skill</span><span className="ledger-count" aria-live="polite">{results.length ? `${pageStart + 1}–${pageEnd} of ${results.length}` : "0 skills"}</span>
+          <span aria-hidden="true">#</span><span aria-hidden="true">Workflow</span><span className="ledger-count" aria-live="polite">{results.length ? `${results.length} workflows` : "0 workflows"}</span>
         </div>
         {results.length ? (
           <>
             <div className="skill-list">
-            {visibleResults.map((skill, index) => {
-              const itemCategory = categories.find((item) => item.slug === skill.category)!;
+            {results.map((skill, index) => {
+              const itemCategory = categoriesBySlug.get(skill.category);
+              if (!itemCategory) return null;
               return (
                 <Link
                   className={`skill-row accent-${itemCategory.color}`}
                   href={`/skills/${skill.slug}`}
                   key={skill.slug}
                   style={{ animationDelay: `${Math.min(index, 10) * 20}ms` }}
-                  onClick={() => track("skill_open", { skill: skill.slug, source: "library" })}
+                  onClick={() => track("search_to_skill_open", { skill: skill.slug, source: "library", has_query: Boolean(query.trim()), category })}
                 >
-                  <span className="skill-number">{String(pageStart + index + 1).padStart(2, "0")}</span>
+                  <span className="skill-number">{String(index + 1).padStart(2, "0")}</span>
                   <span className="skill-main"><strong>{skill.title}</strong><span>{skill.outcome}</span></span>
-                  <span className="skill-cat"><span className="cat-dot" aria-hidden="true" />{itemCategory.shortName}</span>
-                  <span className="skill-arrow" aria-hidden="true">↗</span>
+                  <span className="skill-tags"><span className="skill-category">{itemCategory.shortName}</span>{skill.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}</span>
+                  <span className="skill-arrow" aria-hidden="true">View</span>
                 </Link>
               );
             })}
             </div>
-            {pageCount > 1 && <nav className="pagination" aria-label="Library pages">
-              <button type="button" className="pagination-button" disabled={currentPage === 1} onClick={() => goToPage(currentPage - 1)}><span aria-hidden="true">←</span> Previous</button>
-              <span className="pagination-status" aria-live="polite">Page {currentPage} of {pageCount}</span>
-              <button type="button" className="pagination-button" disabled={currentPage === pageCount} onClick={() => goToPage(currentPage + 1)}>Next <span aria-hidden="true">→</span></button>
-            </nav>}
           </>
         ) : (
-          <div className="empty-state"><p className="eyebrow">No exact skill</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The launch library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all skills</button></div>
+          <div className="empty-state"><p className="eyebrow">No exact workflow</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all workflows</button></div>
         )}
       </div>
     </section>

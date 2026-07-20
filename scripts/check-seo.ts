@@ -9,8 +9,10 @@ const output = path.join(root, "out");
 const skills = getAllSkills();
 const pages = [
   { route: "/", file: "index.html" },
+  { route: "/skills/", file: "skills/index.html" },
   { route: "/install/", file: "install/index.html" },
   { route: "/methodology/", file: "methodology/index.html" },
+  { route: "/privacy/", file: "privacy/index.html" },
   ...categories.map(({ slug }) => ({ route: `/categories/${slug}/`, file: `categories/${slug}/index.html` })),
   ...skills.map(({ slug }) => ({ route: `/skills/${slug}/`, file: `skills/${slug}/index.html` })),
 ];

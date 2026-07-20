@@ -1,6 +1,6 @@
-# Everyday — Practical AI Agent Skills
+# Everyday — Practical Workflows for Real Life
 
-A static Next.js library containing exactly 30 installable, non-developer AI agent skill packages for recurring real-life situations.
+A static Next.js library containing exactly 30 short workflows for recurring real-life situations. People can read and save workflows directly; compatible AI agents can optionally install the portable source packages.
 
 ## Local setup
 

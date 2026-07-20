@@ -1,0 +1,34 @@
+name: Request a workflow
+description: Describe a recurring everyday situation that needs a reliable process.
+title: "Workflow request: "
+labels: ["workflow-request"]
+body:
+  - type: textarea
+    id: situation
+    attributes:
+      label: Recurring situation
+      description: Describe the last time this happened and what made it difficult.
+      placeholder: Walk us through the real situation, not a proposed feature.
+    validations:
+      required: true
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: What do you do today?
+      description: Include tools, notes, searches, or people you currently rely on.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Useful outcome
+      description: What would be visibly different after a good workflow?
+    validations:
+      required: true
+  - type: checkboxes
+    id: recurring
+    attributes:
+      label: Frequency
+      options:
+        - label: This situation has happened more than once.
+          required: true

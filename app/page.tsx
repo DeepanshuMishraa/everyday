@@ -1,52 +1,39 @@
-import Link from "next/link";
-import { categories } from "@/catalog/categories";
-import { SearchLibrary } from "@/components/SearchLibrary";
 import { JsonLd } from "@/components/JsonLd";
-import { getAllSkills } from "@/lib/skills";
+import { TrackedBrowseLink } from "@/components/TrackedBrowseLink";
 import { absoluteUrl, site } from "@/lib/site";
 
 export default function Home() {
-  const skills = getAllSkills();
-  const metadata = skills.map(({ markdown: _markdown, body: _body, hash: _hash, lineCount: _lineCount, evaluation: _evaluation, ...skill }) => skill);
   return <>
-    <JsonLd data={{ "@context": "https://schema.org", "@graph": [
-      { "@type": "CollectionPage", "@id": `${site.url}/#collection`, name: "Everyday AI Agent Skills Library", description: site.description, url: site.url, isPartOf: { "@id": `${site.url}/#website` }, inLanguage: site.language, mainEntity: { "@id": `${site.url}/#skill-list` } },
-      { "@type": "ItemList", "@id": `${site.url}/#skill-list`, name: "30 practical AI agent skills for everyday life", numberOfItems: skills.length, itemListElement: skills.map((skill, index) => ({ "@type": "ListItem", position: index + 1, name: skill.title, url: absoluteUrl(`/skills/${skill.slug}/`) })) },
-    ] }} />
-    <section className="hero wrap">
-      <p className="eyebrow rise">Everyday — practical agent skills<span className="cursor" aria-hidden="true" /></p>
-      <h1 className="rise rise-1">Give your agent skills for real life.</h1>
-      <p className="hero-deck rise rise-2">Thirty open, installable procedures for cooking, workouts, paperwork, shared care, money routines, travel, and the difficult middle of an ordinary week.</p>
-      <div className="hero-actions rise rise-3">
-        <Link className="button primary" href="#library">Browse the library</Link>
-        <Link className="button secondary" href="/methodology">How we review</Link>
-      </div>
-    </section>
-    <div className="trust-strip" aria-label="Library facts">
-      <div className="wrap trust-line">
-        <span><strong>30</strong> installable skills</span>
-        <span><strong>6</strong> everyday categories</span>
-        <span><strong>10</strong> review scenarios each</span>
-        <span>Free to inspect and install</span>
-      </div>
-    </div>
-    <SearchLibrary skills={metadata} categories={categories} />
-    <section className="category-overview">
-      <div className="wrap">
-        <div className="section-heading">
-          <div><p className="eyebrow">Six parts of everyday life</p><h2>Designed around situations, not personas.</h2></div>
-          <p>Every category contains five practical skills. The constraint keeps the launch useful, legible, and reviewable.</p>
+    <JsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", "@id": absoluteUrl("/"), name: "Everyday — practical workflows for real life", description: site.description, url: absoluteUrl("/"), isPartOf: { "@id": `${site.url}/#website` }, inLanguage: site.language }} />
+    <section className="home-hero">
+      <div className="wrap home-hero-grid">
+        <div className="home-hero-copy">
+          <p className="eyebrow rise">A field guide for everyday life</p>
+          <h1 className="rise rise-1">Know what to do next.</h1>
+          <p className="hero-deck rise rise-2">Thirty practical workflows for the moments that drain your time: difficult messages, household admin, meals, money, health, and getting unstuck.</p>
+          <div className="hero-actions rise rise-3">
+            <TrackedBrowseLink />
+          </div>
+          <div className="hero-proof rise rise-3" aria-label="Free to read, no account required, human-readable guidance">
+            <span>Free to read</span><span>No account</span><span>Use it immediately</span>
+          </div>
         </div>
-        <div className="category-grid">
-          {categories.map((category, index) => (
-            <Link key={category.slug} href={`/categories/${category.slug}`} className={`category-block accent-${category.color}`}>
-              <span className="cat-index"><span className="cat-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")}</span>
-              <h3>{category.name}</h3>
-              <p>{category.description}</p>
-              <strong>Browse 5 skills <i aria-hidden="true">→</i></strong>
-            </Link>
-          ))}
-        </div>
+        <aside className="hero-index rise rise-2" aria-label="Examples from the workflow library">
+          <div className="hero-index-head">
+            <span>Start with your situation</span>
+            <strong>30 workflows</strong>
+          </div>
+          <div className="hero-index-intro">
+            <span>What are you dealing with?</span>
+            <p>Search in your own words. Leave with a clear next step.</p>
+          </div>
+          <div className="hero-index-list">
+            <div><span className="hero-index-number">01</span><strong>I got a suspicious message</strong><span className="hero-index-tag">Safety</span></div>
+            <div><span className="hero-index-number">02</span><strong>I need dinner from what I have</strong><span className="hero-index-tag">Food</span></div>
+            <div><span className="hero-index-number">03</span><strong>I feel overwhelmed and stuck</strong><span className="hero-index-tag">Thinking</span></div>
+          </div>
+          <div className="hero-index-foot"><span>Plain-language guidance</span><span>Read before using</span></div>
+        </aside>
       </div>
     </section>
   </>;

@@ -4,9 +4,9 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Everyday — Practical AI Agent Skills",
+    name: "Everyday — Practical Workflows",
     short_name: "Everyday",
-    description: "A free library of practical, installable AI agent skills for daily life.",
+    description: "A free library of short, practical workflows for daily life.",
     start_url: "/",
     display: "standalone",
     background_color: "#fafafa",
