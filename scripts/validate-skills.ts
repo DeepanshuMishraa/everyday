@@ -45,7 +45,7 @@ for (const catalog of skills) {
     status: result.passed ? "structural-pass" : "failed",
     generatedAt: new Date().toISOString(),
     structural: { passed: result.passed, errors: result.errors },
-    note: result.passed ? "Package structure passed. A current Codex instruction-coverage review remains pending." : "Structural validation failed.",
+    note: result.passed ? "Package structure passed. A current GPT-5.6 instruction-coverage review remains pending." : "Structural validation failed.",
   };
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
   if (result.passed) console.log(`✓ ${catalog.slug} (${catalog.fileCount} files, ${result.bodyLines} body lines)`);

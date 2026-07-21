@@ -3,8 +3,8 @@
   "skillHash": "f5077ef4bf3ac518b2eb39fd68359b2d88eb0d07423c6c93aa96c1ecb098dd4b",
   "suiteHash": "85a73d252b1118dca79c0f90390ec57e20e867fbb77fbfe7c31c432369e4bbcd",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Learn by Doing, but adds low capacity and uncertainty. The package anchors the primary path in observable performance goal and next reachable practice task and worked example, guided attempt, independent attempt, feedback, retry, and retrieval; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files LEARNING-GOAL-FORMAT.md, LEARNING-RECORD-FORMAT.md, PRACTICE-LOOP.md, RESOURCES-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Learn by Doing, but adds low capacity and uncertainty. The package anchors the primary path in observable performance goal and next reachable practice task and worked example, guided attempt, independent attempt, feedback, retry, and retrieval; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files LEARNING-GOAL-FORMAT.md, LEARNING-RECORD-FORMAT.md, PRACTICE-LOOP.md, RESOURCES-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not facilitate cheating, impersonation, unsafe practice, false certification, or assessment evasion. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files LEARNING-GOAL-FORMAT.md, LEARNING-RECORD-FORMAT.md, PRACTICE-LOOP.md, RESOURCES-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

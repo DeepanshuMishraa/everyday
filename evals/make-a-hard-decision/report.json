@@ -3,8 +3,8 @@
   "skillHash": "dcd6d2d922118ddfa225306255e4c7bebb6999d014ba5d90144b5b355995dd88",
   "suiteHash": "2eff068716d0d2e020dbc2685a3db3cd9e9abc1360e0dfffdece39b49d01c79e",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Make a Hard Decision, but adds low capacity and uncertainty. The package anchors the primary path in one framed decision with options, evidence, assumptions, and reversibility and premortem, safeguards, choice or test, and review trigger; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DECISION-RECORD-FORMAT.md, PREMORTEM.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Make a Hard Decision, but adds low capacity and uncertainty. The package anchors the primary path in one framed decision with options, evidence, assumptions, and reversibility and premortem, safeguards, choice or test, and review trigger; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DECISION-RECORD-FORMAT.md, PREMORTEM.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not make medical, legal, financial, or safety-critical decisions for the user. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files DECISION-RECORD-FORMAT.md, PREMORTEM.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

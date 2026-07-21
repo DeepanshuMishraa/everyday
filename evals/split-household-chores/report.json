@@ -3,8 +3,8 @@
   "skillHash": "4772d84a40056c77bd15a8ac93859f5a9c1dd76aee858c51f1e76fd5d2313009",
   "suiteHash": "3bf47218158cf63a7d4ba2f21f6ca6d34ea0d04a7db53518f318976799cadf74",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Split Household Chores Fairly, but adds low capacity and uncertainty. The package anchors the primary path in full-loop ownership including invisible work and observable standards, handoffs, capacity exceptions, and trial review; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files HOUSEHOLD-AGREEMENT-FORMAT.md, INVISIBLE-WORK.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Split Household Chores Fairly, but adds low capacity and uncertainty. The package anchors the primary path in full-loop ownership including invisible work and observable standards, handoffs, capacity exceptions, and trial review; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files HOUSEHOLD-AGREEMENT-FORMAT.md, INVISIBLE-WORK.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not use chore planning to conceal coercive control, financial abuse, or unsafe conditions. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files HOUSEHOLD-AGREEMENT-FORMAT.md, INVISIBLE-WORK.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

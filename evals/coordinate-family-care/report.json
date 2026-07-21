@@ -3,8 +3,8 @@
   "skillHash": "9c53f22e5536cc3682837f793d3e53533d7419754c6c0e31a9942871dbd1b39a",
   "suiteHash": "31641164c9acd67c3580cfec84bf797aec7b3c8a046fc793507aade563b867ee",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Coordinate Family or Pet Care, but adds low capacity and uncertainty. The package anchors the primary path in consent-aware care board with owners, times, supplies, and backups and minimum-necessary handoffs and questions routed to professionals; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files CARE-BOARD-FORMAT.md, CARE-HANDOFF-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Coordinate Family or Pet Care, but adds low capacity and uncertainty. The package anchors the primary path in consent-aware care board with owners, times, supplies, and backups and minimum-necessary handoffs and questions routed to professionals; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files CARE-BOARD-FORMAT.md, CARE-HANDOFF-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not diagnose, prescribe, dose, restrain, change treatment, or override autonomy. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files CARE-BOARD-FORMAT.md, CARE-HANDOFF-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

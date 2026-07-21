@@ -3,8 +3,8 @@
   "skillHash": "ef29bf229e09f039f0994a107eefd5e117166a21b2c1b954bd7f71e3c537987e",
   "suiteHash": "edf19d57f1ea96a000aed177d7e52f25f6b0da627f71e90f5e46ea33802da997",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Restart a Personal Project, but adds low capacity and uncertainty. The package anchors the primary path in project state reconstructed from existing evidence and continue, reduce, transfer, archive, or abandon decision plus one finishable milestone; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files PROJECT-STATE-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Restart a Personal Project, but adds low capacity and uncertainty. The package anchors the primary path in project state reconstructed from existing evidence and continue, reduce, transfer, archive, or abandon decision plus one finishable milestone; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files PROJECT-STATE-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not turn an optional personal project into compulsory productivity. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files PROJECT-STATE-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

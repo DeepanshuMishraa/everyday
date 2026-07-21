@@ -3,8 +3,8 @@
   "skillHash": "0898aff8e2c9ed0b51e6443a92a15f57f5e824d9dc13d1579614eb8a84944d6d",
   "suiteHash": "9363a08c56d816b559081ac65e8a59af3310e08c37d2d79edf69146d59600a06",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Organize Monthly Bills, but adds low capacity and uncertainty. The package anchors the primary path in dated calendar using confirmed or clearly labeled figures and visible arithmetic, pressure points, and reminder schedule; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files BILL-CALENDAR-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Organize Monthly Bills, but adds low capacity and uncertainty. The package anchors the primary path in dated calendar using confirmed or clearly labeled figures and visible arithmetic, pressure points, and reminder schedule; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files BILL-CALENDAR-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not recommend borrowing, investing, debt priority, transfers, or financial products. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files BILL-CALENDAR-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

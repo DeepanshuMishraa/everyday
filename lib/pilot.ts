@@ -40,7 +40,7 @@ export const weeknightMealsPilot: SkillPilot = {
   installCommand: `npx skills add https://github.com/DeepanshuMishraa/everyday-agent-skills/tree/${tag}/skills/plan-weeknight-meals -g -y`,
   evidence: { kind: "preparing" },
   runtimes: [
-    { name: "Codex", preflight: { kind: "untested" }, cohort: { kind: "not-started" } },
+    { name: "GPT-5.6", preflight: { kind: "untested" }, cohort: { kind: "not-started" } },
     { name: "Claude Code", preflight: { kind: "untested" }, cohort: { kind: "not-started" } },
   ],
 };

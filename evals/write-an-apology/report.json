@@ -3,8 +3,8 @@
   "skillHash": "2e893cf3593b26a432048fc1844c7f0397f925e7b6336906c1716066cdb83aa2",
   "suiteHash": "ba846ecc7704bc00043193253fcf850b3331bb6d20f700974dee969c658ce278",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Write an Apology, but adds low capacity and uncertainty. The package anchors the primary path in direct action, impact, responsibility, repair, and concrete change and send-ready apology separated from the private repair plan; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files APOLOGY-CHECK.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Write an Apology, but adds low capacity and uncertainty. The package anchors the primary path in direct action, impact, responsibility, repair, and concrete change and send-ready apology separated from the private repair plan; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files APOLOGY-CHECK.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not violate no-contact, evade consequences, demand forgiveness, or manipulate renewed access. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files APOLOGY-CHECK.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

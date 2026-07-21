@@ -3,8 +3,8 @@
   "skillHash": "134776d70ba73699776e64f97c0ae6ac0e5e82db094c16d9ad64d759ff8c566f",
   "suiteHash": "08ab9a8adaea085cdee045c00ad2516fa9b58abcf8128d20fd782f8c8074f595",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Prepare for Travel Delays, but adds low capacity and uncertainty. The package anchors the primary path in itinerary normalised to local dates and times with connection processes and critical access plus offline delay, cancellation, missed-connection, bag, phone, and onward-transport branches; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DISRUPTION-PLAYBOOK.md, OFFLINE-TRAVEL-BRIEF.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Prepare for Travel Delays, but adds low capacity and uncertainty. The package anchors the primary path in itinerary normalised to local dates and times with connection processes and critical access plus offline delay, cancellation, missed-connection, bag, phone, and onward-transport branches; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DISRUPTION-PLAYBOOK.md, OFFLINE-TRAVEL-BRIEF.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not guarantee entry, boarding, compensation, or connection feasibility and verifies live facts. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files DISRUPTION-PLAYBOOK.md, OFFLINE-TRAVEL-BRIEF.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

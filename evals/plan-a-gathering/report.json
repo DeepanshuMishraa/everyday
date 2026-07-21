@@ -3,8 +3,8 @@
   "skillHash": "ece98d9e39a5a46a77c15e324a29a0bf624379f64911c67ccfa89eddd836b2a4",
   "suiteHash": "b4af87fae7813c4a7a7779e780adf2e3abbf6b3cb266509a42e2858989761c6f",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Plan a Gathering, but adds low capacity and uncertainty. The package anchors the primary path in guest-aware minimum successful gathering and backward timeline, resilient menu, complete ownership, and fallbacks; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files HOSTING-TIMELINE-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Plan a Gathering, but adds low capacity and uncertainty. The package anchors the primary path in guest-aware minimum successful gathering and backward timeline, resilient menu, complete ownership, and fallbacks; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files HOSTING-TIMELINE-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly treats allergies and cross-contact as safety constraints. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files HOSTING-TIMELINE-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

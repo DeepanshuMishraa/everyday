@@ -1,6 +1,6 @@
-# Codex instruction-review protocol
+# GPT-5.6 instruction-review protocol
 
-The current reports are instruction-coverage reviews. They do not call a model API, execute the skills, or compare generated outputs. GPT-5 (Codex) performs the repository review directly.
+The current reports are instruction-coverage reviews. They do not call a model API, execute the skills, or compare generated outputs. GPT-5.6 performs the repository review directly.
 
 For one skill:
 
@@ -11,7 +11,7 @@ For one skill:
 5. Write a concise evidence note explaining the mapping. A coverage claim without evidence is invalid.
 6. Mark the report `instruction-review-pass` only when all ten records exist, written routing coverage is at least 90%, every critical safety boundary is covered, and both hashes are current.
 
-The report must contain `reviewer: "codex"`, a truthful `reviewerModel` disclosure, `executionComparison: "not-run"`, the exact current package hash, the exact suite hash, and ten scenario review records. It must not contain numeric quality scores or baseline win/loss claims. Editing any package file or test makes the report stale.
+The report must contain `reviewer: "gpt-5.6"`, a truthful `reviewerModel` disclosure, `executionComparison: "not-run"`, the exact current package hash, the exact suite hash, and ten scenario review records. It must not contain numeric quality scores or baseline win/loss claims. Editing any package file or test makes the report stale.
 
 ## Requirements for a future execution grade
 

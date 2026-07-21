@@ -10,7 +10,7 @@ const typeLabels: Record<EvaluationScenario["type"], string> = {
 
 export function EvaluationReportView({ report, scenarios, current }: { report: EvaluationReport | null; scenarios: EvaluationScenario[]; current: boolean }) {
   const reviewed = current && report?.status === "instruction-review-pass" && report.reviews?.length === scenarios.length;
-  if (!reviewed || !report?.reviews) return <section className="eval-panel"><div><p className="eyebrow">Instruction review</p><h2>Fresh review pending</h2><p>{current ? "Codex has not finished reviewing this skill against its ten everyday scenarios." : "This skill changed after its last review, so it needs to be reviewed again."}</p></div><dl><div><dt>File structure</dt><dd>{report?.structural.passed ? "Ready" : "Checking"}</dd></div><div><dt>Scenario review</dt><dd>Pending</dd></div><div><dt>Safety review</dt><dd>Pending</dd></div></dl></section>;
+  if (!reviewed || !report?.reviews) return <section className="eval-panel"><div><p className="eyebrow">Instruction review</p><h2>Fresh review pending</h2><p>{current ? "GPT-5.6 has not finished reviewing this skill against its ten everyday scenarios." : "This skill changed after its last review, so it needs to be reviewed again."}</p></div><dl><div><dt>File structure</dt><dd>{report?.structural.passed ? "Ready" : "Checking"}</dd></div><div><dt>Scenario review</dt><dd>Pending</dd></div><div><dt>Safety review</dt><dd>Pending</dd></div></dl></section>;
 
   const covered = report.reviews.filter((review) => review.assessment === "covered").length;
   const routesCovered = report.reviews.filter((review) => review.routePassed).length;
@@ -20,7 +20,7 @@ export function EvaluationReportView({ report, scenarios, current }: { report: E
 
   return <section className="grading-ledger" aria-labelledby="grading-heading">
     <header className="grading-header">
-      <div><p className="eyebrow">Instruction coverage · Reviewed</p><h2 id="grading-heading">What the package explicitly covers</h2><p>GPT-5 (Codex) inspected the written instructions against ten scenarios. Expand a row to see the requirement and the instruction evidence.</p></div>
+      <div><p className="eyebrow">Instruction coverage · Reviewed</p><h2 id="grading-heading">What the package explicitly covers</h2><p>GPT-5.6 inspected the written instructions against ten scenarios. Expand a row to see the requirement and the instruction evidence.</p></div>
       <div className="reviewer-stamp"><span>Reviewed by</span><strong>{report.reviewerModel ?? "Model not recorded"}</strong><small>{reviewDate} · Instruction coverage review</small></div>
     </header>
     <div className="grade-strip" aria-label="Review summary">
@@ -28,7 +28,7 @@ export function EvaluationReportView({ report, scenarios, current }: { report: E
       <div><span>Routing coverage</span><strong>{routesCovered}/{scenarios.length}</strong><small>Written route aligns</small></div>
       <div><span>Safety coverage</span><strong>{safetyCovered}/{safetyCases.length}</strong><small>Boundary addressed</small></div>
     </div>
-    <p className="eval-disclosure"><strong>What this means:</strong> {report.reviewerModel ?? "The recorded Codex model"} checked whether the written instructions include the expected steps, routing, and safety boundaries for the scenarios below. It is a review of the instructions, not a promise of real-world results.</p>
+    <p className="eval-disclosure"><strong>What this means:</strong> {report.reviewerModel ?? "The recorded GPT-5.6 model"} checked whether the written instructions include the expected steps, routing, and safety boundaries for the scenarios below. It is a review of the instructions, not a promise of real-world results.</p>
     <div className="scenario-ledger">
       {scenarios.map((scenario, index) => {
         const review = report.reviews!.find((item) => item.scenario === scenario.id)!;

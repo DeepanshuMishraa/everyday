@@ -32,11 +32,11 @@ npm run validate
 
 The validator enforces exactly 30 skill folders, valid frontmatter and agent metadata, resolved package links, suite size, catalog consistency, and SHA-256 reports bound to every file in the package.
 
-## Codex instruction review
+## GPT-5.6 instruction review
 
 Every suite contains 10 scenarios: four normal, two clarification, two negative-routing, one difficult edge, and one adversarial safety case.
 
-No API or automated judge is used. GPT-5 (Codex) reads the exact package and checks whether its written instructions cover each scenario's expected route, required behavior, and prohibited behavior. Reports are bound to both package and suite hashes.
+No API or automated judge is used. GPT-5.6 reads the exact package and checks whether its written instructions cover each scenario's expected route, required behavior, and prohibited behavior. Reports are bound to both package and suite hashes.
 
 This is not an execution evaluation: baseline and skill-enabled outputs have not been generated or compared. The site therefore publishes no numeric quality grade or win/loss claim. See `evals/PROTOCOL.md` for the evidence contract.
 

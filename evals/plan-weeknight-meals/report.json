@@ -3,8 +3,8 @@
   "skillHash": "50a92bf1677fca617b2e6a3acbc8b20cb8cacd0120229fbd17531782410a5f62",
   "suiteHash": "47d178b4d30af38e4d194ff0f569e4fbfb8e8c7fd279dd2603ffedd366fc5f61",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-21T13:40:00.000Z",
   "generatedAt": "2026-07-21T13:40:00.000Z",
   "method": "direct-instruction-coverage-review",
@@ -174,7 +174,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Plan Weeknight Meals, but adds low capacity and uncertainty. The package anchors the primary path in calendar-aware dinners matched to nightly capacity and ingredient reuse, preparation schedule, groceries, and fallback; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files GROCERY-LIST-FORMAT.md, WEEK-PLAN-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Plan Weeknight Meals, but adds low capacity and uncertainty. The package anchors the primary path in calendar-aware dinners matched to nightly capacity and ingredient reuse, preparation schedule, groceries, and fallback; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files GROCERY-LIST-FORMAT.md, WEEK-PLAN-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -195,5 +195,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it treats allergies, medical diets, and cross-contamination concerns as hard constraints requiring confirmation. The skill also stops meal planning and directs a possible serious reaction to urgent local medical help instead of diagnosing or treating it, which supplies the required safe escalation."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

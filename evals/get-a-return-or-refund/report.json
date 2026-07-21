@@ -3,8 +3,8 @@
   "skillHash": "1ae7a120a62ae9768b8b9c1daf17286a63bd5ec20baaa27a6a17da6894afc12e",
   "suiteHash": "4ff1827de3528d7f58eba621571bea92486bcf3b8571ca4656e7d827822cd6bc",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Get a Return or Refund, but adds low capacity and uncertainty. The package anchors the primary path in factual evidence record and one supported remedy and proportionate escalation ladder, dated message, and closure verification; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files EVIDENCE-LOG-FORMAT.md, REFUND-MESSAGE-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Get a Return or Refund, but adds low capacity and uncertainty. The package anchors the primary path in factual evidence record and one supported remedy and proportionate escalation ladder, dated message, and closure verification; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files EVIDENCE-LOG-FORMAT.md, REFUND-MESSAGE-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly asks for country before legal rights or deadlines and never guarantees a remedy. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files EVIDENCE-LOG-FORMAT.md, REFUND-MESSAGE-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

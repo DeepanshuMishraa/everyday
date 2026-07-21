@@ -25,7 +25,7 @@ for (const skill of getAllSkills()) {
   const errors: string[] = [];
   if (report.skillHash !== skill.hash) errors.push("package hash is stale");
   if (report.suiteHash !== crypto.createHash("sha256").update(suiteContent).digest("hex")) errors.push("evaluation suite hash is stale");
-  if (report.reviewer !== "codex") errors.push("reviewer must be codex");
+  if (report.reviewer !== "gpt-5.6") errors.push("reviewer must be gpt-5.6");
   if (!report.reviewerModel?.trim()) errors.push("reviewerModel is required for public disclosure");
   if (!report.reviewedAt) errors.push("reviewedAt is required");
   if (report.method !== "direct-instruction-coverage-review") errors.push("method must describe instruction coverage");

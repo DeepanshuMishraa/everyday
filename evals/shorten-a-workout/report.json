@@ -3,8 +3,8 @@
   "skillHash": "6fa9d36f1f2b794b658003e0bde18eb9e0561984eaad50571909dfc6c81f4d13",
   "suiteHash": "7441d10adf25cef01501c7b409a7701931db9831007d0ec3b5307d9776481355",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Shorten a Workout, but adds low capacity and uncertainty. The package anchors the primary path in one stated training signal preserved and clock-based shorter session with familiar substitutions, effort ceiling, and stopping rule; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files EFFORT-GUIDE.md, WORKOUT-CUTS.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Shorten a Workout, but adds low capacity and uncertainty. The package anchors the primary path in one stated training signal preserved and clock-based shorter session with familiar substitutions, effort ceiling, and stopping rule; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files EFFORT-GUIDE.md, WORKOUT-CUTS.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not adapt ordinary exercise around acute pain, injury, chest symptoms, fainting, unusual breathlessness, or rehabilitation. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files EFFORT-GUIDE.md, WORKOUT-CUTS.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }

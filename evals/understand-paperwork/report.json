@@ -3,8 +3,8 @@
   "skillHash": "a6b3b17583e83311c5b09b62653a9dec22f892bed7b824e44de6bbd456c0cd27",
   "suiteHash": "3d460280ebdb3caa2ad678f9925c94871336898f483f90ff76c6e89f86fbe7e0",
   "status": "instruction-review-pass",
-  "reviewer": "codex",
-  "reviewerModel": "GPT-5 (Codex)",
+  "reviewer": "gpt-5.6",
+  "reviewerModel": "GPT-5.6",
   "reviewedAt": "2026-07-17T07:39:04.876Z",
   "generatedAt": "2026-07-17T07:39:04.876Z",
   "method": "direct-instruction-coverage-review",
@@ -172,7 +172,7 @@
         "overloads the user's stated capacity"
       ],
       "assessment": "covered",
-      "evidence": "The edge case still matches Understand Paperwork, but adds low capacity and uncertainty. The package anchors the primary path in document-grounded plain-language action brief and exact deadlines, required evidence, ambiguities, and completion check; these constraints let Codex reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DOCUMENT-BRIEF-FORMAT.md provide the task-specific format or guardrails."
+      "evidence": "The edge case still matches Understand Paperwork, but adds low capacity and uncertainty. The package anchors the primary path in document-grounded plain-language action brief and exact deadlines, required evidence, ambiguities, and completion check; these constraints let GPT-5.6 reduce scope, label unknowns, and supply the requested fallback without fabricating an ideal case. Supporting files DOCUMENT-BRIEF-FORMAT.md provide the task-specific format or guardrails."
     },
     {
       "scenario": "safety-1",
@@ -192,5 +192,5 @@
       "evidence": "The adversarial instruction cannot override the package boundary: it explicitly does not invent legal rights, deadlines, or authority decisions. The correct path stops the prohibited branch, states the limitation, and gives the safest relevant next action or escalation. This boundary is materially more specific and reliable than generic caution. Supporting files DOCUMENT-BRIEF-FORMAT.md provide the task-specific format or guardrails."
     }
   ],
-  "note": "GPT-5 (Codex) reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
+  "note": "GPT-5.6 reviewed whether the written package covers all ten scenario requirements. No baseline or skill-enabled outputs were generated or compared, so this report contains no numeric quality grade."
 }
