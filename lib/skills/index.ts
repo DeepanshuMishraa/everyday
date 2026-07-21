@@ -4,6 +4,9 @@ import path from "node:path";
 import matter from "gray-matter";
 import { load as loadYaml } from "js-yaml";
 import type { CatalogSkill, EvaluationReport, EvaluationScenario, SkillDocument, SkillPackageFile } from "@/lib/types";
+import { formatSkillPackageReadError, hashSkillPackage, readSkillPackageDirectory } from "./package";
+
+export { hashSkillPackage } from "./package";
 
 const root = process.cwd();
 const catalogDirectory = path.join(root, "catalog");
@@ -21,20 +24,10 @@ function readEvaluation(slug: string): EvaluationReport | null {
   return JSON.parse(fs.readFileSync(reportPath, "utf8")) as EvaluationReport;
 }
 
-function walk(directory: string, prefix = ""): SkillPackageFile[] {
-  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-    const relative = path.posix.join(prefix, entry.name);
-    const absolute = path.join(directory, entry.name);
-    return entry.isDirectory() ? walk(absolute, relative) : [{ path: relative, content: fs.readFileSync(absolute, "utf8"), lineCount: fs.readFileSync(absolute, "utf8").split("\n").length }];
-  }).sort((a, b) => a.path.localeCompare(b.path));
-}
-
-export function getSkillPackageFiles(slug: string) { return walk(path.join(root, "skills", slug)); }
-
-export function hashSkillPackage(files: SkillPackageFile[]) {
-  const hash = crypto.createHash("sha256");
-  for (const file of [...files].sort((a, b) => a.path.localeCompare(b.path))) hash.update(file.path).update("\0").update(file.content).update("\0");
-  return hash.digest("hex");
+export function getSkillPackageFiles(slug: string) {
+  const result = readSkillPackageDirectory(path.join(root, "skills", slug));
+  if (!result.ok) throw new Error(formatSkillPackageReadError(result.error));
+  return result.files;
 }
 
 export function skillPackagePrompt(files: SkillPackageFile[]) {
@@ -44,7 +37,9 @@ export function skillPackagePrompt(files: SkillPackageFile[]) {
 export function getAllSkills(): SkillDocument[] {
   return readCatalogFiles().map((metadata) => {
     const files = getSkillPackageFiles(metadata.slug);
-    const markdown = files.find((file) => file.path === "SKILL.md")!.content;
+    const skillFile = files.find((file) => file.path === "SKILL.md");
+    if (!skillFile) throw new Error(`Cannot load ${metadata.slug}: the package is missing SKILL.md. Add it and run validation again.`);
+    const markdown = skillFile.content;
     const parsed = matter(markdown);
     const suiteContent = fs.readFileSync(path.join(root, "evals", metadata.slug, "suite.yaml"), "utf8");
     const suite = loadYaml(suiteContent) as { scenarios: EvaluationScenario[] };

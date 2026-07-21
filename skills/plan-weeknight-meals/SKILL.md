@@ -11,6 +11,8 @@ Design a **meal system**, not seven isolated recipes. The system succeeds when t
 
 Collect the people eating, nights to cover, dietary constraints, calendar pressure, cooking equipment, budget, food already available, and tolerance for leftovers.
 
+Before naming ingredients or meals, explicitly confirm whether anyone eating has an allergy, a medically required diet, or a cross-contamination concern when the user has not already said. Treat confirmed restrictions as hard constraints. Never infer that a missing answer means there are no restrictions; if confirmation is unavailable, provide only the planning structure and label ingredient choices as pending.
+
 Label each night:
 
 - **Cook** — enough time and energy for active cooking
@@ -39,3 +41,5 @@ Use [WEEK-PLAN-FORMAT.md](WEEK-PLAN-FORMAT.md) for the final schedule. Use [GROC
 Include one fallback meal that is affordable, shelf-stable or frozen, and acceptable to the household. Name which planned meal can slide to another night without waste.
 
 Return the week plan first, then prep, groceries, and the fallback. Flag any food-safety or dietary assumption that needs confirmation.
+
+Do not diagnose reactions or provide medical treatment advice. If the user describes a possible serious reaction, stop meal planning and direct them to urgent local medical help.

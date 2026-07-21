@@ -7,6 +7,8 @@ import { SkillDocumentView } from "@/components/SkillDocumentView";
 import { SkillUseActions } from "@/components/SkillUseActions";
 import { EvaluationReportView } from "@/components/EvaluationReportView";
 import { JsonLd } from "@/components/JsonLd";
+import { PilotPanel } from "@/components/PilotPanel";
+import { getPilotForSkill } from "@/lib/pilot";
 import { getAllSkills, getSkill } from "@/lib/skills";
 import { absoluteUrl, breadcrumbSchema, metaDescription, site } from "@/lib/site";
 
@@ -37,6 +39,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
   if (!category) notFound();
   const repo = process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ?? "DeepanshuMishraa/everyday-agent-skills";
   const install = `npx skills add ${repo}@${skill.slug} -g -y`;
+  const pilot = getPilotForSkill(skill.slug, skill.hash);
   const reportMatches = skill.evaluation?.skillHash === skill.hash && skill.evaluation?.suiteHash === skill.suiteHash;
   const reviewed = reportMatches && skill.evaluation?.status === "instruction-review-pass";
   const path = `/skills/${skill.slug}/`;
@@ -53,6 +56,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
         <aside className="skill-fact"><span>What you will leave with</span><p>{skill.outcome}</p></aside>
       </div>
     </header>
+    {pilot ? <div className="wrap"><PilotPanel pilot={pilot} /></div> : null}
     <div className="wrap skill-layout">
       <div className="skill-content">
         <SkillDocumentView body={skill.body} files={skill.files} />
@@ -60,7 +64,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
       </div>
       <aside className="skill-sidebar">
         <section><h2>Try asking your agent</h2><ul>{skill.examples.map((example) => <li key={example}>“{example}”</li>)}</ul></section>
-        <section className="agent-setup"><h2>Optional agent setup</h2><p>Install this workflow if you want a compatible AI agent to reuse it.</p><details><summary>Show installation options</summary><div className="command"><code>{install}</code><CopyButton value={install} label="Copy command" event="install_command_copy" skill={skill.slug} /></div><DownloadButton files={skill.files} slug={skill.slug} /><CopyButton value={skill.markdown} label="Copy source file" event="skill_copy" skill={skill.slug} /></details></section>
+        {pilot ? <section className="agent-setup"><h2>Pilot installation</h2><p>Use the tagged cohort command above. ZIP downloads are not part of the verified pilot path.</p><CopyButton value={skill.markdown} label="Copy source to inspect" event="skill_copy" skill={skill.slug} /></section> : <section className="agent-setup"><h2>Optional agent setup</h2><p>Install this workflow if you want a compatible AI agent to reuse it.</p><details><summary>Show installation options</summary><div className="command"><code>{install}</code><CopyButton value={install} label="Copy command" event="install_command_copy" skill={skill.slug} /></div><DownloadButton files={skill.files} slug={skill.slug} /><CopyButton value={skill.markdown} label="Copy source file" event="skill_copy" skill={skill.slug} /></details></section>}
         <section className="file-facts"><h2>About this workflow</h2><dl><div><dt>Review</dt><dd><span className={reviewed ? "status passed" : "status pending"}>{reviewed ? "Guidance reviewed" : "Review pending"}</span></dd></div><div><dt>Version</dt><dd>{skill.version}</dd></div><div><dt>References</dt><dd>{skill.fileCount}</dd></div><div><dt>Updated</dt><dd>{skill.updated}</dd></div></dl><Link className="text-link" href="/methodology">How reviews work →</Link></section>
       </aside>
     </div>

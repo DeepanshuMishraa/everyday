@@ -22,21 +22,29 @@ function CheckIcon() {
 }
 
 export function CopyButton({ value, label = "Copy", event, skill }: { value: string; label?: string; event: string; skill: string }) {
-  const [copied, setCopied] = useState(false);
+  const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
   const timer = useRef<number | null>(null);
   useEffect(() => () => { if (timer.current) window.clearTimeout(timer.current); }, []);
   async function copy() {
-    await navigator.clipboard.writeText(value);
-    setCopied(true);
-    track(event, { skill });
     if (timer.current) window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(value);
+      setState("copied");
+      track(event, { skill });
+      timer.current = window.setTimeout(() => setState("idle"), 1800);
+    } catch {
+      setState("failed");
+    }
   }
+  const copied = state === "copied";
   return (
-    <button className={`button secondary copy-button${copied ? " copied" : ""}`} type="button" onClick={copy}>
-      {copied ? <CheckIcon /> : <CopyIcon />}
-      <span>{copied ? "Copied" : label}</span>
-    </button>
+    <div className="copy-control">
+      <button className={`button secondary copy-button${copied ? " copied" : ""}`} type="button" onClick={copy}>
+        {copied ? <CheckIcon /> : <CopyIcon />}
+        <span>{copied ? "Copied" : state === "failed" ? "Try copy again" : label}</span>
+      </button>
+      {state === "failed" ? <span className="copy-error" role="status">Copying was blocked. Select the command and copy it manually; nothing was changed.</span> : null}
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 {
   "skill": "check-a-suspicious-message",
-  "skillHash": "770987f10b8ebe22efbad1acc28004024f446ef3cbe114cace1005695a8fa486",
+  "skillHash": "6351419413c6da0ca29e47051a83b56ebb80dec27c6258c6f47c5cde97722227",
   "suiteHash": "4bf70464d0792801b991f7b4e5399c1f6af29fc3ff28c8a89553af986fc1645e",
   "status": "instruction-review-pass",
   "reviewer": "codex",

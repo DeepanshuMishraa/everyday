@@ -8,10 +8,14 @@ import { createSkillSearch, searchSkills } from "@/lib/skills/search";
 import type { CatalogSkill, Category } from "@/lib/types";
 
 type Props = { skills: CatalogSkill[]; categories: Category[] };
+const pageSize = 10;
+
 export function SearchLibrary({ skills, categories }: Props) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  const [page, setPage] = useState(1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const ledgerRef = useRef<HTMLDivElement>(null);
   const trackedSearchRef = useRef("");
 
   const search = useMemo(() => createSkillSearch(skills), [skills]);
@@ -21,6 +25,17 @@ export function SearchLibrary({ skills, categories }: Props) {
     const matching = searchSkills(search, skills, query);
     return category === "all" ? matching : matching.filter((skill) => skill.category === category);
   }, [category, query, search, skills]);
+  const pageCount = Math.max(1, Math.ceil(results.length / pageSize));
+  const currentPage = Math.min(page, pageCount);
+  const pageStart = (currentPage - 1) * pageSize;
+  const visibleResults = results.slice(pageStart, pageStart + pageSize);
+
+  function selectPage(nextPage: number) {
+    const boundedPage = Math.min(Math.max(nextPage, 1), pageCount);
+    setPage(boundedPage);
+    track("catalog_page_change", { page: boundedPage, category, has_query: Boolean(query.trim()) });
+    window.requestAnimationFrame(() => ledgerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
 
   useEffect(() => {
     const normalized = query.trim();
@@ -56,7 +71,7 @@ export function SearchLibrary({ skills, categories }: Props) {
             ref={inputRef}
             id="skill-search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => { setQuery(event.target.value); setPage(1); }}
             onKeyDown={(event) => {
               if (event.key === "Escape") {
                 setQuery("");
@@ -72,22 +87,22 @@ export function SearchLibrary({ skills, categories }: Props) {
         <div className="search-examples">
           <span>Try</span>
           {["I feel overwhelmed", "suspicious text", "what can I cook"].map((example) => (
-            <button key={example} type="button" onClick={() => { setQuery(example); inputRef.current?.focus(); track("example_query", { query: example }); }}>“{example}”</button>
+            <button key={example} type="button" onClick={() => { setQuery(example); setPage(1); inputRef.current?.focus(); track("example_query", { query: example }); }}>“{example}”</button>
           ))}
         </div>
         <div className="filter-row" aria-label="Filter by category">
-          <button type="button" aria-pressed={category === "all"} className={category === "all" ? "filter active" : "filter"} onClick={() => setCategory("all")}>All 30</button>
-          {categories.map((item) => <button type="button" aria-pressed={category === item.slug} key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => setCategory(item.slug)}>{item.shortName}</button>)}
+          <button type="button" aria-pressed={category === "all"} className={category === "all" ? "filter active" : "filter"} onClick={() => { setCategory("all"); setPage(1); }}>All 30</button>
+          {categories.map((item) => <button type="button" aria-pressed={category === item.slug} key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => { setCategory(item.slug); setPage(1); }}>{item.shortName}</button>)}
         </div>
       </form>
-      <div className="ledger">
+      <div className="ledger" ref={ledgerRef}>
         <div className="ledger-head">
           <span aria-hidden="true">#</span><span aria-hidden="true">Workflow</span><span className="ledger-count" aria-live="polite">{results.length ? `${results.length} workflows` : "0 workflows"}</span>
         </div>
         {results.length ? (
           <>
             <div className="skill-list">
-            {results.map((skill, index) => {
+            {visibleResults.map((skill, index) => {
               const itemCategory = categoriesBySlug.get(skill.category);
               if (!itemCategory) return null;
               return (
@@ -98,7 +113,7 @@ export function SearchLibrary({ skills, categories }: Props) {
                   style={{ animationDelay: `${Math.min(index, 10) * 20}ms` }}
                   onClick={() => track("search_to_skill_open", { skill: skill.slug, source: "library", has_query: Boolean(query.trim()), category })}
                 >
-                  <span className="skill-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="skill-number">{String(pageStart + index + 1).padStart(2, "0")}</span>
                   <span className="skill-main"><strong>{skill.title}</strong><span>{skill.outcome}</span></span>
                   <span className="skill-tags"><span className="skill-category">{itemCategory.shortName}</span>{skill.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}</span>
                   <span className="skill-arrow" aria-hidden="true">View</span>
@@ -106,9 +121,26 @@ export function SearchLibrary({ skills, categories }: Props) {
               );
             })}
             </div>
+            {pageCount > 1 ? (
+              <nav className="pagination" aria-label="Workflow result pages">
+                <button type="button" onClick={() => selectPage(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
+                <div className="pagination-pages">
+                  {Array.from({ length: pageCount }, (_, index) => index + 1).map((pageNumber) => (
+                    <button
+                      type="button"
+                      key={pageNumber}
+                      aria-current={pageNumber === currentPage ? "page" : undefined}
+                      onClick={() => selectPage(pageNumber)}
+                    >{pageNumber}</button>
+                  ))}
+                </div>
+                <span className="pagination-status">Page {currentPage} of {pageCount}</span>
+                <button type="button" onClick={() => selectPage(currentPage + 1)} disabled={currentPage === pageCount}>Next</button>
+              </nav>
+            ) : null}
           </>
         ) : (
-          <div className="empty-state"><p className="eyebrow">No exact workflow</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Show all workflows</button></div>
+          <div className="empty-state"><p className="eyebrow">No exact workflow</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); setPage(1); }}>Show all workflows</button></div>
         )}
       </div>
     </section>
