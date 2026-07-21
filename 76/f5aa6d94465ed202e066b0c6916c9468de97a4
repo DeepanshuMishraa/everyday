@@ -1,0 +1,117 @@
+scripts/hash-skill.ts
+  s_eb27ff5e36b7c6::t_17f5cfa0e7e5c7 1-15
+evals/handle-a-home-repair/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/prepare-for-travel-delays/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+package.json
+  s_eb27ff5e36b7c6::t_17f5cfa0e7e5c7 10
+app/globals.css
+  s_a913e572949944::t_6bda1b963abf7d 79,84,368-383
+  s_a913e572949944::t_361f602b398510 789-793
+  s_eb27ff5e36b7c6::t_9017dcf223a700 139,176,208,324
+  s_eb27ff5e36b7c6::t_7348a630d778cb 154-155,430-451,469,700,747-751
+lib/skills/index.ts
+  s_eb27ff5e36b7c6::t_17f5cfa0e7e5c7 27-30,40-42
+  s_eb27ff5e36b7c6::t_ac745d771ab33e 7-9
+evals/clean-your-home-fast/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/cool-down-an-angry-message/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/compare-a-big-purchase/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/check-a-suspicious-message/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+skills/plan-weeknight-meals/SKILL.md
+  s_eb27ff5e36b7c6::t_82cf461721fed9 14-15,44-45
+components/PilotPanel.tsx
+  s_eb27ff5e36b7c6::t_886651e4007ba1 1-54
+lib/pilot.ts
+  s_eb27ff5e36b7c6::t_886651e4007ba1 1-54
+evals/audit-subscriptions/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/prepare-for-an-appointment/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/restart-a-habit/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/restart-a-personal-project/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/restart-working-out/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/set-a-boundary/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/split-household-chores/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/get-unstuck/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+catalog/plan-weeknight-meals.yaml
+  s_eb27ff5e36b7c6::t_82cf461721fed9 19-20
+components/SkillActions.tsx
+  s_eb27ff5e36b7c6::t_886651e4007ba1 25,30-37,39,41-47
+evals/make-a-hard-decision/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/get-a-return-or-refund/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/plan-a-gathering/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/cook-with-what-you-have/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/plan-weeknight-meals/report.json
+  s_eb27ff5e36b7c6::t_0d1b818a97147a 3-4,8-9,98,103,108,186,195
+lib/skills/package.ts
+  s_eb27ff5e36b7c6::t_17f5cfa0e7e5c7 1-98
+evals/build-a-bedtime-routine/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+app/skills/[slug]/page.tsx
+  s_eb27ff5e36b7c6::t_886651e4007ba1 10-11,42,59,67
+evals/learn-by-doing/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/move-more-at-your-desk/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/organize-monthly-bills/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/coordinate-family-care/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/pack-for-a-trip/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/plan-a-home-move/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/plan-your-week/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/shorten-a-workout/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/plan-weeknight-meals/suite.yaml
+  s_eb27ff5e36b7c6::t_82cf461721fed9 91,95,190
+evals/understand-paperwork/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+evals/write-an-apology/report.json
+  s_eb27ff5e36b7c6::t_caf362942d6569 3
+research/pilots/weeknight-meals-playbook.md
+  s_eb27ff5e36b7c6::t_ada3c5b4921247 1-147
+components/SearchLibrary.tsx
+  s_a913e572949944::t_ee4e3896ad5005 11-12,16,18,28-38,74,90,94-95,98,105,116,124-140,143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "76f5aa6d94465ed202e066b0c6916c9468de97a4",
+  "prompts": {},
+  "sessions": {
+    "s_a913e572949944": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f80ae-d96e-71f3-9ed2-be2a6d3b3076",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    },
+    "s_eb27ff5e36b7c6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f84b1-b148-78e3-9e19-2a9fe06cbce8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
