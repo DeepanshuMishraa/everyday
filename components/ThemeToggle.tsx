@@ -1,10 +1,39 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+type Theme = "light" | "dark";
+
+function currentTheme(): Theme {
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+}
+
 export function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme | null>(null);
+
+  useEffect(() => {
+    setTheme(currentTheme());
+  }, []);
+
+  function toggleTheme() {
+    const nextTheme = (theme ?? currentTheme()) === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nextTheme;
+    try {
+      localStorage.setItem("everyday-theme", nextTheme);
+    } catch {
+      // The selected theme still applies when storage is unavailable.
+    }
+    setTheme(nextTheme);
+  }
+
   return (
     <button
       type="button"
       className="theme-toggle"
       data-theme-toggle
-      aria-label="Toggle color theme"
+      aria-label={theme === null ? "Toggle color theme" : `Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      aria-pressed={theme === null ? undefined : theme === "dark"}
+      onClick={toggleTheme}
     >
       <span className="theme-icon" aria-hidden="true">
         <svg className="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
