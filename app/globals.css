@@ -159,7 +159,6 @@ h3 { font-size: 1.4rem; letter-spacing: -0.02em; }
 .site-header {
   position: sticky; top: 0; z-index: 50;
   height: var(--header-h);
-  border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--bg) 97%, transparent);
 }
 .site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; }
@@ -642,9 +641,9 @@ h3 { font-size: 1.4rem; letter-spacing: -0.02em; }
 .install-steps article { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 24px; padding: 40px 0; border-bottom: 1px solid var(--line); }
 .install-steps article > span { font-family: var(--font-mono), monospace; font-size: 0.72rem; color: var(--ink-3); padding-top: 4px; }
 .install-steps h2 { font-size: 1.55rem; }
-.install-steps article div { max-width: 46rem; }
+.install-steps article div { min-width: 0; max-width: 46rem; }
 .install-steps article p { color: var(--ink-2); font-size: 0.92rem; }
-.install-steps pre { margin: 1rem 0 0; padding: 16px 18px; background: var(--dark); color: #e4e4e7; border-radius: var(--r-md); overflow-x: auto; }
+.install-steps pre { max-width: 100%; margin: 1rem 0 0; padding: 16px 18px; background: var(--dark); color: #e4e4e7; border-radius: var(--r-md); overflow-x: auto; }
 .install-steps code { font-family: var(--font-mono), monospace; font-size: 0.75rem; line-height: 1.7; }
 .install-note { max-width: 46rem; margin: 0 0 96px; padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
 .install-note h2 { font-size: 1.3rem; }
