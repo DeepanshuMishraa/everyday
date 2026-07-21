@@ -12,7 +12,6 @@ const pageSize = 10;
 
 export function SearchLibrary({ skills, categories }: Props) {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
   const [page, setPage] = useState(1);
   const inputRef = useRef<HTMLInputElement>(null);
   const ledgerRef = useRef<HTMLDivElement>(null);
@@ -20,11 +19,13 @@ export function SearchLibrary({ skills, categories }: Props) {
 
   const search = useMemo(() => createSkillSearch(skills), [skills]);
   const categoriesBySlug = useMemo(() => new Map(categories.map((item) => [item.slug, item])), [categories]);
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    skills.forEach((skill) => counts.set(skill.category, (counts.get(skill.category) ?? 0) + 1));
+    return counts;
+  }, [skills]);
 
-  const results = useMemo(() => {
-    const matching = searchSkills(search, skills, query);
-    return category === "all" ? matching : matching.filter((skill) => skill.category === category);
-  }, [category, query, search, skills]);
+  const results = useMemo(() => searchSkills(search, skills, query), [query, search, skills]);
   const pageCount = Math.max(1, Math.ceil(results.length / pageSize));
   const currentPage = Math.min(page, pageCount);
   const pageStart = (currentPage - 1) * pageSize;
@@ -33,27 +34,27 @@ export function SearchLibrary({ skills, categories }: Props) {
   function selectPage(nextPage: number) {
     const boundedPage = Math.min(Math.max(nextPage, 1), pageCount);
     setPage(boundedPage);
-    track("catalog_page_change", { page: boundedPage, category, has_query: Boolean(query.trim()) });
+    track("catalog_page_change", { page: boundedPage, has_query: Boolean(query.trim()) });
     window.requestAnimationFrame(() => ledgerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   }
 
   useEffect(() => {
     const normalized = query.trim();
-    if (!normalized && category === "all") return;
-    const signature = `${normalized.toLocaleLowerCase()}|${category}|${results.length}`;
+    if (!normalized) return;
+    const signature = `${normalized.toLocaleLowerCase()}|${results.length}`;
     const timer = window.setTimeout(() => {
       if (trackedSearchRef.current === signature) return;
       trackedSearchRef.current = signature;
-      track(results.length ? "search_performed" : "zero_result_search", { has_query: Boolean(normalized), query_length: normalized.length, category, results: results.length });
+      track(results.length ? "search_performed" : "zero_result_search", { has_query: true, query_length: normalized.length, results: results.length });
     }, 600);
     return () => window.clearTimeout(timer);
-  }, [category, query, results.length]);
+  }, [query, results.length]);
 
   function submit(event: FormEvent) {
     event.preventDefault();
     const normalized = query.trim();
-    trackedSearchRef.current = `${normalized.toLocaleLowerCase()}|${category}|${results.length}`;
-    track(results.length ? "search_performed" : "zero_result_search", { has_query: Boolean(normalized), query_length: normalized.length, category, results: results.length });
+    trackedSearchRef.current = `${normalized.toLocaleLowerCase()}|${results.length}`;
+    track(results.length ? "search_performed" : "zero_result_search", { has_query: Boolean(normalized), query_length: normalized.length, results: results.length });
   }
 
   return (
@@ -90,11 +91,29 @@ export function SearchLibrary({ skills, categories }: Props) {
             <button key={example} type="button" onClick={() => { setQuery(example); setPage(1); inputRef.current?.focus(); track("example_query", { query: example }); }}>“{example}”</button>
           ))}
         </div>
-        <div className="filter-row" aria-label="Filter by category">
-          <button type="button" aria-pressed={category === "all"} className={category === "all" ? "filter active" : "filter"} onClick={() => { setCategory("all"); setPage(1); }}>All 30</button>
-          {categories.map((item) => <button type="button" aria-pressed={category === item.slug} key={item.slug} className={category === item.slug ? "filter active" : "filter"} onClick={() => { setCategory(item.slug); setPage(1); }}>{item.shortName}</button>)}
-        </div>
       </form>
+      <nav className="category-nav" aria-label="Browse workflows by category">
+        <div className="category-nav-heading">
+          <span>Browse by category</span>
+          <small>{categories.length} collections</small>
+        </div>
+        <div className="category-nav-grid">
+          {categories.map((item) => {
+            const count = categoryCounts.get(item.slug) ?? 0;
+            return (
+              <Link
+                className={`category-nav-link accent-${item.color}`}
+                href={`/categories/${item.slug}`}
+                key={item.slug}
+                onClick={() => track("category_open", { category: item.slug, source: "library" })}
+              >
+                <span>{item.name}</span>
+                <small>{count} workflows</small>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
       <div className="ledger" ref={ledgerRef}>
         <div className="ledger-head">
           <span aria-hidden="true">#</span><span aria-hidden="true">Workflow</span><span className="ledger-count" aria-live="polite">{results.length ? `${results.length} workflows` : "0 workflows"}</span>
@@ -111,7 +130,7 @@ export function SearchLibrary({ skills, categories }: Props) {
                   href={`/skills/${skill.slug}`}
                   key={skill.slug}
                   style={{ animationDelay: `${Math.min(index, 10) * 20}ms` }}
-                  onClick={() => track("search_to_skill_open", { skill: skill.slug, source: "library", has_query: Boolean(query.trim()), category })}
+                  onClick={() => track("search_to_skill_open", { skill: skill.slug, source: "library", has_query: Boolean(query.trim()), category: skill.category })}
                 >
                   <span className="skill-number">{String(pageStart + index + 1).padStart(2, "0")}</span>
                   <span className="skill-main"><strong>{skill.title}</strong><span>{skill.outcome}</span></span>
@@ -140,7 +159,7 @@ export function SearchLibrary({ skills, categories }: Props) {
             ) : null}
           </>
         ) : (
-          <div className="empty-state"><p className="eyebrow">No exact workflow</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setCategory("all"); setPage(1); }}>Show all workflows</button></div>
+          <div className="empty-state"><p className="eyebrow">No exact workflow</p><h3>Try the underlying situation.</h3><p>Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused.</p><button className="button secondary" type="button" onClick={() => { setQuery(""); setPage(1); }}>Show all workflows</button></div>
         )}
       </div>
     </section>
