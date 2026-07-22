@@ -1,43 +1,60 @@
-# Everyday — Practical Workflows for Real Life
+# Everyday
 
-A static Next.js library containing exactly 30 short workflows for recurring real-life situations. People can read and save workflows directly; compatible AI agents can optionally install the portable source packages.
+**Know what to do next.**
 
-## Local setup
+Everyday is a free field guide for recurring real-life situations: difficult messages, household admin, meals, money, health, travel, and getting unstuck.
+
+It starts with the situation, not the tool. Each entry is a short, readable workflow that works on the site and can optionally be installed in a compatible AI agent.
+
+## Product principles
+
+- **Situation first.** Search in your own words and leave with a clear next step.
+- **Useful without setup.** No account, installation, or AI agent is required.
+- **Procedures over prompts.** Workflows should be reusable, inspectable, and grounded in an observable result.
+- **Evidence with limits.** Reviews show what the written instructions cover without inventing scores or performance claims.
+- **Private by default.** Searches are not recorded verbatim; saved and recent workflows stay in the browser.
+
+## Repository map
+
+- `skills/<slug>/` — portable workflow packages; `SKILL.md` is the entry point.
+- `catalog/<slug>.yaml` — website metadata and search content.
+- `evals/<slug>/` — ten-scenario instruction reviews and hash-bound reports.
+- `app/` and `components/` — the static Next.js website.
+
+The catalog stays focused: supporting files belong inside a package only when the procedure needs them.
+
+## Local development
+
+This project uses npm, Next.js, TypeScript, and Tailwind CSS.
 
 ```bash
 npm install
-npm run validate
-npm test
 npm run dev
 ```
 
-Set `NEXT_PUBLIC_SKILLS_REPOSITORY` to the GitHub `owner/repository` used by the installation command. The production build is a fully static export:
-
-Set `NEXT_PUBLIC_SITE_URL` to the production origin, without a trailing slash. Canonical URLs, Open Graph metadata, the sitemap, robots.txt, JSON-LD, and `llms.txt` are all generated from it. The fallback is `https://everyday-agent-skills.vercel.app`.
+Useful checks:
 
 ```bash
-npm run build
-npm run check-seo
-```
-
-Deploy the generated Next.js project to Vercel, or host `out/` on any static host. The site has no database, authentication, API routes, or server runtime requirement.
-
-## Content workflow
-
-Each installable package lives in `skills/<slug>/`. `SKILL.md` is the entry point; add focused Markdown references, scripts, or assets only when the procedure needs them. Discovery metadata lives in `agents/openai.yaml`. Website metadata remains in `catalog/<slug>.yaml`, and tests remain outside the installed package in `evals/<slug>/`.
-
-```bash
+npm run format:check
+npm run lint
 npm run validate
+npm test
+npm run check-evals
+npm run check-seo
+npm run build
 ```
 
-The validator enforces exactly 30 skill folders, valid frontmatter and agent metadata, resolved package links, suite size, catalog consistency, and SHA-256 reports bound to every file in the package.
+Use `npm run format` and `npm run lint:fix` to apply automatic fixes. Skill packages and evaluation artifacts are excluded from Prettier because their reviews are bound to exact file hashes.
 
-## GPT-5.6 instruction review
+## Configuration and deployment
 
-Every suite contains 10 scenarios: four normal, two clarification, two negative-routing, one difficult edge, and one adversarial safety case.
+- `NEXT_PUBLIC_SITE_URL` sets the production origin used by canonical URLs, Open Graph metadata, JSON-LD, the sitemap, robots.txt, and `llms.txt`.
+- `NEXT_PUBLIC_SKILLS_REPOSITORY` sets the GitHub `owner/repository` used in installation commands.
 
-No API or automated judge is used. GPT-5.6 reads the exact package and checks whether its written instructions cover each scenario's expected route, required behavior, and prohibited behavior. Reports are bound to both package and suite hashes.
+The production build is static. It has no database, authentication, API routes, or server runtime requirement and can be deployed to Vercel or any static host.
 
-This is not an execution evaluation: baseline and skill-enabled outputs have not been generated or compared. The site therefore publishes no numeric quality grade or win/loss claim. See `evals/PROTOCOL.md` for the evidence contract.
+## Review model
 
-Editing any package file changes its hash; the next validation removes any stale reviewed status.
+Every workflow is checked against ten scenarios covering normal use, missing context, negative routing, a difficult edge, and an adversarial safety case. GPT-5.6 reviews whether the written package addresses the expected behavior and boundaries.
+
+This is an instruction-coverage review, not an execution benchmark. The project does not claim that every agent will produce the same result. See [`evals/PROTOCOL.md`](evals/PROTOCOL.md) for the evidence contract.

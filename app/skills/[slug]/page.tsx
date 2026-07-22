@@ -82,10 +82,7 @@ export default async function SkillPage({
   if (!skill) notFound();
   const category = categories.find((item) => item.slug === skill.category);
   if (!category) notFound();
-  const repo =
-    process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ??
-    "DeepanshuMishraa/everyday-agent-skills";
-  const install = `npx skills add ${repo}@${skill.slug} -g -y`;
+  const install = `npx skills add ${site.repository}@${skill.slug}`;
   const pilot = getPilotForSkill(skill.slug, skill.hash);
   const reportMatches =
     skill.evaluation?.skillHash === skill.hash &&
@@ -216,9 +213,12 @@ export default async function SkillPage({
                 Install this workflow if you want a compatible AI agent to reuse
                 it.
               </p>
-              <details className="border-t border-line open:[&>summary]:mb-3">
+              <details
+                className="border-t border-line open:[&>summary]:mb-3"
+                open
+              >
                 <summary className="flex min-h-12 cursor-pointer items-center font-ui text-[0.78rem] font-medium">
-                  Show installation options
+                  Installation options
                 </summary>
                 <div className="mb-2.5">
                   <code className="block wrap-anywhere rounded-md bg-dark px-3.5 py-[13px] font-mono text-[0.7rem] leading-[1.6] text-zinc-200">

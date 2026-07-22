@@ -1,16 +1,16 @@
+const repository =
+  process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ?? "DeepanshuMishraa/everyday";
+
 export const site = {
   name: "Everyday",
   legalName: "Everyday Agent Skills",
   description:
     "A free library of short, practical workflows for cooking, home, money, relationships, travel, learning, and everyday life.",
   url: (
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://everyday-agent-skills.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://everyday.dipxsy.app"
   ).replace(/\/$/, ""),
-  repository:
-    process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ??
-    "DeepanshuMishraa/everyday-agent-skills",
-  repositoryUrl: "https://github.com/DeepanshuMishraa/everyday-agent-skills",
+  repository,
+  repositoryUrl: `https://github.com/${repository}`,
   locale: "en_US",
   language: "en",
 } as const;

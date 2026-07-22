@@ -48,7 +48,7 @@ export const weeknightMealsPilot: SkillPilot = {
   tag,
   packageFingerprint:
     "50a92bf1677fca617b2e6a3acbc8b20cb8cacd0120229fbd17531782410a5f62",
-  installCommand: `npx skills add https://github.com/DeepanshuMishraa/everyday-agent-skills/tree/${tag}/skills/plan-weeknight-meals -g -y`,
+  installCommand: `npx skills add https://github.com/DeepanshuMishraa/everyday/tree/${tag}/skills/plan-weeknight-meals`,
   evidence: { kind: "preparing" },
   runtimes: [
     {

@@ -91,14 +91,15 @@ export default function InstallPage() {
             <span>02</span>
             <div>
               <h2 className={`${heading.h2} text-[1.55rem]`}>
-                Install it globally
+                Choose where to install it
               </h2>
               <p>
-                Copy the command shown under “Optional agent setup” on a
-                workflow page and run it in your terminal.
+                Run the command, then choose a project or global install and a
+                compatible agent. The CLI skips unsupported combinations when
+                you choose the targets yourself.
               </p>
               <pre>
-                <code>{`npx skills add ${repository}@cook-with-what-you-have -g -y`}</code>
+                <code>{`npx skills add ${repository}@cook-with-what-you-have`}</code>
               </pre>
             </div>
           </article>

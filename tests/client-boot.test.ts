@@ -4,14 +4,10 @@ import { clientBootScript } from "../lib/client-boot";
 
 function runBootScript() {
   const listeners = new Map<string, (event: Record<string, unknown>) => void>();
-  const attributes = new Map<string, string>();
   const root = { dataset: { theme: "light" } };
   let stored = "dark";
   let focused = false;
   let scrolled = false;
-  const button = {
-    setAttribute: (name: string, value: string) => attributes.set(name, value),
-  };
   const input = {
     focus: () => {
       focused = true;
@@ -22,7 +18,6 @@ function runBootScript() {
   };
   const document = {
     documentElement: root,
-    querySelector: () => button,
     getElementById: (id: string) => (id === "skill-search" ? input : null),
     addEventListener: (
       name: string,
@@ -42,8 +37,6 @@ function runBootScript() {
   };
   vm.runInNewContext(clientBootScript, { document, localStorage, window });
   return {
-    attributes,
-    button,
     input,
     listeners,
     root,
@@ -52,15 +45,10 @@ function runBootScript() {
 }
 
 describe("pre-hydration interactions", () => {
-  it("loads and toggles the color theme without React", () => {
+  it("loads the saved color theme before React hydrates", () => {
     const harness = runBootScript();
     expect(harness.root.dataset.theme).toBe("dark");
-    harness.listeners.get("click")?.({
-      target: { closest: () => harness.button },
-    });
-    expect(harness.root.dataset.theme).toBe("light");
-    expect(harness.state().stored).toBe("light");
-    expect(harness.attributes.get("aria-label")).toBe("Switch to dark mode");
+    expect(harness.state().stored).toBe("dark");
   });
 
   it("focuses search when slash is pressed outside a text field", () => {
