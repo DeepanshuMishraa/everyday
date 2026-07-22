@@ -11,11 +11,6 @@ const root = process.cwd();
 let failed = 0;
 const skills = getAllSkills();
 
-if (skills.length !== 30)
-  throw new Error(
-    `Catalog must contain exactly 30 skills; found ${skills.length}.`,
-  );
-
 for (const catalog of skills) {
   const skillPath = path.join(root, "skills", catalog.slug, "SKILL.md");
   const catalogPath = path.join(root, "catalog", `${catalog.slug}.yaml`);
@@ -89,14 +84,14 @@ for (const catalog of skills) {
 const skillDirectories = fs
   .readdirSync(path.join(root, "skills"), { withFileTypes: true })
   .filter((entry) => entry.isDirectory());
-if (skillDirectories.length !== 30) {
+if (skillDirectories.length !== skills.length) {
   console.error(
-    `✗ skills/ must contain exactly 30 directories; found ${skillDirectories.length}.`,
+    `✗ skills/ contains ${skillDirectories.length} directories but the catalog contains ${skills.length} entries.`,
   );
   failed += 1;
 }
 
 if (failed) process.exit(1);
 console.log(
-  "Validated exactly 30 skills and refreshed hash-bound structural reports.",
+  `Validated ${skills.length} skills and refreshed hash-bound structural reports.`,
 );

@@ -6,10 +6,11 @@ import { getAllSkills } from "@/lib/skills";
 import { absoluteUrl, site } from "@/lib/site";
 import type { CatalogSkill } from "@/lib/types";
 
+const skillCount = getAllSkills().length;
+
 export const metadata: Metadata = {
   title: "Browse Practical Workflows",
-  description:
-    "Search 30 free workflows for everyday tasks, decisions, routines, relationships, food, travel, money, and home life.",
+  description: `Search ${skillCount} free workflows for everyday tasks, decisions, routines, relationships, food, travel, money, and home life.`,
   alternates: { canonical: "/skills/" },
   openGraph: {
     url: "/skills/",
@@ -67,7 +68,7 @@ export default function SkillsPage() {
             {
               "@type": "ItemList",
               "@id": `${absoluteUrl("/skills/")}#skill-list`,
-              name: "30 practical workflows for everyday life",
+              name: `${skills.length} practical workflows for everyday life`,
               numberOfItems: skills.length,
               itemListElement: skills.map((skill, index) => ({
                 "@type": "ListItem",

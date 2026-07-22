@@ -1,6 +1,7 @@
 import { JsonLd } from "@/components/JsonLd";
 import { TrackedBrowseLink } from "@/components/TrackedBrowseLink";
 import { absoluteUrl, site } from "@/lib/site";
+import { getAllSkills } from "@/lib/skills";
 import { container, eyebrow, heading } from "@/lib/tailwind";
 
 const rise =
@@ -11,6 +12,7 @@ const indexRow =
   "grid min-h-16 grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-3 border-b border-line px-4 py-3 max-[480px]:min-h-[72px] max-[480px]:grid-cols-[22px_minmax(0,1fr)] max-[480px]:gap-x-2.5 max-[480px]:gap-y-2 max-[480px]:p-3";
 
 export default function Home() {
+  const skillCount = getAllSkills().length;
   return (
     <>
       <JsonLd
@@ -41,9 +43,9 @@ export default function Home() {
             <p
               className={`${rise} mt-6 max-w-[35rem] text-pretty text-[clamp(1.05rem,1.6vw,1.25rem)] leading-[1.55] text-ink-2 [animation-delay:110ms] max-[480px]:text-[1.08rem] max-[360px]:text-base`}
             >
-              Thirty practical workflows for the moments that drain your time:
-              difficult messages, household admin, meals, money, health, and
-              getting unstuck.
+              {skillCount} practical workflows for the moments that drain your
+              time: difficult messages, household admin, meals, money, health,
+              and getting unstuck.
             </p>
             <div
               className={`${rise} mt-[2.1rem] flex items-center gap-3 [animation-delay:170ms] max-[720px]:flex-wrap max-[480px]:flex-col max-[480px]:items-stretch`}
@@ -75,7 +77,9 @@ export default function Home() {
           >
             <div className="flex items-center justify-between gap-4 border-b border-line px-4 py-3.5 text-xs text-ink-2 max-[480px]:px-3">
               <span>Start with your situation</span>
-              <strong className="text-xs text-ink">30 workflows</strong>
+              <strong className="text-xs tabular-nums text-ink">
+                {skillCount} workflows
+              </strong>
             </div>
             <div className="bg-ink p-[clamp(22px,4vw,36px)] text-bg max-[480px]:px-[18px] max-[480px]:py-[22px]">
               <span className="text-xs font-bold">

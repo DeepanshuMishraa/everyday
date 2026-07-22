@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { getAllSkills } from "@/lib/skills";
 
 export const dynamic = "force-static";
 
@@ -7,6 +8,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpenGraphImage() {
+  const skillCount = getAllSkills().length;
   return new ImageResponse(
     <div
       style={{
@@ -61,8 +63,7 @@ export default function OpenGraphImage() {
             color: "#62625e",
           }}
         >
-          Thirty short, practical workflows for recurring situations in everyday
-          life.
+          {`${skillCount} short, practical workflows for recurring situations in everyday life.`}
         </div>
       </div>
       <div
@@ -78,8 +79,10 @@ export default function OpenGraphImage() {
         }}
       >
         <span style={{ display: "flex", gap: 5 }}>
-          <span style={{ color: "#171719", fontWeight: 600 }}>30</span>
-          <span>reviewed workflows</span>
+          <span style={{ color: "#171719", fontWeight: 600 }}>
+            {skillCount}
+          </span>
+          <span>practical workflows</span>
         </span>
         <span>Find · start · reuse</span>
       </div>

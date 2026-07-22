@@ -100,7 +100,7 @@ export function SearchLibrary({ skills, categories }: Props) {
     >
       <div className={sectionHeading}>
         <div>
-          <p className={eyebrow}>30 practical workflows</p>
+          <p className={eyebrow}>{skills.length} practical workflows</p>
           <h1
             className={`${heading.h1} max-w-[15ch] text-[clamp(2.75rem,6vw,4.75rem)]`}
             id="library-title"
