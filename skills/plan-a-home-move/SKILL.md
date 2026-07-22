@@ -5,6 +5,12 @@ description: Plan a household move around real dates, people, pets, utilities, p
 
 # Plan a Home Move
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Build a **command plan** around the move date. Protect access to people, documents, medication, keys, and the first night's essentials before optimising boxes.
 
 ## Make the date spine

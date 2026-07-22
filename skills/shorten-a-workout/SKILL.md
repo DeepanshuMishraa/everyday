@@ -5,6 +5,12 @@ description: Turn a planned gym or home workout into a shorter session that fits
 
 # Shorten a Workout
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Shorten the session; preserve the **training signal**. A twenty-minute workout is not a sixty-minute workout performed recklessly fast.
 
 ## 1. Screen the session

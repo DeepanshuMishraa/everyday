@@ -5,6 +5,12 @@ description: Restart a routine after missed days or a longer break by finding wh
 
 # Restart a Habit
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Treat the break as evidence about the design, not the user's character.
 
 ## Decide whether the habit still deserves to exist

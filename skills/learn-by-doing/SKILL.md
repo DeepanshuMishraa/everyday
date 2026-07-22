@@ -5,6 +5,12 @@ description: Teach the user a practical skill through a short explanation, worke
 
 # Learn by Doing
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Treat the current directory as a **learning workspace**. The learner should leave each session able to do one new observable thing, not merely recognise an explanation.
 
 ## Workspace

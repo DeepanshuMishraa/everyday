@@ -31,6 +31,12 @@ export function validateSkill(
     errors.push(`Description must contain 15–80 words; found ${wordCount}.`);
   if (!/^#\s+\S+/m.test(parsed.content))
     errors.push("SKILL.md must have a human-readable H1 title.");
+  const hasInteractionContract =
+    /^## Interaction\s*$/m.test(parsed.content) &&
+    /dedicated user-input or question tool/.test(parsed.content) &&
+    /If no native input tool is available/.test(parsed.content);
+  if (!hasInteractionContract)
+    errors.push("SKILL.md must define the standard interaction contract.");
   const bodyLines = parsed.content.trim().split("\n").length;
   if (bodyLines > 500)
     errors.push(`Body exceeds 500 lines; found ${bodyLines}.`);

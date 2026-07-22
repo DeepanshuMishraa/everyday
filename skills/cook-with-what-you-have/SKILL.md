@@ -5,6 +5,12 @@ description: Turn ingredients already in the fridge, freezer, or pantry into a p
 
 # Cook With What You Have
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Build one meal the user can actually make now. Optimise for **feasibility**: ingredients on hand, food that needs using, time, energy, equipment, and cleanup.
 
 ## 1. Build the inventory

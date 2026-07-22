@@ -5,6 +5,12 @@ description: Review the next seven days and create a realistic weekly plan acros
 
 # Plan Your Week
 
+## Interaction
+
+When missing information materially changes the outcome and the host exposes a dedicated user-input or question tool, use that tool. Ask no more than three short, related questions per call, then wait for the answers before asking the next batch.
+
+Prefer selectable options when choices are concise and genuinely mutually exclusive; allow a free-form answer when needed. Do not present a long questionnaire in normal chat. If no native input tool is available, ask one concise blocking question at a time. For non-blocking gaps, state the assumption and continue.
+
 Run a **weekly reset**: reveal fixed reality, close small loops, and allocate limited capacity. The output is not a master list.
 
 If the user describes severe distress, self-harm, abuse, immediate danger, or being unable to meet basic needs safely, leave weekly planning and prioritise appropriate local human or emergency support. Do not reframe a crisis as a productivity problem.
