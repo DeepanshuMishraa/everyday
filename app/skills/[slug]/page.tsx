@@ -85,6 +85,7 @@ export default async function SkillPage({
   const install = `npx skills add ${site.repository}@${skill.slug}`;
   const pilot = getPilotForSkill(skill.slug, skill.hash);
   const installationCommand = pilot?.installCommand ?? install;
+  const installationTarget = installationCommand.replace("npx skills add ", "");
   const reportMatches =
     skill.evaluation?.skillHash === skill.hash &&
     skill.evaluation?.suiteHash === skill.suiteHash;
@@ -159,19 +160,23 @@ export default async function SkillPage({
             <SkillUseActions slug={skill.slug} />
           </div>
           <div className="grid gap-4">
-            <section className="rounded-lg border border-line bg-surface p-5 max-[480px]:p-[18px] [&_button]:w-full">
-              <h2 className="mb-2.5 font-ui text-xs font-bold text-ink-2">
+            <section className="rounded-lg border border-line bg-surface p-4 [&_button]:w-full">
+              <h2 className="mb-3 text-balance font-ui text-[0.7rem] font-bold text-ink-2">
                 {pilot ? "Install the pilot" : "Install this workflow"}
               </h2>
-              <code className="block wrap-anywhere rounded-md bg-dark px-3.5 py-[13px] font-mono text-[0.7rem] leading-[1.6] text-zinc-200">
-                {installationCommand}
+              <code className="grid gap-1 rounded-md bg-dark px-3.5 py-3 font-mono text-[0.68rem] leading-[1.55] selection:bg-zinc-700">
+                <span className="text-zinc-400">npx skills add</span>
+                <span className="break-all text-zinc-100">
+                  {installationTarget}
+                </span>
               </code>
-              <div className="mt-3">
+              <div className="mt-2.5">
                 <CopyButton
                   value={installationCommand}
-                  label={pilot ? "Copy tagged command" : "Copy command"}
+                  label={pilot ? "Copy tagged command" : "Copy install command"}
                   event="install_command_copy"
                   skill={skill.slug}
+                  variant="compact"
                 />
               </div>
             </section>

@@ -46,11 +46,13 @@ export function CopyButton({
   label = "Copy",
   event,
   skill,
+  variant = "default",
 }: {
   value: string;
   label?: string;
   event: string;
   skill: string;
+  variant?: "default" | "compact";
 }) {
   const [state, setState] = useState<"idle" | "copied" | "failed">("idle");
   const timer = useRef<number | null>(null);
@@ -75,7 +77,11 @@ export function CopyButton({
   return (
     <div className="grid gap-2">
       <button
-        className={`${button.secondary}${copied ? " border-[rgba(14,159,110,0.45)] text-green" : ""}`}
+        className={`${
+          variant === "compact"
+            ? "inline-flex min-h-9 cursor-pointer items-center justify-center gap-2 rounded-md border border-line-2 bg-surface px-3 font-ui text-xs font-medium text-ink transition-colors duration-150 hover:border-ink"
+            : button.secondary
+        }${copied ? " border-[rgba(14,159,110,0.45)] text-green" : ""}`}
         type="button"
         onClick={copy}
       >

@@ -66,6 +66,7 @@ export const weeknightMealsPilot: SkillPilot = {
 
 export function getPilotForSkill(slug: string, currentFingerprint: string) {
   if (slug !== weeknightMealsPilot.slug) return null;
-  if (currentFingerprint !== weeknightMealsPilot.packageFingerprint) return null;
+  if (currentFingerprint !== weeknightMealsPilot.packageFingerprint)
+    return null;
   return weeknightMealsPilot;
 }
