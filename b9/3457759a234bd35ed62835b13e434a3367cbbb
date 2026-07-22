@@ -1,0 +1,218 @@
+app/globals.css
+  s_807c9fc351fa49::t_ec2511267ee639 30
+  s_807c9fc351fa49::t_98564e0e10916c 1-29,31-45,54-56,65-66
+  s_807c9fc351fa49::t_67a95cd5bf8042 46-53,57-64
+components/EvaluationReportView.tsx
+  s_807c9fc351fa49::t_d9dba4b452ab68 2
+  s_807c9fc351fa49::t_67a95cd5bf8042 12-54,57-59,61-74,76-189
+  s_807c9fc351fa49::t_330b4702e68042 56,60
+app/opengraph-image.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 11-35,38-66,68-83
+components/ThemeToggle.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 40-44,49-56,60-68
+  s_807c9fc351fa49::t_262759d2b39466 3,6,8,12-14,16-22,32
+  s_807c9fc351fa49::t_ae61bf89911ee9 38,48
+catalog/set-a-boundary.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+tests/catalog.test.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 13-19,24-27,33-35,37-39,59-60
+catalog/plan-a-home-move.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/coordinate-family-care.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 21
+tests/button-styles.test.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 5-8,14-16,22-24
+  s_807c9fc351fa49::t_a8a94ba0fefa8b 3,12-13
+lib/skills/package.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 9-13,26-33,42-45,50-57,64-72,79-87,93-100,109-115,118-123,126-128,149-156
+catalog/build-a-bedtime-routine.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+lib/skills/validate.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 6-9,12-18,22-33,35-44,46-48,50-51,56-63,65-70
+.prettierignore
+  s_807c9fc351fa49::t_6807e1e26be5c7 1-3,5-6
+  s_807c9fc351fa49::t_e5363f1b6d4dff 4,7
+app/llms.txt/route.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 23-26,29-32,35-37
+catalog/plan-a-gathering.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+app/manifest.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 14-16
+app/skills/[slug]/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 13-27,30-37,42-44,51-71,75-79,85-87,90-94,97-133,135-277,279-280
+components/PilotPanel.tsx
+  s_807c9fc351fa49::t_d214e216716fe1 3
+  s_807c9fc351fa49::t_67a95cd5bf8042 7-16,22-27,33-40,45-141
+tests/client-boot.test.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 12-14,16-21,26-30,34-41,44-51,58-60,72-74
+app/methodology/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 5-11,15-16,18-38,42-61,65-251
+components/SearchLibrary.tsx
+  s_807c9fc351fa49::t_364b7438bcce4b 295
+  s_807c9fc351fa49::t_31e2464ddd8765 101,117,121,151,160-161,181-182,190,195,220,229,287
+  s_807c9fc351fa49::t_67a95cd5bf8042 8-21,35-38,41-43,47-50,59-65,75-79,88-92,96-100,102-114,118-120,122-133,138-141,153-158,162-178,183-188,198-203,205-210,216-219,221-225,230-272,275-286,288-291,296-298,300-302,305-315,320-340
+catalog/write-an-apology.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+eslint.config.mjs
+  s_807c9fc351fa49::t_6807e1e26be5c7 1-9,17
+  s_807c9fc351fa49::t_67a95cd5bf8042 10-16
+components/TrackedBrowseLink.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 8-16
+  s_807c9fc351fa49::t_ae61bf89911ee9 5
+components/ProductAnalytics.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 12-13
+lib/skills/search.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 7-34,38-97,102-104,118-124,128-132,135-138
+scripts/check-seo.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 16-23,26-27,34-36,46-49,55-58,60-67,69-70,73-75,78-82,84-91,95-99,102-103,106-110,117-122
+app/layout.tsx
+  s_807c9fc351fa49::t_3ee3fabf6b2360 11,108,140,157,171
+  s_807c9fc351fa49::t_67a95cd5bf8042 16-25,40-43,50-57,66-73,84-90,97-99,101-102,104-107,110-139,141-151,153-156,158-169,172-184,187-192,198-221
+  s_807c9fc351fa49::t_ec2511267ee639 3,32-37,103
+app/privacy/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 8-9,14-67
+  s_807c9fc351fa49::t_2f77dab7e95c16 4
+package.json
+  s_807c9fc351fa49::t_6807e1e26be5c7 9-12
+  s_807c9fc351fa49::t_cc8a14be102ecd 38-41
+  s_807c9fc351fa49::t_4a56a702e67a99 20,30-31
+app/not-found.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 5-18
+  s_807c9fc351fa49::t_2f77dab7e95c16 2
+app/skills/[slug]/opengraph-image.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 10-12,14-18,21-22,24-48,51-78,80-91
+components/LibraryMemoryPanel.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 14,17-20,32-79
+  s_807c9fc351fa49::t_d77f99299c2a3d 4-5,10-13,15-16
+  s_807c9fc351fa49::t_1fdfca3a49f768 7
+catalog/cool-down-an-angry-message.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+app/sitemap.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 10-13,15-56
+lib/site.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 4-12
+catalog/shorten-a-workout.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/split-household-chores.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/restart-working-out.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+tsconfig.json
+  s_807c9fc351fa49::t_67a95cd5bf8042 4,22,32
+lib/pilot.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 5-16,49-50,54-63,70-72
+components/Reveal.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 5-13,37-41
+catalog/get-a-return-or-refund.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/prepare-for-an-appointment.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 21
+catalog/plan-your-week.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+components/SkillActions.tsx
+  s_807c9fc351fa49::t_806a1ffa7ad5b7 7,76,122
+  s_807c9fc351fa49::t_67a95cd5bf8042 11-22,29-38,44-54,57-62,77-81,83-85,87-95,100-106,108-113,123-135
+catalog/make-a-hard-decision.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/organize-monthly-bills.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+app/skills/page.tsx
+  s_807c9fc351fa49::t_ec2511267ee639 7,39-49
+  s_807c9fc351fa49::t_67a95cd5bf8042 11-12,14-34,51-84
+catalog/restart-a-personal-project.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+app/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 6-11,14-70,72-127,129-131
+  s_807c9fc351fa49::t_ad9cc3a5e6fcb3 4
+  s_807c9fc351fa49::t_d7984c97cc9e83 5
+app/install/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 7-8,12-13,15-35,40-148
+  s_807c9fc351fa49::t_f93870ccfa24ce 5
+  s_807c9fc351fa49::t_2381671aa469b7 6
+postcss.config.mjs
+  s_807c9fc351fa49::t_98564e0e10916c 1-7
+catalog/learn-by-doing.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 21
+catalog/plan-weeknight-meals.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/clean-your-home-fast.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+scripts/hash-skill.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 1-5
+catalog/handle-a-home-repair.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/categories.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 4-51
+components/JsonLd.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 3-8
+scripts/validate-skills.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 14-17,23-27,33-35,37-40,42-49,54-55,57-77,79-86,89-97,100-102
+catalog/compare-a-big-purchase.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+lib/tailwind.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 3-4,12-13,15-16,23-24,26-27,38-39,41-42,44-45,47-48,50-51,53-54,56-57
+  s_807c9fc351fa49::t_de57f09671248d 55
+  s_807c9fc351fa49::t_98564e0e10916c 1-2,5-11,14,17-22,25,28-37,40,43,46,49,52
+catalog/pack-for-a-trip.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+lib/library-memory.ts
+  s_807c9fc351fa49::t_d77f99299c2a3d 14-15,63-93
+  s_807c9fc351fa49::t_7434592f89ab36 16
+  s_807c9fc351fa49::t_67a95cd5bf8042 11,36-41,95-97,100-102,108-111,128-134
+  s_807c9fc351fa49::t_8d2ca8699b52a8 94
+scripts/check-evals.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 19-24,26-29,31-42,45-49,51-52,54-73,75-85,87-89,91-102,104-126,128-131
+components/SkillUseActions.tsx
+  s_807c9fc351fa49::t_262759d2b39466 4,9-17,30,32,44,49,55
+  s_807c9fc351fa49::t_806a1ffa7ad5b7 6
+  s_807c9fc351fa49::t_7434592f89ab36 33-38
+  s_807c9fc351fa49::t_67a95cd5bf8042 25-28,63-90
+app/robots.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 10-13
+catalog/check-a-suspicious-message.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+lib/types.ts
+  s_807c9fc351fa49::t_98564e0e10916c 1-2,8
+  s_807c9fc351fa49::t_67a95cd5bf8042 35-39,43-48,69-74
+tests/library-memory.test.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 8-10,18-25,30-32,37-58
+catalog/move-more-at-your-desk.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+lib/skills/index.ts
+  s_807c9fc351fa49::t_67a95cd5bf8042 6-17,25-26,28-33,50-52,59-62,65-68
+catalog/prepare-for-travel-delays.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+app/categories/[slug]/page.tsx
+  s_807c9fc351fa49::t_67a95cd5bf8042 7-25,28-35,40-42,48-67,71-75,81-170
+catalog/audit-subscriptions.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+components/SkillDocumentView.tsx
+  s_807c9fc351fa49::t_4699af9ddf4745 6,11,14
+  s_807c9fc351fa49::t_67a95cd5bf8042 9-10,12-13,15-21,26-93
+catalog/get-unstuck.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/restart-a-habit.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/cook-with-what-you-have.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+catalog/understand-paperwork.yaml
+  s_807c9fc351fa49::t_67a95cd5bf8042 20
+package-lock.json
+  s_807c9fc351fa49::t_4d6035e6a1ba0c 11,21-22,29-32,38-309,783-787,789-791,793-799,802-806,809,812,815-820,822-834,836-847,849-850,853-863,866-885,887,890-898,900,903-1135,1543-1571,1578-1587,1612-1621,1762-1809,2113-2119,2136-2139,2142-2148,2151-2428,2472-2485,2536-2540,2542-2550,2552-2562,2565-2568,2571-2572,2575-2578,2582-3268,3273-5344,5346-5366,5368-5369,5372-5375,5378-5379,5382,5385-5398,5402,5405,5408-5411,5415-5418,5421,5424-5427,5430-5432,5434,5437-5440,5444-5447,5450,5453-5456,5459-5461,5463,5466-5469,5471-5487,5489-5490,5493-5499,5501-5503,5506-5511,5513-5526,5529-5530,5533-5536,5540,5543-5547,5549-5555,5557,5560-5564,5566-5567,5570-5594,5601,5603-5604,5606-5609,5615-5619,5621-5628,5630,5633-5636,5640-5644,5647,5649-5650,5653-5657,5660-5663,5666,5669-5673,5675-5678,5680-5683,5686-5701,5703-5706,5709-5713,5716-5719,5722,5725-5728,5730-5741,5743-5746,5749-5751,5754,5756-5757,5760-5774,5776-5778,5780,5783,5786-5790,5792,5795-5799,5801-5802,5805-5808,5812-5818,5821-5824,5826-5833,5835-5838,5841-5845,5848,5854-5867,5871,5873-5874,5877-5888,5890-5893,5897,5900-5904,5907-5908,5911-5914,5917-5920,5922-5926,5929-5933,5936-5939,5941-5945,5948-5952,5954-5955,5958,5961-5965,5968-5971,5974,5977-5981,5983-5989,5991,5994-5998,6000-6007,6009,6012-6016,6019-6022,6025,6028-6032,6034-6036,6038,6041-6045,6047-6049,6051-6054,6057-6061,6063-6069,6071,6074-6092,6094-6100,6102-6112,6115-6121,6144-6216,6226-6259,6521-6543,6554-6576,6596-6605,6876-6885,7449-7498,7529-7551,7605-7766,7781-7862,7888-7914,7941-7950,7979-8016,8027-8057,8079-8085,8113-8156,8223-8277,8312-8390,8414,8423-8471,8517-8615,8648-8654,8669-8796,8811-8820,8830-8842,8884-8928,8973-8985,9006-9044,9070-9160,9175-9217,9312-9390,9587-9691,9709-9761
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "b93457759a234bd35ed62835b13e434a3367cbbb",
+  "prompts": {},
+  "sessions": {
+    "s_807c9fc351fa49": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f8878-7cd4-70a3-8d64-b83c3e89a43a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
