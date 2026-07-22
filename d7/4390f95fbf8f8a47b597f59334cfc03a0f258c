@@ -1,0 +1,21 @@
+tests/pilot.test.ts
+  s_43bd37a52a4841::t_d1fc71c8a6d755 1-17
+lib/pilot.ts
+  s_43bd37a52a4841::t_929ff39e534072 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "d74390f95fbf8f8a47b597f59334cfc03a0f258c",
+  "prompts": {},
+  "sessions": {
+    "s_43bd37a52a4841": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f88d0-aee8-7683-b915-fcaf1f163c83",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
