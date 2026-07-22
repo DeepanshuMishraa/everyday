@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -7,6 +8,16 @@ import { ProductAnalytics } from "@/components/ProductAnalytics";
 import { clientBootScript } from "@/lib/client-boot";
 import { absoluteUrl, site } from "@/lib/site";
 import "./globals.css";
+
+const zodiak = localFont({
+  src: [
+    { path: "../fonts/Zodiak-Variable.ttf", weight: "100 900", style: "normal" },
+    { path: "../fonts/Zodiak-VariableItalic.ttf", weight: "100 900", style: "italic" },
+  ],
+  display: "swap",
+  fallback: ["Georgia", "Times New Roman", "serif"],
+  variable: "--font-zodiak",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -46,13 +57,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="light" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={zodiak.variable} data-theme="light" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" />
       </head>
       <body>

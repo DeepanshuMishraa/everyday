@@ -34,7 +34,7 @@
   --r-lg: 16px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 69px;
-  --font-display: "Zodiak", Georgia, "Times New Roman", serif;
+  --font-display: var(--font-zodiak), Georgia, "Times New Roman", serif;
   --font-ui: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --font-mono: var(--font-ui);
   --text-caption: 0.75rem;
