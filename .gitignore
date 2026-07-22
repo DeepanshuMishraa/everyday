@@ -10,3 +10,14 @@ work/
 outputs/
 .gstack/
 .vercel
+.venv-musicgen/
+
+# Local video production / HyperFrames
+videos/
+**/.hyperframes/
+**/.hf-tmp/
+**/renders/
+*.mp4
+*.mov
+*.webm
+*.mkv
