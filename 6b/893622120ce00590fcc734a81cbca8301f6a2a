@@ -1,0 +1,37 @@
+tests/client-boot.test.ts
+  s_807c9fc351fa49::t_c4d6ee1e9e211d 48,51
+lib/site.ts
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 1-3,10,12-13
+app/install/page.tsx
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 94,97-99,102
+lib/pilot.ts
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 51
+README.md
+  s_807c9fc351fa49::t_64ef687bb07a1b 1,3,5,7,9,11-15,17-22,26,28,31-39,41-44,47-49,51-52,54,56,58,60
+  s_807c9fc351fa49::t_f9093e9b80db9c 24
+package.json
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 2
+.env.example
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 1
+app/skills/[slug]/page.tsx
+  s_807c9fc351fa49::t_c76954746317ca 216-219,221
+  s_807c9fc351fa49::t_1a4517e6bdf3d5 85
+package-lock.json
+  s_807c9fc351fa49::t_2c48b7f413ebe1 2,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "6b893622120ce00590fcc734a81cbca8301f6a2a",
+  "prompts": {},
+  "sessions": {
+    "s_807c9fc351fa49": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f8878-7cd4-70a3-8d64-b83c3e89a43a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
