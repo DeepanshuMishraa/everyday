@@ -1,4 +1,3 @@
-import { CopyButton } from "@/components/SkillActions";
 import type { PilotEvidenceState, PilotRuntime, SkillPilot } from "@/lib/pilot";
 import { eyebrow, heading } from "@/lib/tailwind";
 
@@ -97,22 +96,6 @@ export function PilotPanel({ pilot }: { pilot: SkillPilot }) {
           </div>
         </li>
       </ol>
-      <div className="mt-6 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 max-[720px]:grid-cols-1 max-[720px]:items-stretch max-[720px]:[&_button]:w-full">
-        <div>
-          <span className="mb-[7px] block text-xs font-bold text-ink-2">
-            Cohort install command
-          </span>
-          <code className="block wrap-anywhere rounded-md bg-dark px-3.5 py-[13px] font-mono text-[0.7rem] leading-[1.6] text-zinc-200">
-            {pilot.installCommand}
-          </code>
-        </div>
-        <CopyButton
-          value={pilot.installCommand}
-          label="Copy tagged command"
-          event="install_command_copy"
-          skill={pilot.slug}
-        />
-      </div>
       <p className="mt-[18px]">
         <span className="mb-[7px] block text-xs font-bold text-ink-2">
           Package fingerprint

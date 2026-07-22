@@ -84,6 +84,7 @@ export default async function SkillPage({
   if (!category) notFound();
   const install = `npx skills add ${site.repository}@${skill.slug}`;
   const pilot = getPilotForSkill(skill.slug, skill.hash);
+  const installationCommand = pilot?.installCommand ?? install;
   const reportMatches =
     skill.evaluation?.skillHash === skill.hash &&
     skill.evaluation?.suiteHash === skill.suiteHash;
@@ -157,14 +158,32 @@ export default async function SkillPage({
             </div>
             <SkillUseActions slug={skill.slug} />
           </div>
-          <aside className="rounded-lg border border-line bg-surface p-5 max-[480px]:p-[18px]">
-            <span className="mb-2.5 block font-ui text-xs font-bold text-ink-2">
-              What you will leave with
-            </span>
-            <p className="m-0 text-base font-medium leading-[1.5]">
-              {skill.outcome}
-            </p>
-          </aside>
+          <div className="grid gap-4">
+            <section className="rounded-lg border border-line bg-surface p-5 max-[480px]:p-[18px] [&_button]:w-full">
+              <h2 className="mb-2.5 font-ui text-xs font-bold text-ink-2">
+                {pilot ? "Install the pilot" : "Install this workflow"}
+              </h2>
+              <code className="block wrap-anywhere rounded-md bg-dark px-3.5 py-[13px] font-mono text-[0.7rem] leading-[1.6] text-zinc-200">
+                {installationCommand}
+              </code>
+              <div className="mt-3">
+                <CopyButton
+                  value={installationCommand}
+                  label={pilot ? "Copy tagged command" : "Copy command"}
+                  event="install_command_copy"
+                  skill={skill.slug}
+                />
+              </div>
+            </section>
+            <aside className="rounded-lg border border-line bg-surface p-5 max-[480px]:p-[18px]">
+              <span className="mb-2.5 block font-ui text-xs font-bold text-ink-2">
+                What you will leave with
+              </span>
+              <p className="m-0 text-base font-medium leading-[1.5]">
+                {skill.outcome}
+              </p>
+            </aside>
+          </div>
         </div>
       </header>
       {pilot ? (
@@ -192,55 +211,23 @@ export default async function SkillPage({
               ))}
             </ul>
           </section>
-          {pilot ? (
-            <section>
-              <h2>Pilot installation</h2>
-              <p className="-mt-1 mb-[18px] text-[0.95rem] leading-[1.6] text-ink-2">
-                Use the tagged cohort command above. ZIP downloads are not part
-                of the verified pilot path.
-              </p>
-              <CopyButton
-                value={skill.markdown}
-                label="Copy source to inspect"
-                event="skill_copy"
-                skill={skill.slug}
-              />
-            </section>
-          ) : (
-            <section>
-              <h2>Optional agent setup</h2>
-              <p className="-mt-1 mb-[18px] text-[0.95rem] leading-[1.6] text-ink-2">
-                Install this workflow if you want a compatible AI agent to reuse
-                it.
-              </p>
-              <details
-                className="border-t border-line open:[&>summary]:mb-3"
-                open
-              >
-                <summary className="flex min-h-12 cursor-pointer items-center font-ui text-[0.78rem] font-medium">
-                  Installation options
-                </summary>
-                <div className="mb-2.5">
-                  <code className="block wrap-anywhere rounded-md bg-dark px-3.5 py-[13px] font-mono text-[0.7rem] leading-[1.6] text-zinc-200">
-                    {install}
-                  </code>
-                  <CopyButton
-                    value={install}
-                    label="Copy command"
-                    event="install_command_copy"
-                    skill={skill.slug}
-                  />
-                </div>
-                <DownloadButton files={skill.files} slug={skill.slug} />
-                <CopyButton
-                  value={skill.markdown}
-                  label="Copy source file"
-                  event="skill_copy"
-                  skill={skill.slug}
-                />
-              </details>
-            </section>
-          )}
+          <section>
+            <h2>{pilot ? "Pilot package" : "Package options"}</h2>
+            <p className="-mt-1 mb-[18px] text-[0.95rem] leading-[1.6] text-ink-2">
+              {pilot
+                ? "Inspect the pinned source used by the pilot."
+                : "Download the complete folder or inspect its source before installing."}
+            </p>
+            {!pilot ? (
+              <DownloadButton files={skill.files} slug={skill.slug} />
+            ) : null}
+            <CopyButton
+              value={skill.markdown}
+              label={pilot ? "Copy source to inspect" : "Copy source file"}
+              event="skill_copy"
+              skill={skill.slug}
+            />
+          </section>
           <section>
             <h2>About this workflow</h2>
             <dl className="m-0 font-ui [&>div]:grid [&>div]:grid-cols-[minmax(0,1fr)_auto] [&>div]:items-baseline [&>div]:gap-4 [&>div]:py-2.5 [&_dt]:text-[0.76rem] [&_dt]:text-ink-2 [&_dd]:m-0 [&_dd]:text-right [&_dd]:text-[0.72rem] [&_dd]:font-medium [&_dd]:text-ink">
