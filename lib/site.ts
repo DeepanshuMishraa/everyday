@@ -1,9 +1,15 @@
 export const site = {
   name: "Everyday",
   legalName: "Everyday Agent Skills",
-  description: "A free library of short, practical workflows for cooking, home, money, relationships, travel, learning, and everyday life.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://everyday-agent-skills.vercel.app").replace(/\/$/, ""),
-  repository: process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ?? "DeepanshuMishraa/everyday-agent-skills",
+  description:
+    "A free library of short, practical workflows for cooking, home, money, relationships, travel, learning, and everyday life.",
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://everyday-agent-skills.vercel.app"
+  ).replace(/\/$/, ""),
+  repository:
+    process.env.NEXT_PUBLIC_SKILLS_REPOSITORY ??
+    "DeepanshuMishraa/everyday-agent-skills",
   repositoryUrl: "https://github.com/DeepanshuMishraa/everyday-agent-skills",
   locale: "en_US",
   language: "en",

@@ -9,7 +9,8 @@ function recordReturnVisit(): AnalyticsStorageResult {
   try {
     const local = window.localStorage;
     const session = window.sessionStorage;
-    if (session.getItem("everyday-return-recorded") === "true") return { ok: true };
+    if (session.getItem("everyday-return-recorded") === "true")
+      return { ok: true };
     const now = Date.now();
     const previous = Number(local.getItem("everyday-last-visit"));
     local.setItem("everyday-last-visit", String(now));

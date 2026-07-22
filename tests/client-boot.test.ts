@@ -9,31 +9,55 @@ function runBootScript() {
   let stored = "dark";
   let focused = false;
   let scrolled = false;
-  const button = { setAttribute: (name: string, value: string) => attributes.set(name, value) };
+  const button = {
+    setAttribute: (name: string, value: string) => attributes.set(name, value),
+  };
   const input = {
-    focus: () => { focused = true; },
-    scrollIntoView: () => { scrolled = true; },
+    focus: () => {
+      focused = true;
+    },
+    scrollIntoView: () => {
+      scrolled = true;
+    },
   };
   const document = {
     documentElement: root,
     querySelector: () => button,
-    getElementById: (id: string) => id === "skill-search" ? input : null,
-    addEventListener: (name: string, handler: (event: Record<string, unknown>) => void) => listeners.set(name, handler),
+    getElementById: (id: string) => (id === "skill-search" ? input : null),
+    addEventListener: (
+      name: string,
+      handler: (event: Record<string, unknown>) => void,
+    ) => listeners.set(name, handler),
   };
   const localStorage = {
     getItem: () => stored,
-    setItem: (_key: string, value: string) => { stored = value; },
+    setItem: (_key: string, value: string) => {
+      stored = value;
+    },
   };
-  const window = { matchMedia: (query: string) => ({ matches: query.includes("color-scheme") }) };
+  const window = {
+    matchMedia: (query: string) => ({
+      matches: query.includes("color-scheme"),
+    }),
+  };
   vm.runInNewContext(clientBootScript, { document, localStorage, window });
-  return { attributes, button, input, listeners, root, state: () => ({ focused, scrolled, stored }) };
+  return {
+    attributes,
+    button,
+    input,
+    listeners,
+    root,
+    state: () => ({ focused, scrolled, stored }),
+  };
 }
 
 describe("pre-hydration interactions", () => {
   it("loads and toggles the color theme without React", () => {
     const harness = runBootScript();
     expect(harness.root.dataset.theme).toBe("dark");
-    harness.listeners.get("click")?.({ target: { closest: () => harness.button } });
+    harness.listeners.get("click")?.({
+      target: { closest: () => harness.button },
+    });
     expect(harness.root.dataset.theme).toBe("light");
     expect(harness.state().stored).toBe("light");
     expect(harness.attributes.get("aria-label")).toBe("Switch to dark mode");
@@ -45,7 +69,9 @@ describe("pre-hydration interactions", () => {
     harness.listeners.get("keydown")?.({
       key: "/",
       target: { tagName: "BODY", isContentEditable: false },
-      preventDefault: () => { prevented = true; },
+      preventDefault: () => {
+        prevented = true;
+      },
     });
     expect(harness.state()).toMatchObject({ focused: true, scrolled: true });
     expect(prevented).toBe(true);

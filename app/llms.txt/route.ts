@@ -20,11 +20,19 @@ export function GET() {
     `- [Source repository](${site.repositoryUrl})`,
     "",
     "## Categories",
-    ...categories.map((category) => `- [${category.name}](${absoluteUrl(`/categories/${category.slug}/`)}): ${category.description}`),
+    ...categories.map(
+      (category) =>
+        `- [${category.name}](${absoluteUrl(`/categories/${category.slug}/`)}): ${category.description}`,
+    ),
     "",
     "## Workflows",
-    ...skills.map((skill) => `- [${skill.title}](${absoluteUrl(`/skills/${skill.slug}/`)}): ${skill.outcome}`),
+    ...skills.map(
+      (skill) =>
+        `- [${skill.title}](${absoluteUrl(`/skills/${skill.slug}/`)}): ${skill.outcome}`,
+    ),
     "",
   ];
-  return new Response(lines.join("\n"), { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+  return new Response(lines.join("\n"), {
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
+  });
 }

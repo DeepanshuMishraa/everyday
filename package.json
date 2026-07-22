@@ -6,6 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "validate": "node --import tsx scripts/validate-skills.ts",
     "hash-skill": "node --import tsx scripts/hash-skill.ts",
     "test": "vitest run",
@@ -13,6 +17,7 @@
     "check-seo": "node --import tsx scripts/check-seo.ts"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@vercel/analytics": "latest",
     "fflate": "^0.8.3",
     "gray-matter": "latest",
@@ -22,13 +27,18 @@
     "react": "latest",
     "react-dom": "latest",
     "react-markdown": "latest",
-    "remark-gfm": "latest"
+    "remark-gfm": "latest",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@types/js-yaml": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.11",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
     "tsx": "latest",
     "typescript": "^5.9.3",
     "vitest": "latest"

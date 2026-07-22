@@ -1,0 +1,7 @@
+.next/
+build/
+coverage/
+evals/
+node_modules/
+out/
+skills/

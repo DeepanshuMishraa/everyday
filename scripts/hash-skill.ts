@@ -1,4 +1,8 @@
-import { formatSkillPackageReadError, hashSkillPackage, readSkillPackageDirectory } from "../lib/skills/package";
+import {
+  formatSkillPackageReadError,
+  hashSkillPackage,
+  readSkillPackageDirectory,
+} from "../lib/skills/package";
 
 const directories = process.argv.slice(2);
 if (directories.length !== 1) {

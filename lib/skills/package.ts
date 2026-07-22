@@ -6,7 +6,11 @@ import type { SkillPackageFile } from "@/lib/types";
 export type SkillPackageReadError =
   | { kind: "directory-unreadable"; path: string; cause: string }
   | { kind: "file-unreadable"; path: string; cause: string }
-  | { kind: "unsupported-entry"; path: string; entryType: "symbolic link" | "special file" }
+  | {
+      kind: "unsupported-entry";
+      path: string;
+      entryType: "symbolic link" | "special file";
+    }
   | { kind: "invalid-utf8"; path: string }
   | { kind: "nul-content"; path: string };
 
@@ -19,8 +23,14 @@ function errorMessage(error: unknown) {
 }
 
 function compareByCodePoint(left: string, right: string) {
-  const leftPoints = Array.from(left, (character) => character.codePointAt(0) ?? 0);
-  const rightPoints = Array.from(right, (character) => character.codePointAt(0) ?? 0);
+  const leftPoints = Array.from(
+    left,
+    (character) => character.codePointAt(0) ?? 0,
+  );
+  const rightPoints = Array.from(
+    right,
+    (character) => character.codePointAt(0) ?? 0,
+  );
   const length = Math.min(leftPoints.length, rightPoints.length);
   for (let index = 0; index < length; index += 1) {
     const difference = leftPoints[index] - rightPoints[index];
@@ -29,32 +39,65 @@ function compareByCodePoint(left: string, right: string) {
   return leftPoints.length - rightPoints.length;
 }
 
-function readDirectory(directory: string, prefix: string): SkillPackageReadResult {
+function readDirectory(
+  directory: string,
+  prefix: string,
+): SkillPackageReadResult {
   let entries: fs.Dirent[];
   try {
     entries = fs.readdirSync(directory, { withFileTypes: true });
   } catch (error) {
-    return { ok: false, error: { kind: "directory-unreadable", path: directory, cause: errorMessage(error) } };
+    return {
+      ok: false,
+      error: {
+        kind: "directory-unreadable",
+        path: directory,
+        cause: errorMessage(error),
+      },
+    };
   }
 
   const files: SkillPackageFile[] = [];
   for (const entry of entries) {
     const relative = path.posix.join(prefix, entry.name);
     const absolute = path.join(directory, entry.name);
-    if (entry.isSymbolicLink()) return { ok: false, error: { kind: "unsupported-entry", path: relative, entryType: "symbolic link" } };
+    if (entry.isSymbolicLink())
+      return {
+        ok: false,
+        error: {
+          kind: "unsupported-entry",
+          path: relative,
+          entryType: "symbolic link",
+        },
+      };
     if (entry.isDirectory()) {
       const nested = readDirectory(absolute, relative);
       if (!nested.ok) return nested;
       files.push(...nested.files);
       continue;
     }
-    if (!entry.isFile()) return { ok: false, error: { kind: "unsupported-entry", path: relative, entryType: "special file" } };
+    if (!entry.isFile())
+      return {
+        ok: false,
+        error: {
+          kind: "unsupported-entry",
+          path: relative,
+          entryType: "special file",
+        },
+      };
 
     let bytes: Buffer;
     try {
       bytes = fs.readFileSync(absolute);
     } catch (error) {
-      return { ok: false, error: { kind: "file-unreadable", path: relative, cause: errorMessage(error) } };
+      return {
+        ok: false,
+        error: {
+          kind: "file-unreadable",
+          path: relative,
+          cause: errorMessage(error),
+        },
+      };
     }
 
     let content: string;
@@ -63,14 +106,26 @@ function readDirectory(directory: string, prefix: string): SkillPackageReadResul
     } catch {
       return { ok: false, error: { kind: "invalid-utf8", path: relative } };
     }
-    if (content.includes("\0")) return { ok: false, error: { kind: "nul-content", path: relative } };
-    files.push({ path: relative, content, lineCount: content.split("\n").length });
+    if (content.includes("\0"))
+      return { ok: false, error: { kind: "nul-content", path: relative } };
+    files.push({
+      path: relative,
+      content,
+      lineCount: content.split("\n").length,
+    });
   }
 
-  return { ok: true, files: files.sort((left, right) => compareByCodePoint(left.path, right.path)) };
+  return {
+    ok: true,
+    files: files.sort((left, right) =>
+      compareByCodePoint(left.path, right.path),
+    ),
+  };
 }
 
-export function readSkillPackageDirectory(directory: string): SkillPackageReadResult {
+export function readSkillPackageDirectory(
+  directory: string,
+): SkillPackageReadResult {
   return readDirectory(path.resolve(directory), "");
 }
 
@@ -91,8 +146,14 @@ export function formatSkillPackageReadError(error: SkillPackageReadError) {
 
 export function hashSkillPackage(files: SkillPackageFile[]) {
   const hash = crypto.createHash("sha256");
-  for (const file of [...files].sort((left, right) => compareByCodePoint(left.path, right.path))) {
-    hash.update(file.path, "utf8").update("\0").update(file.content, "utf8").update("\0");
+  for (const file of [...files].sort((left, right) =>
+    compareByCodePoint(left.path, right.path),
+  )) {
+    hash
+      .update(file.path, "utf8")
+      .update("\0")
+      .update(file.content, "utf8")
+      .update("\0");
   }
   return hash.digest("hex");
 }

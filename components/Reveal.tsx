@@ -2,7 +2,15 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-export function Reveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+export function Reveal({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -10,7 +18,6 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
     const node = ref.current;
     if (!node) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVisible(true);
       return;
     }
     const observer = new IntersectionObserver(
@@ -27,7 +34,11 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
   }, []);
 
   return (
-    <div ref={ref} className={`reveal${visible ? " visible" : ""}${className ? ` ${className}` : ""}`} style={delay ? { transitionDelay: `${delay}ms` } : undefined}>
+    <div
+      ref={ref}
+      className={`${visible ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"} transition-[opacity,transform] duration-[640ms] ease-spring motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none${className ? ` ${className}` : ""}`}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+    >
       {children}
     </div>
   );

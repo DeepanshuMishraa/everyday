@@ -8,10 +8,12 @@ export type LibraryMemoryError = {
 };
 
 export type LibraryMemoryResult<T> =
-  | { ok: true; value: T }
-  | { ok: false; error: LibraryMemoryError };
+  { ok: true; value: T } | { ok: false; error: LibraryMemoryError };
 
 export const LIBRARY_MEMORY_EVENT = "everyday-library-memory-change";
+export const LIBRARY_MEMORY_UNAVAILABLE = Symbol("library-memory-unavailable");
+export type LibraryMemorySnapshot =
+  string | null | typeof LIBRARY_MEMORY_UNAVAILABLE;
 const STORAGE_KEY = "everyday-library-memory-v1";
 const MAX_RECENT = 6;
 
@@ -31,7 +33,12 @@ function parse(raw: string): LibraryMemoryResult<LibraryMemoryState> {
   } catch {
     return { ok: false, error: { code: "invalid-state" } };
   }
-  if (typeof value !== "object" || value === null || !("saved" in value) || !("recent" in value)) {
+  if (
+    typeof value !== "object" ||
+    value === null ||
+    !("saved" in value) ||
+    !("recent" in value)
+  ) {
     return { ok: false, error: { code: "invalid-state" } };
   }
   const saved = uniqueSlugs(value.saved);
@@ -53,16 +60,55 @@ export const LibraryMemory = {
     }
   },
 
-  read(storage: Pick<Storage, "getItem">): LibraryMemoryResult<LibraryMemoryState> {
+  snapshot(): LibraryMemorySnapshot {
+    try {
+      return window.localStorage.getItem(STORAGE_KEY);
+    } catch {
+      return LIBRARY_MEMORY_UNAVAILABLE;
+    }
+  },
+
+  serverSnapshot(): LibraryMemorySnapshot {
+    return null;
+  },
+
+  subscribe(onStoreChange: () => void): () => void {
+    window.addEventListener(LIBRARY_MEMORY_EVENT, onStoreChange);
+    window.addEventListener("storage", onStoreChange);
+    return () => {
+      window.removeEventListener(LIBRARY_MEMORY_EVENT, onStoreChange);
+      window.removeEventListener("storage", onStoreChange);
+    };
+  },
+
+  fromSnapshot(
+    snapshot: LibraryMemorySnapshot,
+  ): LibraryMemoryResult<LibraryMemoryState> {
+    if (snapshot === LIBRARY_MEMORY_UNAVAILABLE) {
+      return { ok: false, error: { code: "storage-unavailable" } };
+    }
+    return snapshot === null
+      ? { ok: true, value: LibraryMemory.empty() }
+      : parse(snapshot);
+  },
+
+  read(
+    storage: Pick<Storage, "getItem">,
+  ): LibraryMemoryResult<LibraryMemoryState> {
     try {
       const raw = storage.getItem(STORAGE_KEY);
-      return raw === null ? { ok: true, value: LibraryMemory.empty() } : parse(raw);
+      return raw === null
+        ? { ok: true, value: LibraryMemory.empty() }
+        : parse(raw);
     } catch {
       return { ok: false, error: { code: "storage-unavailable" } };
     }
   },
 
-  write(storage: Pick<Storage, "setItem">, state: LibraryMemoryState): LibraryMemoryResult<LibraryMemoryState> {
+  write(
+    storage: Pick<Storage, "setItem">,
+    state: LibraryMemoryState,
+  ): LibraryMemoryResult<LibraryMemoryState> {
     try {
       storage.setItem(STORAGE_KEY, JSON.stringify(state));
       return { ok: true, value: state };
@@ -79,6 +125,12 @@ export const LibraryMemory = {
   },
 
   recordRecent(state: LibraryMemoryState, slug: string): LibraryMemoryState {
-    return { ...state, recent: [slug, ...state.recent.filter((item) => item !== slug)].slice(0, MAX_RECENT) };
+    return {
+      ...state,
+      recent: [slug, ...state.recent.filter((item) => item !== slug)].slice(
+        0,
+        MAX_RECENT,
+      ),
+    };
   },
 } as const;

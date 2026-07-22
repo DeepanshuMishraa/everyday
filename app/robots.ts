@@ -7,7 +7,10 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       { userAgent: "*", allow: "/" },
-      { userAgent: ["GPTBot", "OAI-SearchBot", "ClaudeBot", "PerplexityBot"], allow: "/" },
+      {
+        userAgent: ["GPTBot", "OAI-SearchBot", "ClaudeBot", "PerplexityBot"],
+        allow: "/",
+      },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),
     host: absoluteUrl("/"),

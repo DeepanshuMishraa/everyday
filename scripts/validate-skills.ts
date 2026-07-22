@@ -11,49 +11,92 @@ const root = process.cwd();
 let failed = 0;
 const skills = getAllSkills();
 
-if (skills.length !== 30) throw new Error(`Catalog must contain exactly 30 skills; found ${skills.length}.`);
+if (skills.length !== 30)
+  throw new Error(
+    `Catalog must contain exactly 30 skills; found ${skills.length}.`,
+  );
 
 for (const catalog of skills) {
   const skillPath = path.join(root, "skills", catalog.slug, "SKILL.md");
   const catalogPath = path.join(root, "catalog", `${catalog.slug}.yaml`);
   const suitePath = path.join(root, "evals", catalog.slug, "suite.yaml");
-  if (!fs.existsSync(skillPath) || !fs.existsSync(catalogPath) || !fs.existsSync(suitePath)) {
+  if (
+    !fs.existsSync(skillPath) ||
+    !fs.existsSync(catalogPath) ||
+    !fs.existsSync(suitePath)
+  ) {
     console.error(`✗ ${catalog.slug}: missing skill, catalog, or suite file`);
     failed += 1;
     continue;
   }
   const markdown = catalog.markdown;
-  const parsedCatalog = yaml.load(fs.readFileSync(catalogPath, "utf8")) as typeof catalog;
+  const parsedCatalog = yaml.load(
+    fs.readFileSync(catalogPath, "utf8"),
+  ) as typeof catalog;
   const suiteContent = fs.readFileSync(suitePath, "utf8");
-  const suite = yaml.load(suiteContent) as { skill: string; scenarios: unknown[] };
+  const suite = yaml.load(suiteContent) as {
+    skill: string;
+    scenarios: unknown[];
+  };
   const result = validateSkill(catalog.files, parsedCatalog);
-  if (suite.scenarios.length !== 10) result.errors.push(`Evaluation suite must contain 10 scenarios; found ${suite.scenarios.length}.`);
-  if (suite.skill !== catalog.slug) result.errors.push("Evaluation suite skill must match the catalog slug.");
-  if (matter(markdown).data.description !== parsedCatalog.description) result.errors.push("Catalog and frontmatter descriptions differ.");
+  if (suite.scenarios.length !== 10)
+    result.errors.push(
+      `Evaluation suite must contain 10 scenarios; found ${suite.scenarios.length}.`,
+    );
+  if (suite.skill !== catalog.slug)
+    result.errors.push("Evaluation suite skill must match the catalog slug.");
+  if (matter(markdown).data.description !== parsedCatalog.description)
+    result.errors.push("Catalog and frontmatter descriptions differ.");
   result.passed = result.errors.length === 0;
   const directory = path.join(root, "evals", catalog.slug);
   const reportPath = path.join(directory, "report.json");
   let existing: Partial<EvaluationReport> = {};
-  if (fs.existsSync(reportPath)) existing = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+  if (fs.existsSync(reportPath))
+    existing = JSON.parse(fs.readFileSync(reportPath, "utf8"));
   const hash = catalog.hash;
-  const suiteHash = crypto.createHash("sha256").update(suiteContent).digest("hex");
-  const preserveFullPass = existing.status === "instruction-review-pass" && existing.skillHash === hash && existing.suiteHash === suiteHash;
-  const report: EvaluationReport = preserveFullPass ? existing as EvaluationReport : {
-    skill: catalog.slug,
-    skillHash: hash,
-    suiteHash,
-    status: result.passed ? "structural-pass" : "failed",
-    generatedAt: new Date().toISOString(),
-    structural: { passed: result.passed, errors: result.errors },
-    note: result.passed ? "Package structure passed. A current GPT-5.6 instruction-coverage review remains pending." : "Structural validation failed.",
-  };
+  const suiteHash = crypto
+    .createHash("sha256")
+    .update(suiteContent)
+    .digest("hex");
+  const preserveFullPass =
+    existing.status === "instruction-review-pass" &&
+    existing.skillHash === hash &&
+    existing.suiteHash === suiteHash;
+  const report: EvaluationReport = preserveFullPass
+    ? (existing as EvaluationReport)
+    : {
+        skill: catalog.slug,
+        skillHash: hash,
+        suiteHash,
+        status: result.passed ? "structural-pass" : "failed",
+        generatedAt: new Date().toISOString(),
+        structural: { passed: result.passed, errors: result.errors },
+        note: result.passed
+          ? "Package structure passed. A current GPT-5.6 instruction-coverage review remains pending."
+          : "Structural validation failed.",
+      };
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
-  if (result.passed) console.log(`✓ ${catalog.slug} (${catalog.fileCount} files, ${result.bodyLines} body lines)`);
-  else { console.error(`✗ ${catalog.slug}: ${result.errors.join(" ")}`); failed += 1; }
+  if (result.passed)
+    console.log(
+      `✓ ${catalog.slug} (${catalog.fileCount} files, ${result.bodyLines} body lines)`,
+    );
+  else {
+    console.error(`✗ ${catalog.slug}: ${result.errors.join(" ")}`);
+    failed += 1;
+  }
 }
 
-const skillDirectories = fs.readdirSync(path.join(root, "skills"), { withFileTypes: true }).filter((entry) => entry.isDirectory());
-if (skillDirectories.length !== 30) { console.error(`✗ skills/ must contain exactly 30 directories; found ${skillDirectories.length}.`); failed += 1; }
+const skillDirectories = fs
+  .readdirSync(path.join(root, "skills"), { withFileTypes: true })
+  .filter((entry) => entry.isDirectory());
+if (skillDirectories.length !== 30) {
+  console.error(
+    `✗ skills/ must contain exactly 30 directories; found ${skillDirectories.length}.`,
+  );
+  failed += 1;
+}
 
 if (failed) process.exit(1);
-console.log("Validated exactly 30 skills and refreshed hash-bound structural reports.");
+console.log(
+  "Validated exactly 30 skills and refreshed hash-bound structural reports.",
+);

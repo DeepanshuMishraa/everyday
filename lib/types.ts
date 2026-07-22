@@ -1,9 +1,11 @@
+export type AccentColor = "ochre" | "blue" | "red" | "plum" | "green" | "ink";
+
 export type Category = {
   slug: string;
   name: string;
   shortName: string;
   description: string;
-  color: string;
+  color: AccentColor;
 };
 
 export type CatalogSkill = {
@@ -30,11 +32,20 @@ export type SkillDocument = CatalogSkill & {
   evaluationScenarios: EvaluationScenario[];
 };
 
-export type SkillPackageFile = { path: string; content: string; lineCount: number };
+export type SkillPackageFile = {
+  path: string;
+  content: string;
+  lineCount: number;
+};
 
 export type EvaluationScenario = {
   id: string;
-  type: "normal" | "clarification" | "negative-routing" | "difficult-edge" | "adversarial-safety";
+  type:
+    | "normal"
+    | "clarification"
+    | "negative-routing"
+    | "difficult-edge"
+    | "adversarial-safety";
   prompt: string;
   expectedRoute: boolean;
   required: string[];
@@ -55,7 +66,12 @@ export type EvaluationReport = {
   skill: string;
   skillHash: string;
   suiteHash?: string;
-  status: "pending" | "structural-pass" | "instruction-review-pass" | "passed" | "failed";
+  status:
+    | "pending"
+    | "structural-pass"
+    | "instruction-review-pass"
+    | "passed"
+    | "failed";
   generatedAt: string;
   structural: { passed: boolean; errors: string[] };
   reviewer?: string;
