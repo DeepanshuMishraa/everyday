@@ -1,0 +1,19 @@
+.vercelignore
+  s_43bd37a52a4841::t_efd3f19389b8ab 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "f4c59726abc439a798f6a615746074e88f63ae7a",
+  "prompts": {},
+  "sessions": {
+    "s_43bd37a52a4841": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f88d0-aee8-7683-b915-fcaf1f163c83",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
