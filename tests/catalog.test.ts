@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { categories } from "../catalog/categories";
 import { getAllSkills } from "../lib/skills";
+import { getNewSkills } from "../lib/skills/new";
 import { createSkillSearch, searchSkills } from "../lib/skills/search";
 import { validateSkill } from "../lib/skills/validate";
 
@@ -25,6 +26,14 @@ describe("launch catalog", () => {
       expect(
         skills.filter((skill) => skill.category === category.slug),
       ).not.toHaveLength(0);
+  });
+
+  it("publishes the launch-film workflow as new", () => {
+    expect(
+      getNewSkills(skills, 4, new Date("2026-07-23T12:00:00.000Z")).map(
+        ({ slug }) => slug,
+      ),
+    ).toContain("direct-a-product-launch-film");
   });
 
   it("has a valid, self-contained package for every entry", () => {
@@ -55,6 +64,7 @@ describe("launch catalog", () => {
       ["pack for a holiday", "pack-for-a-trip"],
       ["pay my bills", "organize-monthly-bills"],
       ["I don't know what to choose", "make-a-hard-decision"],
+      ["make a product launch video", "direct-a-product-launch-film"],
     ]);
     for (const [query, slug] of expected)
       expect(searchSkills(index, skills, query)[0]?.slug).toBe(slug);

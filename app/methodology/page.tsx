@@ -52,7 +52,7 @@ const stages = [
   [
     "03",
     "Instruction review",
-    "GPT-5.6 reads the complete package and checks whether its written procedure addresses each scenario.",
+    "The Codex CLI agent running GPT-5.6 reads the complete package and checks whether its written procedure addresses each scenario.",
   ],
   [
     "04",
@@ -77,7 +77,7 @@ export default function MethodologyPage() {
               url: absoluteUrl("/methodology/"),
               isPartOf: { "@id": `${site.url}/#website` },
               inLanguage: site.language,
-              dateModified: "2026-07-17",
+              dateModified: "2026-07-23",
             },
             breadcrumbSchema([
               { name: "Everyday", path: "/" },
@@ -96,6 +96,8 @@ export default function MethodologyPage() {
             The current review checks whether each written package covers its
             scenarios, routes, and safety boundaries. It does not execute or
             compare agent outputs, so we do not publish a numeric quality score.
+            The authoring Codex CLI agent performs this review directly; there
+            is no separate evaluator service or hidden LLM layer.
           </p>
         </header>
         <section
@@ -139,8 +141,9 @@ export default function MethodologyPage() {
               <h2 className={heading.h2}>Four checks. Plain evidence.</h2>
             </div>
             <p>
-              If a skill changes, its review status returns to pending until
-              GPT-5.6 checks the updated instructions again.
+              If a skill changes, its review status returns to pending until the
+              Codex CLI agent running GPT-5.6 checks the updated instructions
+              again.
             </p>
           </div>
           <div className="grid grid-cols-4 border-l border-line max-[980px]:grid-cols-2 max-[980px]:border-t max-[720px]:grid-cols-2">
@@ -171,9 +174,9 @@ export default function MethodologyPage() {
               Instruction coverage, clearly labeled.
             </h2>
             <p className="max-w-lg text-[0.92rem] text-ink-2">
-              “Instructions reviewed” means GPT-5.6 found written coverage for
-              the scenarios below. It is not a promise that every agent will
-              produce the same result.
+              “Instructions reviewed” means the GPT-5.6 Codex CLI agent found
+              written coverage for the scenarios below. It is not a promise that
+              every agent will produce the same result.
             </p>
           </div>
           <dl className="m-0 [&>div]:flex [&>div]:items-baseline [&>div]:justify-between [&>div]:gap-6 [&>div]:border-b [&>div]:border-line [&>div]:py-[13px] [&>div:first-child]:border-t [&_dt]:text-[0.86rem] [&_dt]:text-ink-2 [&_dd]:m-0 [&_dd]:text-[0.78rem] [&_dd]:font-bold">

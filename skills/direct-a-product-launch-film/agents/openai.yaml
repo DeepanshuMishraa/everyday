@@ -1,0 +1,4 @@
+interface:
+  display_name: "Direct a Product Launch Film"
+  short_description: "Create high-energy launch films that convert"
+  default_prompt: "Use $direct-a-product-launch-film to turn my product into a polished, beat-synced launch video."

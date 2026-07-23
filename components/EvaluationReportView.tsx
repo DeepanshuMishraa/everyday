@@ -32,7 +32,7 @@ export function EvaluationReportView({
           </h2>
           <p className="text-[0.92rem] text-ink-2">
             {current
-              ? "GPT-5.6 has not finished reviewing this skill against its ten everyday scenarios."
+              ? "The GPT-5.6 Codex CLI agent has not finished reviewing this skill against its ten scenarios."
               : "This skill changed after its last review, so it needs to be reviewed again."}
           </p>
         </div>
@@ -85,8 +85,9 @@ export function EvaluationReportView({
             What the package explicitly covers
           </h2>
           <p className="max-w-[34rem] text-[0.92rem] text-ink-2">
-            GPT-5.6 inspected the written instructions against ten scenarios.
-            Expand a row to see the requirement and the instruction evidence.
+            The GPT-5.6 Codex CLI agent inspected the written instructions
+            against ten scenarios. Expand a row to see the requirement and the
+            instruction evidence.
           </p>
         </div>
         <div className="rounded-lg border border-line bg-surface px-5 py-[18px] [&>span]:block [&>span]:text-xs [&>span]:font-bold [&>span]:text-ink-2 [&>strong]:my-1.5 [&>strong]:block [&>strong]:text-[1.02rem] [&>strong]:font-bold [&>strong]:tracking-[-0.02em] [&>small]:block [&>small]:text-xs [&>small]:font-bold [&>small]:text-ink-2">
@@ -123,10 +124,11 @@ export function EvaluationReportView({
       </div>
       <p className="border-b border-line px-0.5 py-[18px] text-[0.84rem] text-ink-2 [&_strong]:text-ink">
         <strong>What this means:</strong>{" "}
-        {report.reviewerModel ?? "The recorded GPT-5.6 model"} checked whether
-        the written instructions include the expected steps, routing, and safety
-        boundaries for the scenarios below. It is a review of the instructions,
-        not a promise of real-world results.
+        {report.reviewerModel ?? "The recorded GPT-5.6 Codex CLI agent"} checked
+        whether the written instructions include the expected steps, routing,
+        and safety boundaries for the scenarios below. This is the same
+        authoring agent reviewing its work, not a separate judge service, and it
+        is not a promise of real-world results.
       </p>
       <div className="pb-8">
         {scenarios.map((scenario, index) => {

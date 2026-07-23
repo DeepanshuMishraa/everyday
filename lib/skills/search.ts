@@ -37,6 +37,8 @@ const stopWords = new Set([
 const aliases: Record<string, string> = {
   "audit-subscriptions":
     "netflix spotify streaming membership recurring charge unused app stop paying cancel service",
+  "direct-a-product-launch-film":
+    "product launch video motion design promo trailer teaser saas app demo hyperframes music storyboard animation",
   "build-a-bedtime-routine":
     "can't sleep sleep schedule late night evening routine phone at night wind down",
   "check-a-suspicious-message":
