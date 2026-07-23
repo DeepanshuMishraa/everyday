@@ -1,0 +1,94 @@
+catalog/plan-a-gathering.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/shorten-a-workout.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/restart-a-personal-project.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+lib/skills/new.ts
+  s_43bd37a52a4841::t_0b0286d6415602 1-28,30-34
+  s_43bd37a52a4841::t_e976f616200318 29
+catalog/check-a-suspicious-message.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+components/SearchLibrary.tsx
+  s_43bd37a52a4841::t_d494d10d81494d 7,26,31,50-53,55-59,78-83,232-259,362-364,366-368,371-373,380
+  s_43bd37a52a4841::t_312de8850951af 260
+catalog/plan-a-home-move.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/compare-a-big-purchase.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/build-a-bedtime-routine.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+tests/new-skills.test.ts
+  s_43bd37a52a4841::t_0b0286d6415602 1-47
+catalog/audit-subscriptions.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/handle-a-home-repair.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/prepare-for-an-appointment.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 21
+catalog/restart-a-habit.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/set-a-boundary.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/coordinate-family-care.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 21
+catalog/understand-paperwork.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/cook-with-what-you-have.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/get-a-return-or-refund.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/write-an-apology.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/make-a-hard-decision.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/split-household-chores.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/clean-your-home-fast.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/organize-monthly-bills.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+lib/types.ts
+  s_43bd37a52a4841::t_0b0286d6415602 20
+catalog/get-unstuck.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+app/opengraph-image.tsx
+  s_43bd37a52a4841::t_0b0286d6415602 79-80
+  s_43bd37a52a4841::t_312de8850951af 64
+catalog/pack-for-a-trip.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/learn-by-doing.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 21
+catalog/move-more-at-your-desk.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+app/skills/page.tsx
+  s_43bd37a52a4841::t_0b0286d6415602 49
+catalog/plan-weeknight-meals.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/cool-down-an-angry-message.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/plan-your-week.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/restart-working-out.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+catalog/prepare-for-travel-delays.yaml
+  s_43bd37a52a4841::t_f128837d9ee922 20
+lib/skills/validate.ts
+  s_43bd37a52a4841::t_f5aa2b81604ac6 26-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "e9b77f68d2147e744f13d4dae749b4adeba4fb04",
+  "prompts": {},
+  "sessions": {
+    "s_43bd37a52a4841": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f88d0-aee8-7683-b915-fcaf1f163c83",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Deepanshu Mishra <d4deepanshu723@gmail.com>"
+    }
+  }
+}
