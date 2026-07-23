@@ -17,6 +17,7 @@ export type CatalogSkill = {
   examples: string[];
   tags: string[];
   version: string;
+  added: string;
   updated: string;
 };
 

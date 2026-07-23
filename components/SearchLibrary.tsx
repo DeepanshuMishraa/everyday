@@ -4,6 +4,7 @@ import { track } from "@vercel/analytics";
 import Link from "next/link";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { LibraryMemoryPanel } from "@/components/LibraryMemoryPanel";
+import { getNewSkills } from "@/lib/skills/new";
 import { createSkillSearch, searchSkills } from "@/lib/skills/search";
 import {
   accentClass,
@@ -22,10 +23,12 @@ import {
 import type { CatalogSkill, Category } from "@/lib/types";
 
 type Props = { skills: CatalogSkill[]; categories: Category[] };
+type LibraryFilter = "all" | "new";
 const pageSize = 10;
 
 export function SearchLibrary({ skills, categories }: Props) {
   const [query, setQuery] = useState("");
+  const [filter, setFilter] = useState<LibraryFilter>("all");
   const [page, setPage] = useState(1);
   const inputRef = useRef<HTMLInputElement>(null);
   const ledgerRef = useRef<HTMLDivElement>(null);
@@ -44,9 +47,16 @@ export function SearchLibrary({ skills, categories }: Props) {
     return counts;
   }, [skills]);
 
+  const newSkillSlugs = useMemo(
+    () => new Set(getNewSkills(skills).map(({ slug }) => slug)),
+    [skills],
+  );
   const results = useMemo(
-    () => searchSkills(search, skills, query),
-    [query, search, skills],
+    () =>
+      searchSkills(search, skills, query).filter(
+        (skill) => filter === "all" || newSkillSlugs.has(skill.slug),
+      ),
+    [filter, newSkillSlugs, query, search, skills],
   );
   const pageCount = Math.max(1, Math.ceil(results.length / pageSize));
   const currentPage = Math.min(page, pageCount);
@@ -63,6 +73,12 @@ export function SearchLibrary({ skills, categories }: Props) {
     window.requestAnimationFrame(() =>
       ledgerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }),
     );
+  }
+
+  function selectFilter(nextFilter: LibraryFilter) {
+    setFilter(nextFilter);
+    setPage(1);
+    track("catalog_filter_change", { filter: nextFilter });
   }
 
   useEffect(() => {
@@ -213,10 +229,35 @@ export function SearchLibrary({ skills, categories }: Props) {
           })}
         </div>
       </nav>
-      <div
-        className="mt-10 scroll-mt-[calc(var(--header-h)+20px)] border-t border-line max-[980px]:mt-8 max-[720px]:mt-7"
-        ref={ledgerRef}
-      >
+      <div className="mt-10 flex items-center justify-between gap-4 border-b border-line pb-3 font-ui max-[720px]:mt-8">
+        <span className="text-xs font-bold tracking-[0.03em] text-ink-2">
+          Filter workflows
+        </span>
+        <div
+          className="flex gap-1 rounded-md border border-line bg-surface p-1"
+          role="group"
+          aria-label="Filter workflows"
+        >
+          <button
+            className="min-h-10 rounded-[4px] px-3 text-sm font-semibold text-ink-2 transition-colors hover:text-ink aria-pressed:bg-ink aria-pressed:text-bg"
+            type="button"
+            aria-pressed={filter === "all"}
+            onClick={() => selectFilter("all")}
+          >
+            All
+          </button>
+          <button
+            className="min-h-10 rounded-[4px] px-3 text-sm font-semibold text-ink-2 transition-colors hover:text-ink aria-pressed:bg-ink aria-pressed:text-bg"
+            type="button"
+            aria-pressed={filter === "new"}
+            onClick={() => selectFilter("new")}
+          >
+            New
+            {newSkillSlugs.size > 0 ? ` ${newSkillSlugs.size}` : ""}
+          </button>
+        </div>
+      </div>
+      <div className="scroll-mt-[calc(var(--header-h)+20px)]" ref={ledgerRef}>
         <div className="grid grid-cols-[40px_minmax(0,1fr)_minmax(220px,0.55fr)_auto] items-center gap-5 px-2 py-3 font-ui text-xs font-bold tracking-[0.03em] text-ink-2 max-[980px]:hidden">
           <span aria-hidden="true">#</span>
           <span aria-hidden="true">Workflow</span>
@@ -318,20 +359,25 @@ export function SearchLibrary({ skills, categories }: Props) {
           </>
         ) : (
           <div className="max-w-[620px] border-b border-line px-3 py-[72px]">
-            <p className={eyebrow}>No exact workflow</p>
+            <p className={eyebrow}>
+              {filter === "new" ? "No new workflows" : "No exact workflow"}
+            </p>
             <h3 className={`${heading.h3} text-[1.6rem]`}>
-              Try the underlying situation.
+              {filter === "new"
+                ? "Nothing was added in the last four days."
+                : "Try the underlying situation."}
             </h3>
             <p className="text-[0.92rem] text-ink-2">
-              Use words such as “refund,” “packing,” “brain dump,” “doctor
-              appointment,” or “what can I cook.” The library stays
-              intentionally focused.
+              {filter === "new"
+                ? "Switch back to the complete library while the next workflows are being prepared."
+                : "Use words such as “refund,” “packing,” “brain dump,” “doctor appointment,” or “what can I cook.” The library stays intentionally focused."}
             </p>
             <button
               className={`${button.secondary} mt-[0.8rem]`}
               type="button"
               onClick={() => {
                 setQuery("");
+                setFilter("all");
                 setPage(1);
               }}
             >

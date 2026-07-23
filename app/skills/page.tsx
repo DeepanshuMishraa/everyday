@@ -46,6 +46,7 @@ export default function SkillsPage() {
     examples: skill.examples,
     tags: skill.tags,
     version: skill.version,
+    added: skill.added,
     updated: skill.updated,
   }));
 

@@ -23,6 +23,8 @@ export function validateSkill(
     errors.push("Frontmatter must contain only name and description.");
   if (parsed.data.name !== catalog.slug)
     errors.push("Frontmatter name must match the catalog slug.");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(catalog.added))
+    errors.push("Catalog added date must use YYYY-MM-DD.");
   const wordCount = String(parsed.data.description ?? "")
     .trim()
     .split(/\s+/)
